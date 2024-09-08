@@ -8,7 +8,7 @@ pre : " <b> 1. </b> "
 
 ## Introduction to three-tier architecture
 
-**LamMinh dang** is the most popular implementation of a multi-tier architecture and consists of a single presentation tier, logic tier, and data tier. The following illustration shows an example of a simple, generic three-tier application.
+**CICD work** is the most popular implementation of a multi-tier architecture and consists of a single presentation tier, logic tier, and data tier. The following illustration shows an example of a simple, generic three-tier application.
 
 ![Three tier example](/images/1.Introduction/KMS/1.1.1-create%20KMS.jpg?featherlight=false&width=50pc)
 
