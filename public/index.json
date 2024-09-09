@@ -57,10 +57,10 @@
 },
 {
 	"uri": "//localhost:1313/4-setupnotification/4.2-createeventbridge/",
-	"title": "Connect to EC2 instance",
+	"title": "Create Event for GuardDuty",
 	"tags": [],
 	"description": "",
-	"content": "Connect to EC2 instance On the EC2 instances interface, select the instance you just created and click Connect Switch to the Session Manager tab and click Connect Successfully connect to the instance Run the command sudo -su ec2-user to switch from user to ec2-user, and have root administrative rights for the instance Then run the command ping 8.8.8.8 (IP address of Google’s DNS server) to test whether our instance can connect to the outside internet through igw or not "
+	"content": "Overview In this section, we will implement an event-driven architecture to monitor findings from Amazon GuardDuty in real time. Using Amazon EventBridge, we will create rules that trigger specific actions whenever GuardDuty detects potential threats or vulnerabilities\nIn the AWS search bar, type EventBridge and select the first one. Switch to the EventBridge Rule tab and click Create Rule Type rule-event-gd for the Name section, and leave the default option for the rest On the Event Pattern, select the following\nEvent Source, Select AWS service Choose GuardDuty for AWS service GuardDuty Findings for the event type. Then, choose the Edit Pattern to change the servity of the event will be triggered. Paste the following and modify the dangerous level of the findings {\r\u0026#34;source\u0026#34;: [\r\u0026#34;aws.guardduty\u0026#34;\r],\r\u0026#34;detail-type\u0026#34;: [\r\u0026#34;GuardDuty Finding\u0026#34;\r],\r\u0026#34;detail\u0026#34;: {\r\u0026#34;severity\u0026#34;: [\r4,\r4.0,\r4.1,\r4.2,\r4.3,\r4.4,\r4.5,\r4.6,\r4.7,\r4.8,\r4.9,\r5,\r5.0,\r5.1,\r5.2,\r5.3,\r5.4,\r5.5,\r5.6,\r5.7,\r5.8,\r5.9,\r6,\r6.0,\r6.1,\r6.2,\r6.3,\r6.4,\r6.5,\r6.6,\r6.7,\r6.8,\r6.9,\r7,\r7.0,\r7.1,\r7.2,\r7.3,\r7.4,\r7.5,\r7.6,\r7.7,\r7.8,\r7.9,\r8,\r8.0,\r8.1,\r8.2,\r8.3,\r8.4,\r8.5,\r8.6,\r8.7,\r8.8,\r8.9\r]\r}\r} 6. In the Advance Settings, Select the below:\nChoose AWS service Select SNS topic and in the Topic part, choose the guardduty-topic, that you just created Next, we will create a custom notification for SNS: In the additional settings, select Input transformer In the Target input transformer, Type the following Input Path: {\r\u0026#34;severity\u0026#34;: \u0026#34;$.detail.severity\u0026#34;,\r\u0026#34;Account_ID\u0026#34;: \u0026#34;$.detail.accountId\u0026#34;,\r\u0026#34;Finding_ID\u0026#34;: \u0026#34;$.detail.id\u0026#34;,\r\u0026#34;Finding_Type\u0026#34;: \u0026#34;$.detail.type\u0026#34;,\r\u0026#34;region\u0026#34;: \u0026#34;$.region\u0026#34;,\r\u0026#34;Finding_description\u0026#34;: \u0026#34;$.detail.description\u0026#34;\r}\r9. On the Template, we will procvide the following Input Template:\n\u0026#34;AWS \u0026lt;Account_ID\u0026gt; has a severity \u0026lt;severity\u0026gt; GuardDuty finding type \u0026lt;Finding_Type\u0026gt; in the \u0026lt;region\u0026gt; region.\u0026#34;\r\u0026#34;Finding Description:\u0026#34;\r\u0026#34;\u0026lt;Finding_description\u0026gt;. \u0026#34;\r\u0026#34;For more details open the GuardDuty console at https://console.aws.amazon.com/guardduty/home?region=\u0026lt;region\u0026gt;#/findings?search=id%3D\u0026lt;Finding_ID\u0026gt;\u0026#34; 10. Review and click Create rule 11. Complete create event rule. "
 },
 {
 	"uri": "//localhost:1313/3-guardduty/3.2-createpolicyprotection/",
@@ -155,10 +155,10 @@
 },
 {
 	"uri": "//localhost:1313/5-exportfindingtos3/",
-	"title": "Create Internal Load Balancer and Auto Scaling Group",
+	"title": "Export Findings To S3 bucket",
 	"tags": [],
 	"description": "",
-	"content": "Introduction In this section, we will create an Internal Load Balancer to balance the traffic from the Web Tier to the App Tier and an Auto Scaling Group for the App Tier.\nContent: Create AMI for App Tier Create Target Group Create Internal Load Balancer Create Launch Template for App Tier Create Auto Scaling Group "
+	"content": "Overview In this section, we will config GuardDuty findings found on S3 bucket, encrypt it and export to another bucket for future analysis.\nContent: Create AMI for App Tier Create Target Group Create Internal Load Balancer Create Launch Template for App Tier Create Auto Scaling Group "
 },
 {
 	"uri": "//localhost:1313/6-demo/",
