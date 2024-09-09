@@ -1,6 +1,6 @@
 # relativeURLs = true
 # Change the default theme to be use when building the site with Hugo
-
+baseURL = "fcj-ws-2.vercel.app"
 theme = "hugo-theme-learn"
 
 # For search functionality

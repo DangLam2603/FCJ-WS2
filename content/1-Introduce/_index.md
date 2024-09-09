@@ -6,18 +6,19 @@ chapter : false
 pre : " <b> 1. </b> "
 ---
 
-## Introduction to three-tier architecture
+## Introduction to architecture
 
-**CICD work** is the most popular implementation of a multi-tier architecture and consists of a single presentation tier, logic tier, and data tier. The following illustration shows an example of a simple, generic three-tier application.
+In this workshop, we will explore the capabilities of AWS GuardDuty in securing your S3 bucket by integrating it with SNS and triggering events in EventBridge to alert the Admin for immediate action.
 
-![Three tier example](/images/1.Introduction/KMS/1.1.1-create%20KMS.jpg?featherlight=false&width=50pc)
+![GuardDuty example](/images/GD.png?featherlight=false&width=50pc)
 
-**Three-tier architecture includes**:
-- Presentation tier / Web Tier: interface layer so users can interact directly (eg: website or mobile application UI).
-- Logic tier / App tier: layer to process logic and execute user commands.
-- Data tier: data storage layer of the app.
+**This architecture includes**:
+- Enable Guard Duty for S3 malware protection.
+- Set-up SNS, EventBridge rules for notification via email.
+- Set-up IAM roles, KMS for security.
+- Export Findings to S3 Bucket.
 
-**Advantages of implementing three-tier architecture:**
-- Modularity: this architecture helps us modularize the app into independent parts. This helps the dev team focus on developing each layer of the app, resulting in changes being applied as quickly as possible. In addition, it also helps recover the app faster after the server is down due to an error or disaster thanks to being able to localize and repair the faulty part.
-- High availability: because the architecture deploys applications across multiple Availability Zones, the AZs are designed so that there is no failure that affects 2 AZs at the same time (fault isolation).
-- High redundancy: AWS allows deploying a stand by or replica version of the primary database on the remaining AZ. If the main database is down, the application can still retrieve data from the replica database.
+**Advantages of implementing this architecture:**
+- Security: this architecture helps us alarm action imediately if there are un-protected files in the S3 Bucket also AWS environment in general.
+- Real-time Threat Detection: AWS GuardDuty continuously monitors your S3 bucket for malicious or unauthorized access, helping detect threats in real-time without manual intervention.
+- Automated Event Triggering: When GuardDuty detects a suspicious event, it triggers an event in Amazon EventBridge, which allows for the automatic handling of these findings. In this workshop, we will send custom email via SNS.

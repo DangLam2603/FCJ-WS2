@@ -2,88 +2,64 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/2-preparationsteps/2.1-clonecodefromgithub/</loc>
+    <loc>//localhost:1313/5-exportfindingtos3/5.1-settingsfrequecy/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-preparationsteps/2.1-clonecodefromgithub/"
+                href="//localhost:1313/vi/5-exportfindingtos3/5.1-settingsfrequecy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-preparationsteps/2.1-clonecodefromgithub/"
+                href="//localhost:1313/5-exportfindingtos3/5.1-settingsfrequecy/"
                 />
   </url><url>
-    <loc>//localhost:1313/5-createinternallbandasg/5.1-createapptierami/</loc>
+    <loc>//localhost:1313/2-preparationsteps/2.1-createkmskey/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/5-createinternallbandasg/5.1-createapptierami/"
+                href="//localhost:1313/vi/2-preparationsteps/2.1-createkmskey/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/5-createinternallbandasg/5.1-createapptierami/"
+                href="//localhost:1313/2-preparationsteps/2.1-createkmskey/"
                 />
   </url><url>
-    <loc>//localhost:1313/7-createexternallbandasg/7.1-createwebtierami/</loc>
+    <loc>//localhost:1313/4-setupnotification/4.1-createsns/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/7-createexternallbandasg/7.1-createwebtierami/"
+                href="//localhost:1313/vi/4-setupnotification/4.1-createsns/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/7-createexternallbandasg/7.1-createwebtierami/"
+                href="//localhost:1313/4-setupnotification/4.1-createsns/"
                 />
   </url><url>
-    <loc>//localhost:1313/3-createdbwithrds/3.1-createdbsubnetgroup/</loc>
+    <loc>//localhost:1313/3-guardduty/3.1-malwareprotections3/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-createdbwithrds/3.1-createdbsubnetgroup/"
+                href="//localhost:1313/vi/3-guardduty/3.1-malwareprotections3/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-createdbwithrds/3.1-createdbsubnetgroup/"
+                href="//localhost:1313/3-guardduty/3.1-malwareprotections3/"
                 />
   </url><url>
-    <loc>//localhost:1313/4-deployapptier/4.1-createec2/</loc>
+    <loc>//localhost:1313/1-introduce/1.1-introduce-to-amazon-guardduty/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/4-deployapptier/4.1-createec2/"
+                href="//localhost:1313/vi/1-introduce/1.1-introduce-to-amazon-guardduty/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/4-deployapptier/4.1-createec2/"
-                />
-  </url><url>
-    <loc>//localhost:1313/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/"
-                />
-  </url><url>
-    <loc>//localhost:1313/1-introduce/1.1-flowexplaination/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/1-introduce/1.1-flowexplaination/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/1-introduce/1.1-flowexplaination/"
+                href="//localhost:1313/1-introduce/1.1-introduce-to-amazon-guardduty/"
                 />
   </url><url>
     <loc>//localhost:1313/1-introduce/</loc>
@@ -98,40 +74,52 @@
                 href="//localhost:1313/1-introduce/"
                 />
   </url><url>
-    <loc>//localhost:1313/6-deploywebtier/6.1-updateconfigfile/</loc>
+    <loc>//localhost:1313/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/6-deploywebtier/6.1-updateconfigfile/"
+                href="//localhost:1313/vi/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/6-deploywebtier/6.1-updateconfigfile/"
+                href="//localhost:1313/"
                 />
   </url><url>
-    <loc>//localhost:1313/4-deployapptier/4.2-connectec2/</loc>
+    <loc>//localhost:1313/6-demo/6.1-uploadmalwarefiletos3/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/4-deployapptier/4.2-connectec2/"
+                href="//localhost:1313/vi/6-demo/6.1-uploadmalwarefiletos3/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/4-deployapptier/4.2-connectec2/"
+                href="//localhost:1313/6-demo/6.1-uploadmalwarefiletos3/"
                 />
   </url><url>
-    <loc>//localhost:1313/3-createdbwithrds/3.2-createdbinstance/</loc>
+    <loc>//localhost:1313/4-setupnotification/4.2-createeventbridge/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-createdbwithrds/3.2-createdbinstance/"
+                href="//localhost:1313/vi/4-setupnotification/4.2-createeventbridge/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-createdbwithrds/3.2-createdbinstance/"
+                href="//localhost:1313/4-setupnotification/4.2-createeventbridge/"
+                />
+  </url><url>
+    <loc>//localhost:1313/3-guardduty/3.2-createpolicyprotection/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-guardduty/3.2-createpolicyprotection/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-guardduty/3.2-createpolicyprotection/"
                 />
   </url><url>
     <loc>//localhost:1313/2-preparationsteps/2.2-creates3bucket/</loc>
@@ -146,28 +134,16 @@
                 href="//localhost:1313/2-preparationsteps/2.2-creates3bucket/"
                 />
   </url><url>
-    <loc>//localhost:1313/5-createinternallbandasg/5.2-createtargetgroup/</loc>
+    <loc>//localhost:1313/5-exportfindingtos3/5.2-attachpolicytos3/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/5-createinternallbandasg/5.2-createtargetgroup/"
+                href="//localhost:1313/vi/5-exportfindingtos3/5.2-attachpolicytos3/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/5-createinternallbandasg/5.2-createtargetgroup/"
-                />
-  </url><url>
-    <loc>//localhost:1313/7-createexternallbandasg/7.2-createtargetgroup/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/7-createexternallbandasg/7.2-createtargetgroup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/7-createexternallbandasg/7.2-createtargetgroup/"
+                href="//localhost:1313/5-exportfindingtos3/5.2-attachpolicytos3/"
                 />
   </url><url>
     <loc>//localhost:1313/2-preparationsteps/</loc>
@@ -182,304 +158,148 @@
                 href="//localhost:1313/2-preparationsteps/"
                 />
   </url><url>
-    <loc>//localhost:1313/6-deploywebtier/6.2-uploadcodetos3/</loc>
+    <loc>//localhost:1313/6-demo/6.2-checkemailnoification/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/6-deploywebtier/6.2-uploadcodetos3/"
+                href="//localhost:1313/vi/6-demo/6.2-checkemailnoification/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/6-deploywebtier/6.2-uploadcodetos3/"
+                href="//localhost:1313/6-demo/6.2-checkemailnoification/"
                 />
   </url><url>
-    <loc>//localhost:1313/3-createdbwithrds/</loc>
+    <loc>//localhost:1313/6-demo/6.3-checkexportfindings3/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-createdbwithrds/"
+                href="//localhost:1313/vi/6-demo/6.3-checkexportfindings3/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-createdbwithrds/"
+                href="//localhost:1313/6-demo/6.3-checkexportfindings3/"
                 />
   </url><url>
-    <loc>//localhost:1313/6-deploywebtier/6.3-createec2instance/</loc>
+    <loc>//localhost:1313/3-guardduty/3.3-createroleproctection/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/6-deploywebtier/6.3-createec2instance/"
+                href="//localhost:1313/vi/3-guardduty/3.3-createroleproctection/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/6-deploywebtier/6.3-createec2instance/"
+                href="//localhost:1313/3-guardduty/3.3-createroleproctection/"
                 />
   </url><url>
-    <loc>//localhost:1313/7-createexternallbandasg/7.3-createexternalloadbalancer/</loc>
+    <loc>//localhost:1313/5-exportfindingtos3/5.3-attachpolicytokms/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/7-createexternallbandasg/7.3-createexternalloadbalancer/"
+                href="//localhost:1313/vi/5-exportfindingtos3/5.3-attachpolicytokms/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/7-createexternallbandasg/7.3-createexternalloadbalancer/"
+                href="//localhost:1313/5-exportfindingtos3/5.3-attachpolicytokms/"
                 />
   </url><url>
-    <loc>//localhost:1313/2-preparationsteps/2.3-createec2role/</loc>
+    <loc>//localhost:1313/2-preparationsteps/2.3-enableguardduty/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-preparationsteps/2.3-createec2role/"
+                href="//localhost:1313/vi/2-preparationsteps/2.3-enableguardduty/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-preparationsteps/2.3-createec2role/"
+                href="//localhost:1313/2-preparationsteps/2.3-enableguardduty/"
                 />
   </url><url>
-    <loc>//localhost:1313/5-createinternallbandasg/5.3-createinternalloadbalancer/</loc>
+    <loc>//localhost:1313/3-guardduty/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/5-createinternallbandasg/5.3-createinternalloadbalancer/"
+                href="//localhost:1313/vi/3-guardduty/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/5-createinternallbandasg/5.3-createinternalloadbalancer/"
+                href="//localhost:1313/3-guardduty/"
                 />
   </url><url>
-    <loc>//localhost:1313/4-deployapptier/4.3-downmysqloninstance/</loc>
+    <loc>//localhost:1313/5-exportfindingtos3/5.4-enableexport/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/4-deployapptier/4.3-downmysqloninstance/"
+                href="//localhost:1313/vi/5-exportfindingtos3/5.4-enableexport/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/4-deployapptier/4.3-downmysqloninstance/"
+                href="//localhost:1313/5-exportfindingtos3/5.4-enableexport/"
                 />
   </url><url>
-    <loc>//localhost:1313/6-deploywebtier/6.4-connecttoinstance/</loc>
+    <loc>//localhost:1313/3-guardduty/3.4-enableprotection/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/6-deploywebtier/6.4-connecttoinstance/"
+                href="//localhost:1313/vi/3-guardduty/3.4-enableprotection/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/6-deploywebtier/6.4-connecttoinstance/"
+                href="//localhost:1313/3-guardduty/3.4-enableprotection/"
                 />
   </url><url>
-    <loc>//localhost:1313/5-createinternallbandasg/5.4-createlaunchtemplate/</loc>
+    <loc>//localhost:1313/4-setupnotification/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/5-createinternallbandasg/5.4-createlaunchtemplate/"
+                href="//localhost:1313/vi/4-setupnotification/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/5-createinternallbandasg/5.4-createlaunchtemplate/"
+                href="//localhost:1313/4-setupnotification/"
                 />
   </url><url>
-    <loc>//localhost:1313/7-createexternallbandasg/7.4-createlaunchtemplate/</loc>
+    <loc>//localhost:1313/5-exportfindingtos3/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/7-createexternallbandasg/7.4-createlaunchtemplate/"
+                href="//localhost:1313/vi/5-exportfindingtos3/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/7-createexternallbandasg/7.4-createlaunchtemplate/"
+                href="//localhost:1313/5-exportfindingtos3/"
                 />
   </url><url>
-    <loc>//localhost:1313/2-preparationsteps/2.4-createvpc/</loc>
+    <loc>//localhost:1313/6-demo/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-preparationsteps/2.4-createvpc/"
+                href="//localhost:1313/vi/6-demo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-preparationsteps/2.4-createvpc/"
+                href="//localhost:1313/6-demo/"
                 />
   </url><url>
-    <loc>//localhost:1313/4-deployapptier/</loc>
+    <loc>//localhost:1313/7-cleanupresources/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/4-deployapptier/"
+                href="//localhost:1313/vi/7-cleanupresources/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/4-deployapptier/"
-                />
-  </url><url>
-    <loc>//localhost:1313/4-deployapptier/4.4-runapponinstance/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/4-deployapptier/4.4-runapponinstance/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/4-deployapptier/4.4-runapponinstance/"
-                />
-  </url><url>
-    <loc>//localhost:1313/5-createinternallbandasg/5.5-createautoscalinggroup/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-createinternallbandasg/5.5-createautoscalinggroup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-createinternallbandasg/5.5-createautoscalinggroup/"
-                />
-  </url><url>
-    <loc>//localhost:1313/7-createexternallbandasg/7.5-createautoscalinggroup/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/7-createexternallbandasg/7.5-createautoscalinggroup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/7-createexternallbandasg/7.5-createautoscalinggroup/"
-                />
-  </url><url>
-    <loc>//localhost:1313/5-createinternallbandasg/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-createinternallbandasg/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-createinternallbandasg/"
-                />
-  </url><url>
-    <loc>//localhost:1313/2-preparationsteps/2.5-createsubnets/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/2-preparationsteps/2.5-createsubnets/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/2-preparationsteps/2.5-createsubnets/"
-                />
-  </url><url>
-    <loc>//localhost:1313/2-preparationsteps/2.6-createigw/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/2-preparationsteps/2.6-createigw/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/2-preparationsteps/2.6-createigw/"
-                />
-  </url><url>
-    <loc>//localhost:1313/6-deploywebtier/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/6-deploywebtier/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/6-deploywebtier/"
-                />
-  </url><url>
-    <loc>//localhost:1313/7-createexternallbandasg/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/7-createexternallbandasg/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/7-createexternallbandasg/"
-                />
-  </url><url>
-    <loc>//localhost:1313/2-preparationsteps/2.7-createnatgateway/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/2-preparationsteps/2.7-createnatgateway/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/2-preparationsteps/2.7-createnatgateway/"
-                />
-  </url><url>
-    <loc>//localhost:1313/2-preparationsteps/2.8-createroutetable/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/2-preparationsteps/2.8-createroutetable/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/2-preparationsteps/2.8-createroutetable/"
-                />
-  </url><url>
-    <loc>//localhost:1313/8-demoweb/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/8-demoweb/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/8-demoweb/"
-                />
-  </url><url>
-    <loc>//localhost:1313/9-cleanupresources/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/9-cleanupresources/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/9-cleanupresources/"
-                />
-  </url><url>
-    <loc>//localhost:1313/2-preparationsteps/2.9-createsecuritygroup/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/2-preparationsteps/2.9-createsecuritygroup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/2-preparationsteps/2.9-createsecuritygroup/"
+                href="//localhost:1313/7-cleanupresources/"
                 />
   </url><url>
     <loc>//localhost:1313/categories/</loc>
