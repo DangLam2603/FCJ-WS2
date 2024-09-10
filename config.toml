@@ -20,7 +20,7 @@ home = [ "HTML", "RSS", "JSON"]
   
 [Languages]
 [Languages.en]
-title = "Start with Amazon VPC and AWS VPN Site-to-Site."
+title = ""
 weight = 1
 languageName = "English"
 
@@ -37,7 +37,7 @@ url = "https://www.facebook.com/groups/awsstudygroupfcj"
 weight = 20
 
 [Languages.vi]
-title = "Bắt đầu với Amazon VPC và AWS VPN Site to Site"
+title = ""
 weight = 2
 languageName = "Tiếng Việt"
 
