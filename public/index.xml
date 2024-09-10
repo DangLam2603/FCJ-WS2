@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Malware Protection for S3 using GuardDuty  on Start with Amazon VPC and AWS VPN Site-to-Site.</title>
+    <title>Malware Protection for S3 using GuardDuty</title>
     <link>//localhost:1313/</link>
-    <description>Recent content in Malware Protection for S3 using GuardDuty  on Start with Amazon VPC and AWS VPN Site-to-Site.</description>
+    <description>Recent content in Malware Protection for S3 using GuardDuty</description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
