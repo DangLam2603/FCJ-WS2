@@ -10,13 +10,13 @@ pre : " <b> 1. </b> "
 
 In this workshop, we will explore the capabilities of **AWS GuardDuty** in securing your S3 bucket by integrating it with SNS and triggering events in EventBridge to alert the Admin for immediate action.
 
-![GuardDuty example](/images/GD.png?featherlight=false&width=50pc)
+![GuardDuty example](/images/GD.png?featherlight=false&width=60pc)
 
 **This architecture includes**
 1. Enable Guard Duty for S3 malware protection.
 2. Set-up SNS, EventBridge rules for notification via email.
 3. Set-up IAM roles, KMS for security.
-4.  Export Findings to S3 Bucket.
+4. Export Findings to S3 Bucket.
 
 **Advantages of implementing this architecture:**
 1. **Security**: this architecture helps us alarm action imediately if there are un-protected files in the S3 Bucket also AWS environment in general.
