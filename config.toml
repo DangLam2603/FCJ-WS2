@@ -2,7 +2,6 @@
 # Change the default theme to be use when building the site with Hugo
 
 theme = "hugo-theme-learn"
-baseURL = "https://danglam2603.github.io/FCJ-WS2/"
 
 # For search functionality
 [outputs]
