@@ -137,7 +137,7 @@
 	"title": "Export Findings To S3 bucket",
 	"tags": [],
 	"description": "",
-	"content": "Overview In this section, we will config GuardDuty findings found on S3 bucket, encrypt it and export to another bucket for future analysis.\nContent: Setting Frequency Attach Policy to S3 Attach Policy to S3 Export Findings To S3 bucket "
+	"content": "Overview In this section, we will config GuardDuty findings found on S3 bucket, encrypt it and export to another bucket for future analysis.\nContent: Setting Frequency Attach Policy to S3 Attach Policy to KMS Export Findings To S3 bucket "
 },
 {
 	"uri": "//localhost:1313/6-demo/",

@@ -16,9 +16,9 @@ Trong workshop này, chúng tôi sẽ trình bày cách AWS GuardDuty có thể 
 #### Nội Dung
 
 1. [Giới thiệu](1-introduce/)
-2. [Các bước chuẩn bị](2-PreparationSteps/)
-3. [Amazon GuardDuty](3-GuardDuty/)
-4. [Thiết lập thông báo](4-SetUpNotification/)
-5. [Xuất kết quả đến S3](5-ExportFindingToS3/)
-6. [Demo](6-Demo/)
-7. [Dọn dẹp tài nguyên](7-CleanUpResources/)
+2. [Các bước chuẩn bị](2-preparationsteps/)
+3. [Amazon GuardDuty](3-guardduty/)
+4. [Thiết lập thông báo](4-setupnotification/)
+5. [Xuất kết quả đến S3](5-exportfindingtos3/)
+6. [Demo](6-demo/)
+7. [Dọn dẹp tài nguyên](7-cleanupresources/)

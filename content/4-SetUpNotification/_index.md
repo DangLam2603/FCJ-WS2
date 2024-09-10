@@ -12,5 +12,5 @@ In this section, we will trigger SNS to send and email notification everytime Gu
 
 ### Content
 
-1. [Create SNS](4.1-CreateSNS/)
-2. [Create EventBridge](4.2-CreateEventBridge/)
+1. [Create SNS](4.1-createsns/)
+2. [Create EventBridge](4.2-createeventbridge/)

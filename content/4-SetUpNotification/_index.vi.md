@@ -12,5 +12,5 @@ Trong phần này, chúng ta sẽ kích hoạt SNS để gửi thông báo qua e
 
 ### Nội Dung
 
-1. [Tạo SNS](4.1-CreateSNS/)
-2. [Tạo EventBridge](4.2-CreateEventBridge/)
+1. [Tạo SNS](4.1-createsns/)
+2. [Tạo EventBridge](4.2-createeventbridge/)

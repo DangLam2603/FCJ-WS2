@@ -10,6 +10,6 @@ Trong phần này, chúng ta sẽ thiết lập các điều cần thiết và q
 
 ### Nội dung
 
-- [Tạo khóa KMS](2.1-CreateKMSKey/)
-- [Tạo S3 Bucket](2.2-CreateS3Bucket/)
-- [Kích hoạt GuardDuty](2.3-EnableGuardDuty/)
+- [Tạo khóa KMS](2.1-createkmskey/)
+- [Tạo S3 Bucket](2.2-creates3bucket/)
+- [Kích hoạt GuardDuty](2.3-enableguardduty/)

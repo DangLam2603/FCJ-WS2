@@ -11,7 +11,7 @@ Trong phần này, chúng ta sẽ cấu hình kết quả tìm kiếm của Guar
 
 #### Nội Dung:
 
-1. [Cài Đặt Tần Suất](5.1-SettingsFrequecy/)
-2. [Gán Policy vào S3](5.2-AttachPolicyToS3/)
-3. [Gán Policy vào KMS](5.3-AttachPolicyToKMS/)
-4. [Xuất Kết Quả Tìm Kiếm Đến Bucket S3](5.4-EnableExport/)
+1. [Cài Đặt Tần Suất](5.1-settingsfrequency/)
+2. [Gán Policy vào S3](5.2-attachpolicytos3/)
+3. [Gán Policy vào KMS](5.3-attachpolicytokms/)
+4. [Xuất Kết Quả Tìm Kiếm Đến Bucket S3](5.4-enableexport/)
