@@ -25,7 +25,7 @@
 	"title": "Introduce to Amazon GuardDuty",
 	"tags": [],
 	"description": "",
-	"content": "Introducing Amazon GuardDuty Amazon GuardDuty is a threat detection service that continuously monitors your AWS environment for suspicious or malicious activity. It uses machine learning, monitoring detection, and integrated threat intelligence to detect and alert you about potential threats in AWS enviroment like Amazon S3, EC2 Instances.\nUse Cases:\nProtecting S3 Buckets: Detecting suspicious data, files or the storage of malware in S3. Protecting EC2 Instances: Identifying instances used for crypto mining or connecting to suspicious IP addresses. Monitoring IAM Role Activity: Spotting anomalies in role access, like attempts to escalate privileges or access sensitive resources. "
+	"content": "Introducing Amazon GuardDuty Amazon GuardDuty is a threat detection service that continuously monitors your AWS environment for suspicious or malicious activity. It uses machine learning, monitoring detection, and integrated threat intelligence to detect and alert you about potential threats in AWS enviroment like Amazon S3, EC2 Instances.\nUse Cases Protecting S3 Buckets: Detecting suspicious data, files or the storage of malware in S3. Protecting EC2 Instances: Identifying instances used for crypto mining or connecting to suspicious IP addresses. Monitoring IAM Role Activity: Spotting anomalies in role access, like attempts to escalate privileges or access sensitive resources. "
 },
 {
 	"uri": "//localhost:1313/1-introduce/",
