@@ -9,7 +9,7 @@ chapter : false
 
 #### Tổng Quan
 
-Trong workshop này, chúng tôi sẽ trình bày cách AWS GuardDuty có thể bảo vệ bucket S3 của bạn bằng cách nhận diện và khắc phục các tệp độc hại. Bạn sẽ học cách phát hiện các mối đe dọa tự động, xuất findings GuardDuty được mã hóa vào bucket S3 và thiết lập cảnh báo thời gian thực trong các khoảng thời gian chính sử dụng EventBridge và SNS để thông báo cho các quản trị viên.
+Trong workshop này, chúng tôi sẽ trình bày cách AWS GuardDuty có thể bảo vệ bucket S3 của bạn bằng cách nhận diện và khắc phục các tệp độc hại. Bạn sẽ học cách phát hiện các mối đe dọa tự động, xuất các lỗ hổng bảo mật mà GuardDuty được mã hóa vào bucket S3 và thiết lập cảnh báo thời gian thực trong các khoảng thời gian chính sử dụng EventBridge và SNS để thông báo cho các quản trị viên.
 
 ![Sơ đồ kiến trúc](/images/GD.png?width=60pc)
 
