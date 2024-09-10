@@ -36,10 +36,10 @@
 },
 {
 	"uri": "//localhost:1313/",
-	"title": "Malware Protection for S3 using GuardDuty ",
+	"title": "Real-time detection for S3 bucket with Amazon GuardDuty",
 	"tags": [],
 	"description": "",
-	"content": "Malware Protection for S3 with GuardDuty Overview In this workshop, we will demonstrate how AWS GuardDuty can secure your S3 bucket by identifying and remediating malicious files. You will learn how to automatically detect threats, export encrypted GuardDuty findings to S3 bucket and set up real-time alerts in prime periods using EventBridge and SNS to inform administrators.\nContent Introduction Preparation steps Amazon GuardDuty Set-up Notification Export Findings to S3 Demo Clean up resources "
+	"content": "Real-time detection for S3 bucket with Amazon GuardDuty Overview In this workshop, we will demonstrate how AWS GuardDuty can secure your S3 bucket by identifying and remediating malicious files. You will learn how to automatically detect threats, export encrypted GuardDuty findings to S3 bucket and set up real-time alerts in prime periods using EventBridge and SNS to inform administrators.\nContent Introduction Preparation steps Amazon GuardDuty Set-up Notification Export Findings to S3 Demo Clean up resources "
 },
 {
 	"uri": "//localhost:1313/5-exportfindingtos3/5.1-settingsfrequecy/",

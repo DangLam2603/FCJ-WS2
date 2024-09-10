@@ -1,11 +1,11 @@
 ---
-title : "Malware Protection for S3 using GuardDuty"
+title : "Real-time detection for S3 bucket with Amazon GuardDuty"
 date : "`r Sys.Date()`"
 weight : 1
 chapter : false
 ---
 
-# Malware Protection for S3 with GuardDuty
+# Real-time detection for S3 bucket with Amazon GuardDuty
 
 ### Overview
 

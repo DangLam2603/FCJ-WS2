@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Malware Protection for S3 using GuardDuty</title>
+    <title>Real-time detection for S3 bucket with Amazon GuardDuty on </title>
     <link>//localhost:1313/</link>
-    <description>Recent content in Malware Protection for S3 using GuardDuty</description>
+    <description>Recent content in Real-time detection for S3 bucket with Amazon GuardDuty on </description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />

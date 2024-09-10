@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Malware Protection cho S3 bằng GuardDuty on Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
+    <title>Thiết lập cảnh báo thời gian thực cho bucket S3 với Amazon GuardDuty on </title>
     <link>//localhost:1313/vi/</link>
-    <description>Recent content in Malware Protection cho S3 bằng GuardDuty on Bắt đầu với Amazon VPC và AWS VPN Site to Site</description>
+    <description>Recent content in Thiết lập cảnh báo thời gian thực cho bucket S3 với Amazon GuardDuty on </description>
     <generator>Hugo</generator>
     <language>vi</language>
     <atom:link href="//localhost:1313/vi/index.xml" rel="self" type="application/rss+xml" />

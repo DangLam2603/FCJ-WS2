@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Create SNS on Start with Amazon VPC and AWS VPN Site-to-Site.</title>
+    <title>Create SNS on </title>
     <link>//localhost:1313/4-setupnotification/4.1-createsns/</link>
-    <description>Recent content in Create SNS on Start with Amazon VPC and AWS VPN Site-to-Site.</description>
+    <description>Recent content in Create SNS on </description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="//localhost:1313/4-setupnotification/4.1-createsns/index.xml" rel="self" type="application/rss+xml" />

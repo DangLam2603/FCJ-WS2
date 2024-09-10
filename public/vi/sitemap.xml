@@ -50,18 +50,6 @@
                 href="//localhost:1313/vi/3-guardduty/3.1-malwareprotections3/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/"
-                />
-  </url><url>
     <loc>//localhost:1313/vi/2-preparationsteps/2.1-createkmskey/</loc>
     <xhtml:link
                 rel="alternate"
@@ -84,6 +72,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/4-setupnotification/4.1-createsns/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/2-preparationsteps/</loc>

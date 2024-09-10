@@ -1,11 +1,11 @@
 ---
-title : "Malware Protection cho S3 bằng GuardDuty"
+title : "Thiết lập cảnh báo thời gian thực cho bucket S3 với Amazon GuardDuty"
 date : "`r Sys.Date()`"
 weight : 1
 chapter : false
 ---
 
-# Bảo Vệ Malware cho S3 với GuardDuty
+# Thiết lập cảnh báo thời gian thực cho bucket S3 với Amazon GuardDuty
 
 #### Tổng Quan
 

@@ -20,7 +20,6 @@ home = [ "HTML", "RSS", "JSON"]
   
 [Languages]
 [Languages.en]
-title = ""
 weight = 1
 languageName = "English"
 
@@ -37,7 +36,6 @@ url = "https://www.facebook.com/groups/awsstudygroupfcj"
 weight = 20
 
 [Languages.vi]
-title = ""
 weight = 2
 languageName = "Tiếng Việt"
 
