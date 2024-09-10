@@ -16,9 +16,10 @@ In this workshop, we will demonstrate how AWS GuardDuty can secure your S3 bucke
 #### Content
 
 1. [Introduction](1-introduce/)
-2. [Preparation steps](2-PreparationSteps/)
-3. [Amazon GuardDuty ](3-GuardDuty/) 
-4. [Set-up Notification](4-SetUpNotification/)
-5. [Export Findings to S3](5-ExportFindingToS3/)
-6. [Demo](6-Demo/)
-7. [Clean up resources](7-CleanUpResources/)
+2. [Preparation steps](2-preparationsteps/)
+3. [Amazon GuardDuty](3-guardduty/) 
+4. [Set-up Notification](4-setupnotification/)
+5. [Export Findings to S3](5-exportfindingstos3/)
+6. [Demo](6-demo/)
+7. [Clean up resources](7-cleanupresources/)
+

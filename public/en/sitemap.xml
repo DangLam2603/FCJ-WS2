@@ -86,16 +86,16 @@
                 href="//localhost:1313/5-exportfindingtos3/5.1-settingsfrequecy/"
                 />
   </url><url>
-    <loc>//localhost:1313/6-demo/6.1-uploadmalwarefiletos3/</loc>
+    <loc>//localhost:1313/5-exportfindingtos3/5.2-attachpolicytos3/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/6-demo/6.1-uploadmalwarefiletos3/"
+                href="//localhost:1313/vi/5-exportfindingtos3/5.2-attachpolicytos3/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/6-demo/6.1-uploadmalwarefiletos3/"
+                href="//localhost:1313/5-exportfindingtos3/5.2-attachpolicytos3/"
                 />
   </url><url>
     <loc>//localhost:1313/4-setupnotification/4.2-createeventbridge/</loc>
@@ -134,18 +134,6 @@
                 href="//localhost:1313/2-preparationsteps/2.2-creates3bucket/"
                 />
   </url><url>
-    <loc>//localhost:1313/5-exportfindingtos3/5.2-attachpolicytos3/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-exportfindingtos3/5.2-attachpolicytos3/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-exportfindingtos3/5.2-attachpolicytos3/"
-                />
-  </url><url>
     <loc>//localhost:1313/2-preparationsteps/</loc>
     <xhtml:link
                 rel="alternate"
@@ -158,28 +146,16 @@
                 href="//localhost:1313/2-preparationsteps/"
                 />
   </url><url>
-    <loc>//localhost:1313/6-demo/6.2-checkemailnoification/</loc>
+    <loc>//localhost:1313/5-exportfindingtos3/5.3-attachpolicytokms/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/6-demo/6.2-checkemailnoification/"
+                href="//localhost:1313/vi/5-exportfindingtos3/5.3-attachpolicytokms/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/6-demo/6.2-checkemailnoification/"
-                />
-  </url><url>
-    <loc>//localhost:1313/6-demo/6.3-checkexportfindings3/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/6-demo/6.3-checkexportfindings3/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/6-demo/6.3-checkexportfindings3/"
+                href="//localhost:1313/5-exportfindingtos3/5.3-attachpolicytokms/"
                 />
   </url><url>
     <loc>//localhost:1313/3-guardduty/3.3-createroleproctection/</loc>
@@ -192,18 +168,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="//localhost:1313/3-guardduty/3.3-createroleproctection/"
-                />
-  </url><url>
-    <loc>//localhost:1313/5-exportfindingtos3/5.3-attachpolicytokms/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-exportfindingtos3/5.3-attachpolicytokms/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-exportfindingtos3/5.3-attachpolicytokms/"
                 />
   </url><url>
     <loc>//localhost:1313/2-preparationsteps/2.3-enableguardduty/</loc>

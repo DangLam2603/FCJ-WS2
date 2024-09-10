@@ -109,7 +109,7 @@
 	"title": "Malware protection for S3",
 	"tags": [],
 	"description": "",
-	"content": "What is Malware protection for S3? Malware Protection for S3 helps detect potential malware by scanning newly uploaded objects in your selected Amazon S3 bucket. When an object or a new version of an existing object is uploaded, GuardDuty automatically initiates a malware scan.\nThis is a new feature for GuardDuty from latest update on June,2024\nContent Enable Malware Protection for S3 Create Policy Protection Create IAM rule Enable Protection "
+	"content": "What is Malware protection for S3? Malware Protection for S3 helps detect potential malware by scanning newly uploaded objects in your selected Amazon S3 bucket. When an object or a new version of an existing object is uploaded, GuardDuty automatically initiates a malware scan. S S This is a new feature for GuardDuty from latest update on June,2024\nContent Enable Malware Protection for S3 Create Policy Protection Create IAM rule Enable Protection "
 },
 {
 	"uri": "//localhost:1313/5-exportfindingtos3/5.4-enableexport/",

@@ -2,28 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/vi/2-preparationsteps/2.1-createkmskey/</loc>
+    <loc>//localhost:1313/vi/5-exportfindingtos3/5.1-settingsfrequecy/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-preparationsteps/2.1-createkmskey/"
+                href="//localhost:1313/5-exportfindingtos3/5.1-settingsfrequecy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-preparationsteps/2.1-createkmskey/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/1-introduce/1.1-introduce-to-amazon-guardduty/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/1-introduce/1.1-introduce-to-amazon-guardduty/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/1-introduce/1.1-introduce-to-amazon-guardduty/"
+                href="//localhost:1313/vi/5-exportfindingtos3/5.1-settingsfrequecy/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/1-introduce/</loc>
@@ -38,28 +26,16 @@
                 href="//localhost:1313/vi/1-introduce/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/6-demo/6.1-uploadmalwarefiletos3/</loc>
+    <loc>//localhost:1313/vi/1-introduce/1.1-introduce-to-amazon-guardduty/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/6-demo/6.1-uploadmalwarefiletos3/"
+                href="//localhost:1313/1-introduce/1.1-introduce-to-amazon-guardduty/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/6-demo/6.1-uploadmalwarefiletos3/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/5-exportfindingtos3/5.1-settingsfrequecy/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-exportfindingtos3/5.1-settingsfrequecy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-exportfindingtos3/5.1-settingsfrequecy/"
+                href="//localhost:1313/vi/1-introduce/1.1-introduce-to-amazon-guardduty/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/3-guardduty/3.1-malwareprotections3/</loc>
@@ -74,18 +50,6 @@
                 href="//localhost:1313/vi/3-guardduty/3.1-malwareprotections3/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/4-setupnotification/4.1-createsns/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/4-setupnotification/4.1-createsns/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/4-setupnotification/4.1-createsns/"
-                />
-  </url><url>
     <loc>//localhost:1313/vi/</loc>
     <xhtml:link
                 rel="alternate"
@@ -98,16 +62,28 @@
                 href="//localhost:1313/vi/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/2-preparationsteps/2.3-enableguardduty/</loc>
+    <loc>//localhost:1313/vi/2-preparationsteps/2.1-createkmskey/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-preparationsteps/2.3-enableguardduty/"
+                href="//localhost:1313/2-preparationsteps/2.1-createkmskey/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-preparationsteps/2.3-enableguardduty/"
+                href="//localhost:1313/vi/2-preparationsteps/2.1-createkmskey/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/4-setupnotification/4.1-createsns/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/4-setupnotification/4.1-createsns/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/4-setupnotification/4.1-createsns/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/2-preparationsteps/</loc>
@@ -122,16 +98,16 @@
                 href="//localhost:1313/vi/2-preparationsteps/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/4-setupnotification/4.2-createeventbridge/</loc>
+    <loc>//localhost:1313/vi/5-exportfindingtos3/5.2-attachpolicytos3/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/4-setupnotification/4.2-createeventbridge/"
+                href="//localhost:1313/5-exportfindingtos3/5.2-attachpolicytos3/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/4-setupnotification/4.2-createeventbridge/"
+                href="//localhost:1313/vi/5-exportfindingtos3/5.2-attachpolicytos3/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/3-guardduty/3.2-createpolicyprotection/</loc>
@@ -146,30 +122,6 @@
                 href="//localhost:1313/vi/3-guardduty/3.2-createpolicyprotection/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-guardduty/3.3-createroleproctection/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-guardduty/3.3-createroleproctection/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-guardduty/3.3-createroleproctection/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/3-guardduty/3.4-enableprotection/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-guardduty/3.4-enableprotection/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-guardduty/3.4-enableprotection/"
-                />
-  </url><url>
     <loc>//localhost:1313/vi/2-preparationsteps/2.2-creates3bucket/</loc>
     <xhtml:link
                 rel="alternate"
@@ -182,28 +134,16 @@
                 href="//localhost:1313/vi/2-preparationsteps/2.2-creates3bucket/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/5-exportfindingtos3/5.2-attachpolicytos3/</loc>
+    <loc>//localhost:1313/vi/4-setupnotification/4.2-createeventbridge/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/5-exportfindingtos3/5.2-attachpolicytos3/"
+                href="//localhost:1313/4-setupnotification/4.2-createeventbridge/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/5-exportfindingtos3/5.2-attachpolicytos3/"
-                />
-  </url><url>
-    <loc>//localhost:1313/vi/6-demo/6.2-checkemailnoification/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/6-demo/6.2-checkemailnoification/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/6-demo/6.2-checkemailnoification/"
+                href="//localhost:1313/vi/4-setupnotification/4.2-createeventbridge/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/3-guardduty/</loc>
@@ -218,18 +158,6 @@
                 href="//localhost:1313/vi/3-guardduty/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/6-demo/6.3-checkexportfindings3/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/6-demo/6.3-checkexportfindings3/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/6-demo/6.3-checkexportfindings3/"
-                />
-  </url><url>
     <loc>//localhost:1313/vi/5-exportfindingtos3/5.3-attachpolicytokms/</loc>
     <xhtml:link
                 rel="alternate"
@@ -242,6 +170,30 @@
                 href="//localhost:1313/vi/5-exportfindingtos3/5.3-attachpolicytokms/"
                 />
   </url><url>
+    <loc>//localhost:1313/vi/2-preparationsteps/2.3-enableguardduty/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-preparationsteps/2.3-enableguardduty/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-preparationsteps/2.3-enableguardduty/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/3-guardduty/3.3-createroleproctection/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-guardduty/3.3-createroleproctection/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-guardduty/3.3-createroleproctection/"
+                />
+  </url><url>
     <loc>//localhost:1313/vi/5-exportfindingtos3/5.4-enableexport/</loc>
     <xhtml:link
                 rel="alternate"
@@ -252,6 +204,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/5-exportfindingtos3/5.4-enableexport/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/3-guardduty/3.4-enableprotection/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-guardduty/3.4-enableprotection/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-guardduty/3.4-enableprotection/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/4-setupnotification/</loc>
