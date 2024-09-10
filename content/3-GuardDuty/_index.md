@@ -18,6 +18,6 @@ This is a new feature for GuardDuty from latest update on June,2024
 
 1. [Enable Malware Protection for S3](3.1-malwareprotections3/)
 2. [Create Policy Protection](3.2-createpolicyprotection/)
-3. [Create IAM rule](3.3-createroleprotection/)
+3. [Create IAM rule](3.3-createroleproctection/)
 4. [Enable Protection](3.4-enableprotection/)
 

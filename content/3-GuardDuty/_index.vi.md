@@ -17,5 +17,5 @@ Bảo Vệ S3 giúp phát hiện phần mềm độc hại tiềm ẩn bằng c�
 
 1. [Kích Hoạt Malware Protection cho S3](3.1-malwareprotections3/)
 2. [Tạo Chính Sách Bảo Vệ](3.2-createpolicyprotection/)
-3. [Tạo Quy Tắc IAM](3.3-createroleprotection/)
+3. [Tạo Quy Tắc IAM](3.3-createroleproctection/)
 4. [Kích Hoạt Bảo Vệ](3.4-enableprotection/)
