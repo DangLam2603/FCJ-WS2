@@ -32,7 +32,7 @@
 	"title": "Malware Protection cho S3 bằng GuardDuty",
 	"tags": [],
 	"description": "",
-	"content": "Bảo Vệ Malware cho S3 với GuardDuty Tổng Quan Trong workshop này, chúng tôi sẽ trình bày cách AWS GuardDuty có thể bảo vệ bucket S3 của bạn bằng cách nhận diện và khắc phục các tệp độc hại. Bạn sẽ học cách phát hiện các mối đe dọa tự động, xuất các phát hiện GuardDuty được mã hóa vào bucket S3 và thiết lập cảnh báo thời gian thực trong các khoảng thời gian chính sử dụng EventBridge và SNS để thông báo cho các quản trị viên.\nNội Dung Giới thiệu Các bước chuẩn bị Amazon GuardDuty Thiết lập thông báo Xuất kết quả đến S3 Demo Dọn dẹp tài nguyên "
+	"content": "Bảo Vệ Malware cho S3 với GuardDuty Tổng Quan Trong workshop này, chúng tôi sẽ trình bày cách AWS GuardDuty có thể bảo vệ bucket S3 của bạn bằng cách nhận diện và khắc phục các tệp độc hại. Bạn sẽ học cách phát hiện các mối đe dọa tự động, xuất findings GuardDuty được mã hóa vào bucket S3 và thiết lập cảnh báo thời gian thực trong các khoảng thời gian chính sử dụng EventBridge và SNS để thông báo cho các quản trị viên.\nNội Dung Giới thiệu Các bước chuẩn bị Amazon GuardDuty Thiết lập thông báo Xuất kết quả đến S3 Demo Dọn dẹp tài nguyên "
 },
 {
 	"uri": "//localhost:1313/vi/2-preparationsteps/2.1-createkmskey/",
