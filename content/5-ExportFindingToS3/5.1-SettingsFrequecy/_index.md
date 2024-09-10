@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 5.1 </b> "
 ---
 
-#### Setting GuardDuty 
+### Setting GuardDuty 
 In this part, we will config frequency allow EventBrigde to export findings after amount of time.
 
 1. Navigate to the GuardDuty left sidebar, choose **Settings**

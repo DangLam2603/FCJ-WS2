@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 5.1 </b> "
 ---
 
-#### Cài Đặt GuardDuty
+### Cài Đặt GuardDuty
 Trong phần này, chúng ta sẽ cấu hình tần suất cho phép EventBridge xuất các phát hiện sau một khoảng thời gian.
 
 1. Điều hướng đến thanh bên trái của GuardDuty, chọn **Cài đặt**

@@ -5,7 +5,7 @@ weight : 3
 chapter : false
 pre : " <b> 2.3 </b> "
 ---
-#### Overview
+### Overview
 In this section, we will dive in enable Amazon GuardDuty in your AWS environment.
 
 1. In the AWS Console navigation bar, type **GuardDuty** and select the first result.

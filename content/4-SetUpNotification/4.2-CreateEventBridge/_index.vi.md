@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 4.2 </b> "
 ---
 
-## Tổng Quan
+### Tổng Quan
 Trong phần này, chúng ta sẽ triển khai kiến trúc dựa trên sự kiện để theo dõi các phát hiện từ Amazon GuardDuty theo thời gian thực. Sử dụng Amazon EventBridge, chúng ta sẽ tạo các quy tắc kích hoạt các hành động cụ thể khi GuardDuty phát hiện các mối đe dọa hoặc lỗ hổng tiềm ẩn.
 
 1. Trong thanh tìm kiếm AWS, gõ **EventBridge** và chọn kết quả đầu tiên.

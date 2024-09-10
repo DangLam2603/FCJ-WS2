@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 3.2 </b> "
 ---
 
-## Tổng Quan
+### Tổng Quan
 Trong bước trước, chúng ta đã tạo và chỉnh sửa bảo vệ phần mềm độc hại và nhận được một chính sách JSON. Bây giờ, hãy tùy chỉnh Chính sách IAM để làm cho điều này hoạt động!
 
 1. Trong giao diện AWS Console, tìm kiếm và chọn **IAM** 

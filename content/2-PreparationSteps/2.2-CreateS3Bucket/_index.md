@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 2.2 </b> "
 ---
 
-## Create S3 Bucket
+### Create S3 Bucket
 1. Access the AWS interface, find the **S3 service** and then click to select
 2. In the S3 interface, click **Create bucket**
 3. In the Create bucket interface:

@@ -6,10 +6,10 @@ chapter : false
 pre : " <b> 6. </b> "
 ---
 
-#### Tổng Quan
+### Tổng Quan
 Bây giờ bạn đã cấu hình xong mọi thứ, hãy cùng đi qua các bản demo và xem cách nó hoạt động thực tế.
 
-#### Tải các tệp nghi ngờ lên S3
+### Tải các tệp nghi ngờ lên S3
 {{% notice warning %}}
 Chỉ dành cho mục đích demo! Bạn nên tránh tải lên các tệp nghi ngờ vào bucket S3 của bạn, vì điều này có thể dẫn đến việc dịch vụ bị ngừng hoạt động hoặc tồi tệ hơn. Trong hướng dẫn này, tôi sẽ sử dụng một tệp thử nghiệm Malware. Bạn có thể theo dõi và tải xuống từ [liên kết này](https://www.eicar.org/download-anti-malware-testfile/#top).
 {{% /notice %}}
@@ -29,11 +29,11 @@ Chỉ dành cho mục đích demo! Bạn nên tránh tải lên các tệp nghi 
 4. Trong Console GuardDuty, bạn có thể tìm thấy tất cả các kết quả mà GuardDuty phát hiện ở đây.
 ![](/images/6.Demo/4.jpg?width=60pc)
 
-#### Thông Báo
+### Thông Báo
 1. Sau khi phát hiện kết quả, bạn sẽ nhận được email mà bạn đã cấu hình trước đó.
 ![](/images/6.Demo/5.jpg?width=60pc)
 
-#### Xuất S3 Bucket 
+### Xuất S3 Bucket 
 1. Điều hướng đến bucket ```s3-malware-gd```
 ![](/images/6.Demo/6.jpg?width=60pc)
 2. Bạn có thể tìm thấy các kết quả trong bucket đã được mã hóa ở đây

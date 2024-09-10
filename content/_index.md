@@ -7,13 +7,13 @@ chapter : false
 
 # Malware Protection for S3 with GuardDuty
 
-#### Overview
+### Overview
 
 In this workshop, we will demonstrate how AWS GuardDuty can secure your S3 bucket by identifying and remediating malicious files. You will learn how to automatically detect threats, export encrypted GuardDuty findings to S3 bucket and set up real-time alerts in prime periods using EventBridge and SNS to inform administrators.
 
 ![Architecture diagram](/images/GD.png?width=60pc)
 
-#### Content
+### Content
 
 1. [Introduction](1-introduce/)
 2. [Preparation steps](2-preparationsteps/)

@@ -5,10 +5,10 @@ weight : 6
 chapter : false
 pre : " <b> 6. </b> "
 ---
-#### Overview
+### Overview
 Now you have been configurated everything, let's walk through demos and see how it actual work.
 
-#### Upload Malware File to S3
+### Upload Malware File to S3
 {{% notice warning %}}
 For demonstration purposes only! You should avoid uploading suspicious files to your S3 bucket, as it could lead to service termination or worse. In this tutorial, I'll be using a Malware Testfile. You can follow along and download it from [this](https://www.eicar.org/download-anti-malware-testfile/#top) link
 {{% /notice %}}
@@ -28,11 +28,11 @@ For demonstration purposes only! You should avoid uploading suspicious files to 
 1. In the GuardDuty Console, You can find all the findings that GuardDuty detected here.
 ![](/images/6.Demo/4.jpg?width=60pc)
 
-#### Notification
+### Notification
 1. After detected a findings, you will recieve an email that you configured before.
 ![](/images/6.Demo/5.jpg?width=60pc)
 
-#### S3 Export Logs 
+### S3 Export Logs 
 1. Navigate to ```s3-malware-gd``` bucket
 ![](/images/6.Demo/6.jpg?width=60pc)
 2. You can found the bucket findings that have been encryted here 

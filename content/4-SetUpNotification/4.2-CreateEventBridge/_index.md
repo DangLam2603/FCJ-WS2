@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 4.2 </b> "
 ---
 
-## Overview
+### Overview
 In this section, we will implement an event-driven architecture to monitor findings from Amazon GuardDuty in real time. Using Amazon EventBridge, we will create rules that trigger specific actions whenever GuardDuty detects potential threats or vulnerabilities
 
 1. In the AWS search bar, type **EventBridge** and select the first one.

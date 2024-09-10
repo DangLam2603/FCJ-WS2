@@ -6,6 +6,6 @@ chapter : false
 pre : " <b> 5.4 </b> "
 ---
 
-#### Overview
+### Overview
 Now you are set-up, let go back to GuardDuty page and save the configuration. After the configuration successfully, you will recieve a message likewise.
 ![set-up](/images/5.%20Export%20Findings/5.15.jpg?width=60pc)

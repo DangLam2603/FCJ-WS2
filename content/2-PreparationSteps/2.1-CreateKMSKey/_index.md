@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 2.1 </b> "
 ---
 
-## Create KMS encrypted keys
+### Create KMS encrypted keys
 
 1. Access your AWS account and Search for KMS (Key Management Service).
 2. Right-click to **Create Key**

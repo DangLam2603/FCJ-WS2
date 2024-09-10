@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 2.2 </b> "
 ---
 
-## Tạo S3 Bucket
+### Tạo S3 Bucket
 1. Truy cập giao diện AWS, tìm **Dịch vụ S3** và nhấp chọn
 2. Trong giao diện S3, nhấp vào **Create bucket** (Tạo Bucket)
 3. Trong giao diện Tạo Bucket:

@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 3.2 </b> "
 ---
 
-## Overview
+### Overview
 In the previous step, we have create and modify the malware protection and recieve a JSON Policy. Now let custom IAM Policy to make this works!
 
 1. In the AWS Console interface, search and select **IAM** 

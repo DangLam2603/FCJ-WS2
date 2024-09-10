@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 5.2 </b> "
 ---
 
-#### Modify S3 bucket permission
+### Modify S3 bucket permission
 1. Navigate back to **Findings export options**, and click on **Configure now** in the S3 bucket section
 
 2. In the **Export Findings** interface:

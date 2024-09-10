@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 5.3 </b> "
 ---
 
-#### Gán Policy cho KMS
+### Gán Policy cho KMS
 
 1. Quay lại **Attach Policy** trên trang GuardDuty, nhấp vào **View policy for KMS key**.
 ![S3](/images/5.%20Export%20Findings/5.11.jpg?width=60pc)

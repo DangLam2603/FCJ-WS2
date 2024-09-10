@@ -6,10 +6,10 @@ chapter : false
 pre : " <b> 4.1 </b> "
 ---
 
-## Create SNS to send email
+### Create SNS to send email
 In this section, we will config a Email service using SNS topic.
 
-#### Create Topic
+### Create Topic
 1. Navigate to **AWS console**, Search for **SNS** sevice.
 ![SNS](/images/4.Notification/SNS/4.1.1-sns.jpg?width=60pc)
 
@@ -22,7 +22,7 @@ In this section, we will config a Email service using SNS topic.
 4. Then, Click **Create Topic**
 ![SNS](/images/4.Notification/SNS/4.1.4.jpg?width=60pc)
 
-#### Create and Subscribe subscription
+### Create and Subscribe subscription
 
 1. Navigate to left sidebar and select **Topic**:
    - Choose the following topic that we just created
@@ -40,7 +40,7 @@ In this section, we will config a Email service using SNS topic.
 After you create subscription, the following status will be pending to confirm. You will recieve a confirmation email base on the one you provide above.
 {{% /notice %}} 
 ![SNS](/images/4.Notification/SNS/4.1.10.jpg?width=60pc)
-#### Confirm Email
+### Confirm Email
 1. Email Confirm successully.
 ![SNS](/images/4.Notification/SNS/4.1.11.jpg?width=60pc)
 2. Status Update

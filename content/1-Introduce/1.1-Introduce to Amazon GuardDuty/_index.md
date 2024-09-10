@@ -5,7 +5,7 @@ weight : 1
 chapter : false
 pre : " <b> 1.1 </b> "
 ---
-###  Introducing Amazon GuardDuty
+####  Introducing Amazon GuardDuty
 
 
 **Amazon GuardDuty** is a threat detection service that continuously monitors your AWS environment for suspicious or malicious activity. It uses machine learning, monitoring detection, and integrated threat intelligence to detect and alert you about potential threats in AWS enviroment like Amazon S3, EC2 Instances.

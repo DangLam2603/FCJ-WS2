@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 5.3 </b> "
 ---
 
-#### Attach Policy to KMS
+### Attach Policy to KMS
 
 1. Navigate back to **Attach Policy** on GuardDuty page, click on **View policy for KMS key**.
 ![S3](/images/5.%20Export%20Findings/5.11.jpg?width=60pc)

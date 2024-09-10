@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 2.1 </b> "
 ---
 
-## Tạo khóa mã hóa KMS
+### Tạo khóa mã hóa KMS
 
 1. Truy cập vào tài khoản AWS của bạn và tìm kiếm KMS (Key Management Service).
 2. Nhấp chuột phải vào **Create Key** (Tạo Khóa)

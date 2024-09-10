@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 3.3 </b> "
 ---
 
-## Tổng Quan
+### Tổng Quan
 Trong bước tiếp theo, chúng ta sẽ tạo một vai trò IAM dựa trên chính sách trước đó để sử dụng thêm nhằm chỉ định Quyền trong GuardDuty.
 
 1. Trong giao diện **IAM**, chọn **Role** từ thanh điều hướng bên trái và **Create Role**

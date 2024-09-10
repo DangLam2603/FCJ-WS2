@@ -5,7 +5,7 @@ weight : 7
 chapter : false
 pre : " <b> 7. </b> "
 ---
-## Clean Up Resources
+### Clean Up Resources
 
 We will proceed to delete the resources:
 1. Delete **EventBridge**

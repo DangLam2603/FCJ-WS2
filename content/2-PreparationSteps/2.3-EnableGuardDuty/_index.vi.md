@@ -5,7 +5,7 @@ weight : 3
 chapter : false
 pre : " <b> 2.3 </b> "
 ---
-#### Tổng quan
+### Tổng quan
 Trong phần này, chúng ta sẽ tìm hiểu cách kích hoạt Amazon GuardDuty trong môi trường AWS của bạn.
 
 1. Trên thanh điều hướng của AWS Console, gõ **GuardDuty** và chọn kết quả đầu tiên.

@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 5.2 </b> "
 ---
 
-#### Chỉnh sửa quyền bucket S3
+### Chỉnh sửa quyền bucket S3
 1. Quay lại **Findings export options**, và nhấp vào **Configure now** trong phần bucket S3.
 
 2. Trong giao diện **Export Findings**:

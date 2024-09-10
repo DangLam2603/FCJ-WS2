@@ -6,10 +6,10 @@ chapter : false
 pre : " <b> 4.1 </b> "
 ---
 
-## Tạo SNS để gửi email
+### Tạo SNS để gửi email
 Trong phần này, chúng ta sẽ cấu hình dịch vụ Email sử dụng chủ đề SNS.
 
-#### Tạo Chủ Đề
+### Tạo Chủ Đề
 1. Điều hướng đến **AWS console**, Tìm kiếm dịch vụ **SNS**.
 ![SNS](/images/4.Notification/SNS/4.1.1-sns.jpg?width=60pc)
 
@@ -22,7 +22,7 @@ Trong phần này, chúng ta sẽ cấu hình dịch vụ Email sử dụng ch�
 4. Sau đó, nhấp **Tạo Chủ đề**
 ![SNS](/images/4.Notification/SNS/4.1.4.jpg?width=60pc)
 
-#### Tạo và Đăng Ký đăng ký
+### Tạo và Đăng Ký đăng ký
 
 1. Điều hướng đến thanh bên trái và chọn **Chủ đề**:
    - Chọn chủ đề mà chúng ta vừa tạo
@@ -40,7 +40,7 @@ Trong phần này, chúng ta sẽ cấu hình dịch vụ Email sử dụng ch�
 Sau khi bạn tạo đăng ký, trạng thái tiếp theo sẽ chờ xác nhận. Bạn sẽ nhận được một email xác nhận dựa trên email mà bạn cung cấp ở trên.
 {{% /notice %}} 
 ![SNS](/images/4.Notification/SNS/4.1.10.jpg?width=60pc)
-#### Xác Nhận Email
+### Xác Nhận Email
 1. Email đã được xác nhận thành công.
 ![SNS](/images/4.Notification/SNS/4.1.11.jpg?width=60pc)
 2. Cập nhật trạng thái
