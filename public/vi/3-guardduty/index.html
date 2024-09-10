@@ -12,21 +12,21 @@
     <title>Bảo Vệ S3 khỏi phần mềm độc hại :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1725963596" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725963596" rel="stylesheet">
-    <link href="/css/hybrid.css?1725963596" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725963596" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725963596" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725963596" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725963596" rel="stylesheet">
-    <link href="/css/theme.css?1725963596" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725963596" rel="stylesheet">
+    <link href="/css/nucleus.css?1725969193" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725969193" rel="stylesheet">
+    <link href="/css/hybrid.css?1725969193" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725969193" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725969193" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725969193" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725969193" rel="stylesheet">
+    <link href="/css/theme.css?1725969193" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725969193" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725963596" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725969193" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725963596"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725969193"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -86,14 +86,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725963596"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725963596"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725969193"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725969193"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725963596"></script>
+<script type="text/javascript" src="/js/search.js?1725969193"></script>
 
     
   </div>
@@ -358,13 +358,13 @@
  
   
     
-    <li data-nav-id="/vi/3-guardduty/3.2-createpolicyprotection/" title="Tạo Chính Sách Bảo Vệ IAM" class="dd-item 
+    <li data-nav-id="/vi/3-guardduty/3.2-createpolicyprotection/" title="Tạo Policy Bảo Vệ IAM" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-guardduty/3.2-createpolicyprotection/">
-           <b> 3.2 </b> Tạo Chính Sách Bảo Vệ IAM
+           <b> 3.2 </b> Tạo Policy Bảo Vệ IAM
           
             <i class="fas fa-check read-icon"></i>
           
@@ -386,13 +386,13 @@
  
   
     
-    <li data-nav-id="/vi/3-guardduty/3.3-createroleproctection/" title="Tạo Vai Trò Bảo Vệ IAM" class="dd-item 
+    <li data-nav-id="/vi/3-guardduty/3.3-createroleproctection/" title="Tạo IAM Role Bảo Vệ " class="dd-item 
         
         
         
         ">
       <a href="/vi/3-guardduty/3.3-createroleproctection/">
-           <b> 3.3 </b> Tạo Vai Trò Bảo Vệ IAM
+           <b> 3.3 </b> Tạo IAM Role Bảo Vệ 
           
             <i class="fas fa-check read-icon"></i>
           
@@ -414,13 +414,13 @@
  
   
     
-    <li data-nav-id="/vi/3-guardduty/3.4-enableprotection/" title="Kích Hoạt Bảo Vệ Malware" class="dd-item 
+    <li data-nav-id="/vi/3-guardduty/3.4-enableprotection/" title="Kích Hoạt Malware Protection" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-guardduty/3.4-enableprotection/">
-           <b> 3.4 </b> Kích Hoạt Bảo Vệ Malware
+           <b> 3.4 </b> Kích Hoạt Malware Protection
           
             <i class="fas fa-check read-icon"></i>
           
@@ -508,13 +508,13 @@
  
   
     
-    <li data-nav-id="/vi/4-setupnotification/4.2-createeventbridge/" title="Tạo Sự Kiện cho GuardDuty" class="dd-item 
+    <li data-nav-id="/vi/4-setupnotification/4.2-createeventbridge/" title="Tạo Sự Kiện Cho GuardDuty" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-setupnotification/4.2-createeventbridge/">
-           <b> 4.2 </b> Tạo Sự Kiện cho GuardDuty
+           <b> 4.2 </b> Tạo Sự Kiện Cho GuardDuty
           
             <i class="fas fa-check read-icon"></i>
           
@@ -887,8 +887,12 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#bảo-vệ-s3-khỏi-phần-mềm-độc-hại-là-gì">Bảo Vệ S3 khỏi phần mềm độc hại là gì?</a></li>
-    <li><a href="#nội-dung">Nội Dung</a></li>
+    <li>
+      <ul>
+        <li><a href="#bảo-vệ-s3-khỏi-phần-mềm-độc-hại-là-gì">Bảo Vệ S3 khỏi phần mềm độc hại là gì?</a></li>
+        <li><a href="#nội-dung">Nội Dung</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -914,13 +918,13 @@
 
 
 
-	<h2 id="bảo-vệ-s3-khỏi-phần-mềm-độc-hại-là-gì">Bảo Vệ S3 khỏi phần mềm độc hại là gì?</h2>
-<p>Bảo Vệ S3 giúp phát hiện phần mềm độc hại tiềm ẩn bằng cách quét các đối tượng mới tải lên trong bucket Amazon S3 được chọn của bạn. Khi một đối tượng hoặc một phiên bản mới của đối tượng hiện có được tải lên, GuardDuty tự động khởi tạo quét phần mềm độc hại.</p>
+	<h3 id="bảo-vệ-s3-khỏi-phần-mềm-độc-hại-là-gì">Bảo Vệ S3 khỏi phần mềm độc hại là gì?</h3>
+<p>Malware Protection S3 giúp phát hiện các phần mềm độc hại tiềm ẩn bằng cách quét các đối tượng mới tải lên trong bucket Amazon S3 được chọn của bạn. Khi một đối tượng hoặc một phiên bản mới của đối tượng hiện có được tải lên, GuardDuty tự động khởi tạo quét phần mềm độc hại.</p>
 
 <div class="notices info" ><p>Đây là tính năng mới của GuardDuty từ bản cập nhật gần nhất vào tháng 6 năm 2024</p>
 </div>
 
-<h2 id="nội-dung">Nội Dung</h2>
+<h3 id="nội-dung">Nội Dung</h3>
 <ol>
 <li><a href="/vi/3-guardduty/3.1-malwareprotections3/">Kích Hoạt Malware Protection cho S3</a></li>
 <li><a href="/vi/3-guardduty/3.2-createpolicyprotection/">Tạo Chính Sách Bảo Vệ</a></li>
@@ -1337,19 +1341,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725963596"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725963596"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725963596"></script>
-    <script src="/js/jquery.sticky.js?1725963596"></script>
-    <script src="/js/featherlight.min.js?1725963596"></script>
-    <script src="/js/highlight.pack.js?1725963596"></script>
+    <script src="/js/clipboard.min.js?1725969193"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725969193"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725969193"></script>
+    <script src="/js/jquery.sticky.js?1725969193"></script>
+    <script src="/js/featherlight.min.js?1725969193"></script>
+    <script src="/js/highlight.pack.js?1725969193"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725963596"></script>
-    <script src="/js/learn.js?1725963596"></script>
-    <script src="/js/hugo-learn.js?1725963596"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725969193"></script>
+    <script src="/js/learn.js?1725969193"></script>
+    <script src="/js/hugo-learn.js?1725969193"></script>
 
-    <link href="/mermaid/mermaid.css?1725963596" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725963596"></script>
+    <link href="/mermaid/mermaid.css?1725969193" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725969193"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
