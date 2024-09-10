@@ -1,5 +1,5 @@
 ---
-title : "Malware Protection for S3 using GuardDuty "
+title : "Malware Protection for S3 using GuardDuty"
 date : "`r Sys.Date()`"
 weight : 1
 chapter : false
