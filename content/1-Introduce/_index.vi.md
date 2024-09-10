@@ -1,23 +1,24 @@
 ---
-title : "Giới thiệu"
+title : "Giới thiệu"
 date :  "`r Sys.Date()`" 
 weight : 1 
 chapter : false
 pre : " <b> 1. </b> "
 ---
 
-#### Giới thiệu kiến trúc 3 tầng
+## Giới thiệu về kiến trúc
 
-**Kiến trúc ba tầng** là cách triển khai phổ biến nhất của kiến ​​trúc nhiều tầng, bao gồm một tầng giao diện, tầng logic và tầng dữ liệu. Hình minh họa sau đây cho thấy một ví dụ về một ứng dụng ba tầng chung đơn giản.
+Trong buổi workshop này, chúng ta sẽ khám phá khả năng của **AWS GuardDuty** trong việc bảo vệ S3 bucket của bạn bằng cách tích hợp với SNS và kích hoạt các sự kiện trong EventBridge để cảnh báo cho Admin hành động kịp thời.
 
-![Three tier example](/images/1.Introduction/KMS/1.1.1-create%20KMS.jpg?featherlight=false&width=50pc)
+![GuardDuty example](/images/GD.png?featherlight=false&width=50pc)
 
-**Kiến trúc 3 tầng bao gồm**:
-- Presentation tier / Web Tier: tầng giao diện để người dùng có thể tương tác trực tiếp (vd: trang web hay UI của ứng dụng mobile).
-- Logic tier / App tier: tầng để xử lý logic và thực thi những câu lệnh của người dùng.
-- Data tier: tầng lưu trữ dữ liệu của app.
+**Kiến trúc này bao gồm**:
+- Kích hoạt GuardDuty để bảo vệ S3 khỏi phần mềm độc hại.
+- Thiết lập SNS, các quy tắc EventBridge để nhận thông báo qua email.
+- Thiết lập IAM roles, KMS để bảo mật.
+- Xuất kết quả tìm được vào S3 Bucket.
 
-**Lợi ích của việc sử dụng kiến trúc 3 tầng:**
-- Tính mô-đun: kiến trúc này giúp ta module hóa app thành các phần độc lập nhau. Điều này giúp team dev có thể tập trung phát triển từng tầng của app, dẫn đến các thay đổi được áp dụng nhanh nhất có thể. Ngoài ra, nó còn giúp việc khôi phục app diễn ra nhanh chóng hơn sau khi server bị down do lỗi hay thảm họa nhờ vào việc có thể khoanh vùng và sửa chữa phần bị lỗi.
-- Tính sẵn sàng cao: vì kiến trúc triển khai ứng dụng trên nhiều Availability Zones, các AZ được thiết kế để không xảy ra sự cố ảnh hưởng đồng thời 2 AZ một lúc (fault isolation).
-- Tính dự phòng cao: AWS cho phép triển khai bản stand by hay replica của primary database trên AZ còn lại. Nếu database chính bị down, ứng dụng vẫn có thể truy xuất dữ liệu từ replica database.
+**Lợi ích của việc triển khai kiến trúc này:**
+- **Bảo mật**: kiến trúc này giúp chúng ta cảnh báo ngay lập tức nếu có các tệp không được bảo vệ trong S3 Bucket cũng như môi trường AWS nói chung.
+- **Phát hiện mối đe dọa theo thời gian thực**: AWS GuardDuty liên tục giám sát S3 bucket của bạn để phát hiện các truy cập độc hại hoặc không được phép, giúp phát hiện các mối đe dọa theo thời gian thực mà không cần can thiệp thủ công.
+- **Kích hoạt sự kiện tự động**: Khi GuardDuty phát hiện một sự kiện đáng ngờ, nó sẽ kích hoạt sự kiện trong Amazon EventBridge, cho phép xử lý tự động các phát hiện này. Trong buổi workshop này, chúng ta sẽ gửi email tùy chỉnh qua SNS.

@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tạo Target group cho App Tier :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
+    <title>Gán Policy cho S3 :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1725940413" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725940413" rel="stylesheet">
-    <link href="/css/hybrid.css?1725940413" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725940413" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725940413" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725940413" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725940413" rel="stylesheet">
-    <link href="/css/theme.css?1725940413" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725940413" rel="stylesheet">
+    <link href="/css/nucleus.css?1725947921" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725947921" rel="stylesheet">
+    <link href="/css/hybrid.css?1725947921" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725947921" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725947921" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725947921" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725947921" rel="stylesheet">
+    <link href="/css/theme.css?1725947921" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725947921" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725940413" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725947921" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725940413"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725947921"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -43,7 +43,7 @@
 
   <div id="header-wrapper">
     <div id="header">
-      <a id="logo" href="/Workshop-02/">
+      <a id="logo" href="/">
   <svg
     id="Layer_1"
     data-name="Layer 1"
@@ -86,14 +86,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725940413"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725940413"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725947921"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725947921"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725940413"></script>
+<script type="text/javascript" src="/js/search.js?1725947921"></script>
 
     
   </div>
@@ -111,13 +111,13 @@
  
   
     
-    <li data-nav-id="/vi/1-introduce/" title="Giới thiệu" class="dd-item 
+    <li data-nav-id="/vi/1-introduce/" title="Giới thiệu" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-introduce/">
-           <b> 1. </b> Giới thiệu
+           <b> 1. </b> Giới thiệu
           
             <i class="fas fa-check read-icon"></i>
           
@@ -142,13 +142,13 @@
  
   
     
-    <li data-nav-id="/vi/1-introduce/1.1-introduce-to-amazon-guardduty/" title="Giải thích luồng chạy" class="dd-item 
+    <li data-nav-id="/vi/1-introduce/1.1-introduce-to-amazon-guardduty/" title="Giới thiệu về Amazon GuardDuty" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-introduce/1.1-introduce-to-amazon-guardduty/">
-           <b> 1.1 </b> Giải thích luồng chạy
+           <b> 1.1 </b> Giới thiệu về Amazon GuardDuty
           
             <i class="fas fa-check read-icon"></i>
           
@@ -208,41 +208,13 @@
  
   
     
-    <li data-nav-id="/vi/2-preparationsteps/2.1-createkmskey/" title="Clone code từ GitHub" class="dd-item 
+    <li data-nav-id="/vi/2-preparationsteps/2.1-createkmskey/" title="Tạo khóa KMS" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-preparationsteps/2.1-createkmskey/">
-           <b> 2.1 </b> Clone code từ GitHub
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-preparationsteps/2.3-enableguardduty/" title="Các bước chuẩn bị" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-preparationsteps/2.3-enableguardduty/">
-           <b> 2. </b> Các bước chuẩn bị
+           <b> 2.1 </b> Tạo khóa KMS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -283,6 +255,34 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-preparationsteps/2.3-enableguardduty/" title="Kích hoạt GuardDuty" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-preparationsteps/2.3-enableguardduty/">
+           <b> 2.3 </b> Kích hoạt GuardDuty
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -299,13 +299,13 @@
  
   
     
-    <li data-nav-id="/vi/3-guardduty/" title="Tạo Database với RDS" class="dd-item 
+    <li data-nav-id="/vi/3-guardduty/" title="Bảo Vệ S3 khỏi phần mềm độc hại" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-guardduty/">
-           <b> 3. </b> Tạo Database với RDS
+           <b> 3. </b> Bảo Vệ S3 khỏi phần mềm độc hại
           
             <i class="fas fa-check read-icon"></i>
           
@@ -330,13 +330,13 @@
  
   
     
-    <li data-nav-id="/vi/3-guardduty/3.1-malwareprotections3/" title="Tạo database subnet group" class="dd-item 
+    <li data-nav-id="/vi/3-guardduty/3.1-malwareprotections3/" title="Kích hoạt bảo vệ phần mềm độc hại cho S3" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-guardduty/3.1-malwareprotections3/">
-           <b> 3.1 </b> Tạo database subnet group
+           <b> 3.1 </b> Kích hoạt bảo vệ phần mềm độc hại cho S3
           
             <i class="fas fa-check read-icon"></i>
           
@@ -358,13 +358,13 @@
  
   
     
-    <li data-nav-id="/vi/3-guardduty/3.2-createpolicyprotection/" title="Tạo database instance" class="dd-item 
+    <li data-nav-id="/vi/3-guardduty/3.2-createpolicyprotection/" title="Tạo Chính Sách Bảo Vệ IAM" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-guardduty/3.2-createpolicyprotection/">
-           <b> 3.2 </b> Tạo database instance
+           <b> 3.2 </b> Tạo Chính Sách Bảo Vệ IAM
           
             <i class="fas fa-check read-icon"></i>
           
@@ -386,13 +386,13 @@
  
   
     
-    <li data-nav-id="/vi/3-guardduty/3.3-createroleproctection/" title="Tạo database instance" class="dd-item 
+    <li data-nav-id="/vi/3-guardduty/3.3-createroleproctection/" title="Tạo Vai Trò Bảo Vệ IAM" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-guardduty/3.3-createroleproctection/">
-           <b> 3.2 </b> Tạo database instance
+           <b> 3.3 </b> Tạo Vai Trò Bảo Vệ IAM
           
             <i class="fas fa-check read-icon"></i>
           
@@ -414,13 +414,13 @@
  
   
     
-    <li data-nav-id="/vi/3-guardduty/3.4-enableprotection/" title="Tạo database instance" class="dd-item 
+    <li data-nav-id="/vi/3-guardduty/3.4-enableprotection/" title="Kích Hoạt Bảo Vệ Malware" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-guardduty/3.4-enableprotection/">
-           <b> 3.2 </b> Tạo database instance
+           <b> 3.4 </b> Kích Hoạt Bảo Vệ Malware
           
             <i class="fas fa-check read-icon"></i>
           
@@ -449,13 +449,13 @@
  
   
     
-    <li data-nav-id="/vi/4-setupnotification/" title="Triển khai App Tier" class="dd-item 
+    <li data-nav-id="/vi/4-setupnotification/" title="Thiết lập Thông Báo" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-setupnotification/">
-           <b> 4. </b> Triển khai App Tier
+           <b> 4. </b> Thiết lập Thông Báo
           
             <i class="fas fa-check read-icon"></i>
           
@@ -480,13 +480,13 @@
  
   
     
-    <li data-nav-id="/vi/4-setupnotification/4.1-createsns/" title="Tạo máy chủ EC2" class="dd-item 
+    <li data-nav-id="/vi/4-setupnotification/4.1-createsns/" title="Tạo SNS" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-setupnotification/4.1-createsns/">
-           <b> 4.1 </b> Tạo máy chủ EC2
+           <b> 4.1 </b> Tạo SNS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -508,13 +508,13 @@
  
   
     
-    <li data-nav-id="/vi/4-setupnotification/4.2-createeventbridge/" title="Kết nối tới EC2 instance" class="dd-item 
+    <li data-nav-id="/vi/4-setupnotification/4.2-createeventbridge/" title="Tạo Sự Kiện cho GuardDuty" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-setupnotification/4.2-createeventbridge/">
-           <b> 4.2 </b> Kết nối tới EC2 instance
+           <b> 4.2 </b> Tạo Sự Kiện cho GuardDuty
           
             <i class="fas fa-check read-icon"></i>
           
@@ -574,13 +574,13 @@
  
   
     
-    <li data-nav-id="/vi/5-exportfindingtos3/5.1-settingsfrequecy/" title="Tạo AMI cho App Tier" class="dd-item 
+    <li data-nav-id="/vi/5-exportfindingtos3/5.1-settingsfrequecy/" title="Cài Đặt Tần Suất" class="dd-item 
         
         
         
         ">
       <a href="/vi/5-exportfindingtos3/5.1-settingsfrequecy/">
-           <b> 5.1 </b> Tạo AMI cho App Tier
+           <b> 5.1 </b> Cài Đặt Tần Suất
           
             <i class="fas fa-check read-icon"></i>
           
@@ -602,13 +602,13 @@
  
   
     
-    <li data-nav-id="/vi/5-exportfindingtos3/5.2-attachpolicytos3/" title="Tạo Target group cho App Tier" class="dd-item 
+    <li data-nav-id="/vi/5-exportfindingtos3/5.2-attachpolicytos3/" title="Gán Policy cho S3" class="dd-item 
         
         active
         
         ">
       <a href="/vi/5-exportfindingtos3/5.2-attachpolicytos3/">
-           <b> 5.2 </b> Tạo Target group cho App Tier
+           <b> 5.2 </b> Gán Policy cho S3
           
             <i class="fas fa-check read-icon"></i>
           
@@ -705,102 +705,6 @@
           
       </a>
       
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/6-demo/6.1-uploadmalwarefiletos3/" title="Sửa lại file cấu hình Nginx" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/6-demo/6.1-uploadmalwarefiletos3/">
-           <b> 6.1 </b> Sửa lại file cấu hình Nginx
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/6-demo/6.2-checkemailnoification/" title="Upaload code lên S3" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/6-demo/6.2-checkemailnoification/">
-           <b> 6.2 </b> Upaload code lên S3
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/6-demo/6.3-checkexportfindings3/" title="Tạo EC2 instance" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/6-demo/6.3-checkexportfindings3/">
-           <b> 6.3 </b> Tạo EC2 instance
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -974,7 +878,7 @@
             
           
           
-            <a href='/vi/'>Triển khai fullstack app với kiến trúc ba tầng</a> > <a href='/vi/5-exportfindingtos3/'>Tạo Internal Load Balancer và Auto Scaling Group</a> > Tạo Target group cho App Tier
+            <a href='/vi/'>Triển khai fullstack app với kiến trúc ba tầng</a> > <a href='/vi/5-exportfindingtos3/'>Tạo Internal Load Balancer và Auto Scaling Group</a> > Gán Policy cho S3
           
         
           
@@ -1011,7 +915,7 @@
           
             <h1>
               
-              Tạo Target group cho App Tier
+              Gán Policy cho S3
             </h1>
           
 
@@ -1019,31 +923,32 @@
 
 
 
-	<h4 id="tại-sao-cần-tạo-target-group">Tại sao cần tạo Target group?</h4>
-<ul>
-<li>Vì khi đăng ký các ec2 instances vào target group, load balancer có thể theo dõi <strong>health</strong> của từng instance và <strong>route traffic</strong> tới <strong>healthy instance</strong> → ensure <strong>high availability</strong>.</li>
-</ul>
-<h4 id="tạo-target-group">Tạo Target group</h4>
+	<h4 id="chỉnh-sửa-quyền-bucket-s3">Chỉnh sửa quyền bucket S3</h4>
 <ol>
 <li>
-<p>Tại giao diện EC2, chọn <strong>Target Groups</strong> ở nhóm <strong>Load balancing</strong> ở sidebar, sau đó chọn <strong>Create target group</strong>
-<img alt="Target group" src="/workshop01-AWS-FCJ-2024/images/5-2/01.png?width=50pc"></p>
+<p>Quay lại <strong>Findings export options</strong>, và nhấp vào <strong>Configure now</strong> trong phần bucket S3.</p>
 </li>
 <li>
-<p>Tại giao diện tạo target group:</p>
+<p>Trong giao diện <strong>Export Findings</strong>:</p>
 <ul>
-<li><strong>Target group name</strong> điền <strong><code>AppTierTargetGroup</code></strong></li>
-<li><strong>Protocol: HTTP, Port: 8080</strong></li>
-<li><strong>VPC</strong> chọn <strong>my-vpc</strong></li>
-<li>Kéo xuống dưới cùng click <strong>Next</strong> rồi click <strong>Create target group</strong>
-<img alt="Target group" src="/workshop01-AWS-FCJ-2024/images/5-2/02.png?width=50pc"></li>
+<li><strong>S3 Bucket ARN</strong> điền <strong>ARN</strong> của bucket mà bạn muốn xuất: <strong><code>s3-malware-gd</code></strong>.</li>
+<li><strong>KMS Key ARN</strong> điền <strong>ARN</strong> của khóa KMS mà chúng ta đã tạo trong <strong>Bước chuẩn bị</strong></li>
 </ul>
 </li>
-<li>
-<p>Hoàn thành tạo target group
-<img alt="Target group" src="/workshop01-AWS-FCJ-2024/images/5-2/03.png?width=50pc"></p>
-</li>
 </ol>
+<p><img alt="S3" src="/images/5.%20Export%20Findings/5.4.jpg?width=60pc">
+3. Tiếp theo, nhấp vào <strong>View Policy for S3 Bucket</strong> trong <strong>Attach Policy</strong>
+<img alt="S3" src="/images/5.%20Export%20Findings/5.5.jpg?width=60pc">
+4. Sao chép <strong>JSON policy</strong> và chuyển sang phần tiếp theo.
+<img alt="S3" src="/images/5.%20Export%20Findings/5.6.jpg?width=60pc">
+5. <strong>Mở một tab mới</strong> và điều hướng đến <strong>Permission</strong> của bucket <strong><code>s3-malware-gd</code></strong>
+<img alt="S3" src="/images/5.%20Export%20Findings/5.7.jpg?width=60pc">
+6. Trong <strong>Bucket Policy</strong>, nhấp vào <strong>Edit</strong>
+<img alt="S3" src="/images/5.%20Export%20Findings/5.8.jpg?width=60pc">
+7. Dán <strong>JSON policy</strong>. Nhấp vào <strong>Save Change</strong>
+<img alt="S3" src="/images/5.%20Export%20Findings/5.8.jpg?width=60pc">
+8. Hoàn tất việc Gán Policy cho S3
+<img alt="S3" src="/images/5.%20Export%20Findings/5.9.jpg?width=60pc"></p>
 
 
 
@@ -1414,58 +1319,8 @@
 
                     
                     
-                        
-                    
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -1495,7 +1350,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/5-exportfindingtos3/5.1-settingsfrequecy/" title="Tạo AMI cho App Tier"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/5-exportfindingtos3/5.1-settingsfrequecy/" title="Cài Đặt Tần Suất"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/vi/5-exportfindingtos3/5.3-attachpolicytokms/" title="Tạo Internal Load Balancer" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -1508,19 +1363,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725940413"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725940413"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725940413"></script>
-    <script src="/js/jquery.sticky.js?1725940413"></script>
-    <script src="/js/featherlight.min.js?1725940413"></script>
-    <script src="/js/highlight.pack.js?1725940413"></script>
+    <script src="/js/clipboard.min.js?1725947921"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725947921"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725947921"></script>
+    <script src="/js/jquery.sticky.js?1725947921"></script>
+    <script src="/js/featherlight.min.js?1725947921"></script>
+    <script src="/js/highlight.pack.js?1725947921"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725940413"></script>
-    <script src="/js/learn.js?1725940413"></script>
-    <script src="/js/hugo-learn.js?1725940413"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725947921"></script>
+    <script src="/js/learn.js?1725947921"></script>
+    <script src="/js/hugo-learn.js?1725947921"></script>
 
-    <link href="/mermaid/mermaid.css?1725940413" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725940413"></script>
+    <link href="/mermaid/mermaid.css?1725947921" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725947921"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

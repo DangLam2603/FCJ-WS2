@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Giới thiệu :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
+    <title>Giới thiệu :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1725945906" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725945906" rel="stylesheet">
-    <link href="/css/hybrid.css?1725945906" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725945906" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725945906" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725945906" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725945906" rel="stylesheet">
-    <link href="/css/theme.css?1725945906" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725945906" rel="stylesheet">
+    <link href="/css/nucleus.css?1725946416" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725946416" rel="stylesheet">
+    <link href="/css/hybrid.css?1725946416" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725946416" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725946416" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725946416" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725946416" rel="stylesheet">
+    <link href="/css/theme.css?1725946416" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725946416" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725945906" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725946416" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725945906"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725946416"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -43,7 +43,7 @@
 
   <div id="header-wrapper">
     <div id="header">
-      <a id="logo" href="/Workshop-02/">
+      <a id="logo" href="/">
   <svg
     id="Layer_1"
     data-name="Layer 1"
@@ -86,14 +86,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725945906"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725945906"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725946416"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725946416"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725945906"></script>
+<script type="text/javascript" src="/js/search.js?1725946416"></script>
 
     
   </div>
@@ -111,13 +111,13 @@
  
   
     
-    <li data-nav-id="/vi/1-introduce/" title="Giới thiệu" class="dd-item 
+    <li data-nav-id="/vi/1-introduce/" title="Giới thiệu" class="dd-item 
         
         active
         
         ">
       <a href="/vi/1-introduce/">
-           <b> 1. </b> Giới thiệu
+           <b> 1. </b> Giới thiệu
           
             <i class="fas fa-check read-icon"></i>
           
@@ -874,7 +874,7 @@
             
           
           
-            <a href='/vi/'>Triển khai fullstack app với kiến trúc ba tầng</a> > Giới thiệu
+            <a href='/vi/'>Triển khai fullstack app với kiến trúc ba tầng</a> > Giới thiệu
           
         
           
@@ -887,11 +887,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#giới-thiệu-về-kiến-trúc">Giới thiệu về kiến trúc</a></li>
   </ul>
 </nav>
     </div>
@@ -909,7 +905,7 @@
           
             <h1>
               
-              Giới thiệu
+              Giới thiệu
             </h1>
           
 
@@ -917,20 +913,21 @@
 
 
 
-	<h4 id="giới-thiệu-kiến-trúc-3-tầng">Giới thiệu kiến trúc 3 tầng</h4>
-<p><strong>Kiến trúc ba tầng</strong> là cách triển khai phổ biến nhất của kiến ​​trúc nhiều tầng, bao gồm một tầng giao diện, tầng logic và tầng dữ liệu. Hình minh họa sau đây cho thấy một ví dụ về một ứng dụng ba tầng chung đơn giản.</p>
-<p><img alt="Three tier example" src="/images/1.Introduction/KMS/1.1.1-create%20KMS.jpg?featherlight=false&width=50pc"></p>
-<p><strong>Kiến trúc 3 tầng bao gồm</strong>:</p>
+	<h2 id="giới-thiệu-về-kiến-trúc">Giới thiệu về kiến trúc</h2>
+<p>Trong buổi workshop này, chúng ta sẽ khám phá khả năng của <strong>AWS GuardDuty</strong> trong việc bảo vệ S3 bucket của bạn bằng cách tích hợp với SNS và kích hoạt các sự kiện trong EventBridge để cảnh báo cho Admin hành động kịp thời.</p>
+<p><img alt="GuardDuty example" src="/images/GD.png?featherlight=false&width=50pc"></p>
+<p><strong>Kiến trúc này bao gồm</strong>:</p>
 <ul>
-<li>Presentation tier / Web Tier: tầng giao diện để người dùng có thể tương tác trực tiếp (vd: trang web hay UI của ứng dụng mobile).</li>
-<li>Logic tier / App tier: tầng để xử lý logic và thực thi những câu lệnh của người dùng.</li>
-<li>Data tier: tầng lưu trữ dữ liệu của app.</li>
+<li>Kích hoạt GuardDuty để bảo vệ S3 khỏi phần mềm độc hại.</li>
+<li>Thiết lập SNS, các quy tắc EventBridge để nhận thông báo qua email.</li>
+<li>Thiết lập IAM roles, KMS để bảo mật.</li>
+<li>Xuất kết quả tìm được vào S3 Bucket.</li>
 </ul>
-<p><strong>Lợi ích của việc sử dụng kiến trúc 3 tầng:</strong></p>
+<p><strong>Lợi ích của việc triển khai kiến trúc này:</strong></p>
 <ul>
-<li>Tính mô-đun: kiến trúc này giúp ta module hóa app thành các phần độc lập nhau. Điều này giúp team dev có thể tập trung phát triển từng tầng của app, dẫn đến các thay đổi được áp dụng nhanh nhất có thể. Ngoài ra, nó còn giúp việc khôi phục app diễn ra nhanh chóng hơn sau khi server bị down do lỗi hay thảm họa nhờ vào việc có thể khoanh vùng và sửa chữa phần bị lỗi.</li>
-<li>Tính sẵn sàng cao: vì kiến trúc triển khai ứng dụng trên nhiều Availability Zones, các AZ được thiết kế để không xảy ra sự cố ảnh hưởng đồng thời 2 AZ một lúc (fault isolation).</li>
-<li>Tính dự phòng cao: AWS cho phép triển khai bản stand by hay replica của primary database trên AZ còn lại. Nếu database chính bị down, ứng dụng vẫn có thể truy xuất dữ liệu từ replica database.</li>
+<li><strong>Bảo mật</strong>: kiến trúc này giúp chúng ta cảnh báo ngay lập tức nếu có các tệp không được bảo vệ trong S3 Bucket cũng như môi trường AWS nói chung.</li>
+<li><strong>Phát hiện mối đe dọa theo thời gian thực</strong>: AWS GuardDuty liên tục giám sát S3 bucket của bạn để phát hiện các truy cập độc hại hoặc không được phép, giúp phát hiện các mối đe dọa theo thời gian thực mà không cần can thiệp thủ công.</li>
+<li><strong>Kích hoạt sự kiện tự động</strong>: Khi GuardDuty phát hiện một sự kiện đáng ngờ, nó sẽ kích hoạt sự kiện trong Amazon EventBridge, cho phép xử lý tự động các phát hiện này. Trong buổi workshop này, chúng ta sẽ gửi email tùy chỉnh qua SNS.</li>
 </ul>
 
 
@@ -1339,19 +1336,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725945906"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725945906"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725945906"></script>
-    <script src="/js/jquery.sticky.js?1725945906"></script>
-    <script src="/js/featherlight.min.js?1725945906"></script>
-    <script src="/js/highlight.pack.js?1725945906"></script>
+    <script src="/js/clipboard.min.js?1725946416"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725946416"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725946416"></script>
+    <script src="/js/jquery.sticky.js?1725946416"></script>
+    <script src="/js/featherlight.min.js?1725946416"></script>
+    <script src="/js/highlight.pack.js?1725946416"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725945906"></script>
-    <script src="/js/learn.js?1725945906"></script>
-    <script src="/js/hugo-learn.js?1725945906"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725946416"></script>
+    <script src="/js/learn.js?1725946416"></script>
+    <script src="/js/hugo-learn.js?1725946416"></script>
 
-    <link href="/mermaid/mermaid.css?1725945906" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725945906"></script>
+    <link href="/mermaid/mermaid.css?1725946416" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725946416"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

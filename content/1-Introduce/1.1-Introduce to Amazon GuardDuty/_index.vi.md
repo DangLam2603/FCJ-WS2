@@ -1,12 +1,17 @@
 ---
-title : "Giải thích luồng chạy"
+title : "Giới thiệu về Amazon GuardDuty"
 date :  "`r Sys.Date()`" 
-weight : 1 
+weight : 1
 chapter : false
 pre : " <b> 1.1 </b> "
 ---
-## Giải thích luồng chạy của kiến trúc ba tầng
+## Giới thiệu về Amazon GuardDuty
 
-Trong hình dưới đây, chúng ta sẽ thấy mô hình kiến trúc của ứng dụng fullstack với **kiến trúc ba tầng**. Đầu tiên, thao tác của người dùng sẽ đi qua **Internet gateway** và sau đó đến **External (Internet facing) Application Load Balancer**. Load Balancer sẽ chuyển tiếp các traffic đến các **máy chủ ở Web tier**. Sau đó các máy chủ ở Web tier sẽ gọi các API đến **Interal Load Balancer**. Load Balancer sau đó sẽ chuyển tiếp các traffic đến các **máy chủ ở App tier**. Cuối cùng, các máy chủ ở App tier sẽ xử lý yêu cầu, truy xuất dữ liệu ở **Data tier** (nếu cần) và trả kết quả về cho người dùng ở Web tier. Đây là mô hình kiến trúc ba lớp cơ bản mà chúng ta sẽ triển khai trong workshop này.
+**Amazon GuardDuty** là dịch vụ phát hiện mối đe dọa liên tục giám sát môi trường AWS của bạn để phát hiện các hoạt động đáng ngờ hoặc độc hại. Nó sử dụng học máy, giám sát phát hiện và trí tuệ mối đe dọa tích hợp để phát hiện và cảnh báo cho bạn về các mối đe dọa tiềm tàng trong môi trường AWS như Amazon S3, EC2 Instances.
 
-![Architecture diagram](/workshop01-AWS-FCJ-2024/images/1-Introduce/workshop01-white.png?width=60pc)
+**Trường hợp sử dụng:**
+1. Bảo vệ S3 Buckets: Phát hiện dữ liệu, tệp tin đáng ngờ hoặc lưu trữ phần mềm độc hại trong S3.
+2. Bảo vệ EC2 Instances: Xác định các instances được sử dụng để khai thác tiền điện tử hoặc kết nối với các địa chỉ IP đáng ngờ.
+3. Giám sát hoạt động IAM Role: Phát hiện các hành vi bất thường trong truy cập role, chẳng hạn như cố gắng leo thang quyền hoặc truy cập vào các tài nguyên nhạy cảm.
+
+![Sơ đồ kiến trúc](/images/gd.jpg?width=60pc)

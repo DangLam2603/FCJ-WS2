@@ -1,28 +1,24 @@
 ---
-title : "Triển khai fullstack app với kiến trúc ba tầng"
-date :  "`r Sys.Date()`" 
-weight : 1 
+title : "Malware Protection cho S3 bằng GuardDuty"
+date : "`r Sys.Date()`"
+weight : 1
 chapter : false
 ---
 
-# Triển khai fullstack app với kiến trúc ba tầng
+# Bảo Vệ Malware cho S3 với GuardDuty
 
-#### Tổng quan
+#### Tổng Quan
 
-Trong bài workshop này, chúng ta sẽ cùng nhau triển khai fullstack app (Spring Boot, React, MySQL) với kiến trúc ba tầng. Tìm hiểu các khái niệm, các tính năng của từng dịch vụ được sử dụng trong kiến trúc.
+Trong workshop này, chúng tôi sẽ trình bày cách AWS GuardDuty có thể bảo vệ bucket S3 của bạn bằng cách nhận diện và khắc phục các tệp độc hại. Bạn sẽ học cách phát hiện các mối đe dọa tự động, xuất các phát hiện GuardDuty được mã hóa vào bucket S3 và thiết lập cảnh báo thời gian thực trong các khoảng thời gian chính sử dụng EventBridge và SNS để thông báo cho các quản trị viên.
 
+![Sơ đồ kiến trúc](/images/GD.png?width=60pc)
 
-![Architecture diagram](/workshop01-AWS-FCJ-2024/images/1-Introduce/workshop01-white.png?width=60pc)
-
-#### Nội dung
+#### Nội Dung
 
 1. [Giới thiệu](1-introduce/)
 2. [Các bước chuẩn bị](2-PreparationSteps/)
-3. [Tạo database với RDS ](3-CreateDbWithRDS/) 
-4. [Triển khai App tier](4-DeployAppTier/)
-5. [Tạo Internal LB và ASG](5-CreateInternalLbAndASG/)
-6. [Triển khai Web tier](6-DeployWebTier/)
-7. [Tạo External LB và ASG](7-CreateExternalLbAndASG/)
-8. [Demo web sau khi deploy thành công](8-DemoWeb/)
-9. [Dọn dẹp tài nguyên](9-CleanUpResources/)
-
+3. [Amazon GuardDuty](3-GuardDuty/)
+4. [Thiết lập thông báo](4-SetUpNotification/)
+5. [Xuất kết quả đến S3](5-ExportFindingToS3/)
+6. [Demo](6-Demo/)
+7. [Dọn dẹp tài nguyên](7-CleanUpResources/)

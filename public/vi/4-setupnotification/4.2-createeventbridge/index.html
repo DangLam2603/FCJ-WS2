@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Kết nối tới EC2 instance :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
+    <title>Tạo Sự Kiện cho GuardDuty :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1725938801" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725938801" rel="stylesheet">
-    <link href="/css/hybrid.css?1725938801" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725938801" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725938801" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725938801" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725938801" rel="stylesheet">
-    <link href="/css/theme.css?1725938801" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725938801" rel="stylesheet">
+    <link href="/css/nucleus.css?1725947752" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725947752" rel="stylesheet">
+    <link href="/css/hybrid.css?1725947752" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725947752" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725947752" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725947752" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725947752" rel="stylesheet">
+    <link href="/css/theme.css?1725947752" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725947752" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725938801" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725947752" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725938801"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725947752"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -43,7 +43,7 @@
 
   <div id="header-wrapper">
     <div id="header">
-      <a id="logo" href="/Workshop-02/">
+      <a id="logo" href="/">
   <svg
     id="Layer_1"
     data-name="Layer 1"
@@ -86,14 +86,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725938801"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725938801"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725947752"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725947752"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725938801"></script>
+<script type="text/javascript" src="/js/search.js?1725947752"></script>
 
     
   </div>
@@ -111,13 +111,13 @@
  
   
     
-    <li data-nav-id="/vi/1-introduce/" title="Giới thiệu" class="dd-item 
+    <li data-nav-id="/vi/1-introduce/" title="Giới thiệu" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-introduce/">
-           <b> 1. </b> Giới thiệu
+           <b> 1. </b> Giới thiệu
           
             <i class="fas fa-check read-icon"></i>
           
@@ -142,13 +142,13 @@
  
   
     
-    <li data-nav-id="/vi/1-introduce/1.1-introduce-to-amazon-guardduty/" title="Giải thích luồng chạy" class="dd-item 
+    <li data-nav-id="/vi/1-introduce/1.1-introduce-to-amazon-guardduty/" title="Giới thiệu về Amazon GuardDuty" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-introduce/1.1-introduce-to-amazon-guardduty/">
-           <b> 1.1 </b> Giải thích luồng chạy
+           <b> 1.1 </b> Giới thiệu về Amazon GuardDuty
           
             <i class="fas fa-check read-icon"></i>
           
@@ -208,41 +208,13 @@
  
   
     
-    <li data-nav-id="/vi/2-preparationsteps/2.1-createkmskey/" title="Clone code từ GitHub" class="dd-item 
+    <li data-nav-id="/vi/2-preparationsteps/2.1-createkmskey/" title="Tạo khóa KMS" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-preparationsteps/2.1-createkmskey/">
-           <b> 2.1 </b> Clone code từ GitHub
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-preparationsteps/2.3-enableguardduty/" title="Các bước chuẩn bị" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-preparationsteps/2.3-enableguardduty/">
-           <b> 2. </b> Các bước chuẩn bị
+           <b> 2.1 </b> Tạo khóa KMS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -283,6 +255,34 @@
 
             
           
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-preparationsteps/2.3-enableguardduty/" title="Kích hoạt GuardDuty" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-preparationsteps/2.3-enableguardduty/">
+           <b> 2.3 </b> Kích hoạt GuardDuty
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -299,13 +299,13 @@
  
   
     
-    <li data-nav-id="/vi/3-guardduty/" title="Tạo Database với RDS" class="dd-item 
+    <li data-nav-id="/vi/3-guardduty/" title="Bảo Vệ S3 khỏi phần mềm độc hại" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-guardduty/">
-           <b> 3. </b> Tạo Database với RDS
+           <b> 3. </b> Bảo Vệ S3 khỏi phần mềm độc hại
           
             <i class="fas fa-check read-icon"></i>
           
@@ -330,13 +330,13 @@
  
   
     
-    <li data-nav-id="/vi/3-guardduty/3.1-malwareprotections3/" title="Tạo database subnet group" class="dd-item 
+    <li data-nav-id="/vi/3-guardduty/3.1-malwareprotections3/" title="Kích hoạt bảo vệ phần mềm độc hại cho S3" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-guardduty/3.1-malwareprotections3/">
-           <b> 3.1 </b> Tạo database subnet group
+           <b> 3.1 </b> Kích hoạt bảo vệ phần mềm độc hại cho S3
           
             <i class="fas fa-check read-icon"></i>
           
@@ -358,13 +358,13 @@
  
   
     
-    <li data-nav-id="/vi/3-guardduty/3.2-createpolicyprotection/" title="Tạo database instance" class="dd-item 
+    <li data-nav-id="/vi/3-guardduty/3.2-createpolicyprotection/" title="Tạo Chính Sách Bảo Vệ IAM" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-guardduty/3.2-createpolicyprotection/">
-           <b> 3.2 </b> Tạo database instance
+           <b> 3.2 </b> Tạo Chính Sách Bảo Vệ IAM
           
             <i class="fas fa-check read-icon"></i>
           
@@ -386,13 +386,13 @@
  
   
     
-    <li data-nav-id="/vi/3-guardduty/3.3-createroleproctection/" title="Tạo database instance" class="dd-item 
+    <li data-nav-id="/vi/3-guardduty/3.3-createroleproctection/" title="Tạo Vai Trò Bảo Vệ IAM" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-guardduty/3.3-createroleproctection/">
-           <b> 3.2 </b> Tạo database instance
+           <b> 3.3 </b> Tạo Vai Trò Bảo Vệ IAM
           
             <i class="fas fa-check read-icon"></i>
           
@@ -414,13 +414,13 @@
  
   
     
-    <li data-nav-id="/vi/3-guardduty/3.4-enableprotection/" title="Tạo database instance" class="dd-item 
+    <li data-nav-id="/vi/3-guardduty/3.4-enableprotection/" title="Kích Hoạt Bảo Vệ Malware" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-guardduty/3.4-enableprotection/">
-           <b> 3.2 </b> Tạo database instance
+           <b> 3.4 </b> Kích Hoạt Bảo Vệ Malware
           
             <i class="fas fa-check read-icon"></i>
           
@@ -480,13 +480,13 @@
  
   
     
-    <li data-nav-id="/vi/4-setupnotification/4.1-createsns/" title="Tạo máy chủ EC2" class="dd-item 
+    <li data-nav-id="/vi/4-setupnotification/4.1-createsns/" title="Tạo SNS" class="dd-item 
         
         
         
         ">
       <a href="/vi/4-setupnotification/4.1-createsns/">
-           <b> 4.1 </b> Tạo máy chủ EC2
+           <b> 4.1 </b> Tạo SNS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -508,13 +508,13 @@
  
   
     
-    <li data-nav-id="/vi/4-setupnotification/4.2-createeventbridge/" title="Kết nối tới EC2 instance" class="dd-item 
+    <li data-nav-id="/vi/4-setupnotification/4.2-createeventbridge/" title="Tạo Sự Kiện cho GuardDuty" class="dd-item 
         
         active
         
         ">
       <a href="/vi/4-setupnotification/4.2-createeventbridge/">
-           <b> 4.2 </b> Kết nối tới EC2 instance
+           <b> 4.2 </b> Tạo Sự Kiện cho GuardDuty
           
             <i class="fas fa-check read-icon"></i>
           
@@ -705,102 +705,6 @@
           
       </a>
       
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/6-demo/6.1-uploadmalwarefiletos3/" title="Sửa lại file cấu hình Nginx" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/6-demo/6.1-uploadmalwarefiletos3/">
-           <b> 6.1 </b> Sửa lại file cấu hình Nginx
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/6-demo/6.2-checkemailnoification/" title="Upaload code lên S3" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/6-demo/6.2-checkemailnoification/">
-           <b> 6.2 </b> Upaload code lên S3
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/6-demo/6.3-checkexportfindings3/" title="Tạo EC2 instance" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/6-demo/6.3-checkexportfindings3/">
-           <b> 6.3 </b> Tạo EC2 instance
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -974,7 +878,7 @@
             
           
           
-            <a href='/vi/'>Triển khai fullstack app với kiến trúc ba tầng</a> > <a href='/vi/4-setupnotification/'>Triển khai App Tier</a> > Kết nối tới EC2 instance
+            <a href='/vi/'>Triển khai fullstack app với kiến trúc ba tầng</a> > <a href='/vi/4-setupnotification/'>Triển khai App Tier</a> > Tạo Sự Kiện cho GuardDuty
           
         
           
@@ -989,11 +893,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#tổng-quan">Tổng Quan</a></li>
   </ul>
 </nav>
     </div>
@@ -1011,7 +911,7 @@
           
             <h1>
               
-              Kết nối tới EC2 instance
+              Tạo Sự Kiện cho GuardDuty
             </h1>
           
 
@@ -1019,28 +919,74 @@
 
 
 
-	<h4 id="kết-nối-tới-ec2-instance">Kết nối tới EC2 instance</h4>
+	<h2 id="tổng-quan">Tổng Quan</h2>
+<p>Trong phần này, chúng ta sẽ triển khai kiến trúc dựa trên sự kiện để theo dõi các phát hiện từ Amazon GuardDuty theo thời gian thực. Sử dụng Amazon EventBridge, chúng ta sẽ tạo các quy tắc kích hoạt các hành động cụ thể khi GuardDuty phát hiện các mối đe dọa hoặc lỗ hổng tiềm ẩn.</p>
 <ol>
 <li>
-<p>Trên giao diện các EC2 instances, chọn instance vừa tạo và bấm <strong>Connect</strong>
-<img alt="connect ec2" src="/workshop01-AWS-FCJ-2024/images/4-2/01.png?width=50pc"></p>
+<p>Trong thanh tìm kiếm AWS, gõ <strong>EventBridge</strong> và chọn kết quả đầu tiên.
+<img alt="EventBridge" src="/images/4.Notification/EventBridge/4.2.1-started.jpg?width=60pc"></p>
 </li>
 <li>
-<p>Chuyển qua tab <strong>Session Manager</strong> và click Connect
-<img alt="connect ec2" src="/workshop01-AWS-FCJ-2024/images/4-2/02.png?width=50pc"></p>
+<p>Chuyển đến tab <strong>EventBridge Rule</strong> và nhấp <strong>Create Rule</strong>
+<img alt="EventBridge" src="/images/4.Notification/EventBridge/4.2.2.jpg?width=60pc"></p>
 </li>
 <li>
-<p>Connect thành công vào instance
-<img alt="connect ec2" src="/workshop01-AWS-FCJ-2024/images/4-2/03.png?width=50pc"></p>
+<p>Gõ <code>rule-event-gd</code> vào phần Tên, và để các tùy chọn còn lại ở mặc định
+<img alt="EventBridge" src="/images/4.Notification/EventBridge/4.2.3.jpg?width=60pc"></p>
 </li>
 <li>
-<p>Chạy lệnh <strong><code>sudo -su ec2-user</code></strong> để chuyển từ user sang ec2-user, và có những quyền quản trị root đối với instance
-<img alt="connect ec2" src="/workshop01-AWS-FCJ-2024/images/4-2/04.png?width=50pc"></p>
+<p>Trong <strong>Event Pattern</strong>, chọn các tùy chọn sau:</p>
+<ul>
+<li><strong>Event Source</strong>, Chọn <strong>AWS service</strong></li>
+<li>Chọn <strong>GuardDuty</strong> cho <strong>AWS service</strong></li>
+<li><strong>GuardDuty Findings</strong> cho <strong>Event Type</strong>.</li>
+</ul>
 </li>
-<li>
-<p>Tiếp đó chạy lệnh <strong><code>ping 8.8.8.8</code></strong> (IP address của Google’s DNS server) để test xem instance của ta có thể kết nối với internet bên ngoài thông qua igw không
-<img alt="connect ec2" src="/workshop01-AWS-FCJ-2024/images/4-2/05.png?width=50pc"></p>
+</ol>
+<p>Sau đó, chọn <strong>Edit Pattern</strong> để thay đổi mức độ nghiêm trọng của sự kiện sẽ được kích hoạt.
+<img alt="EventBridge" src="/images/4.Notification/EventBridge/4.2.5.jpg?width=60pc"></p>
+<ol start="5">
+<li>Dán đoạn mã sau và chỉnh sửa mức độ nguy hiểm của các phát hiện</li>
+</ol>
+<pre tabindex="0"><code>{ &#34;source&#34;: [ &#34;aws.guardduty&#34; ], &#34;detail-type&#34;: [ &#34;GuardDuty Finding&#34; ], &#34;detail&#34;: { &#34;severity&#34;: [ 4, 4.0, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5, 5.0, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 5.9, 6, 6.0, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8, 6.9, 7, 7.0, 7.1, 7.2, 7.3, 7.4, 7.5, 7.6, 7.7, 7.8, 7.9, 8, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5, 8.6, 8.7, 8.8, 8.9 ] } }
+</code></pre><p><img alt="EventBridge" src="/images/4.Notification/EventBridge/4.2.6.jpg?width=60pc">
+6. Trong Cài đặt Nâng cao, chọn các tùy chọn sau:</p>
+<ul>
+<li>Chọn dịch vụ AWS</li>
+<li>Chọn <strong>SNS topic</strong></li>
+<li>Và trong phần <strong>Topic</strong>, chọn <code>guardduty-topic</code>, mà bạn vừa tạo
+<img alt="EventBridge" src="/images/4.Notification/EventBridge/4.2.7.jpg?width=60pc"></li>
+</ul>
+<ol start="7">
+<li>Tiếp theo, chúng ta sẽ tạo thông báo tùy chỉnh cho SNS:
+<ul>
+<li>Trong <strong>Additional settings</strong>, chọn <strong>Input transformer</strong>
+<img alt="EventBridge" src="/images/4.Notification/EventBridge/4.2.8.jpg?width=60pc"></li>
+</ul>
 </li>
+<li>Trong <strong>Target input transformer</strong>, gõ đoạn mã sau vào <strong>Input Path</strong>:</li>
+</ol>
+<pre tabindex="0"><code>{
+    &#34;severity&#34;: &#34;$.detail.severity&#34;,
+    &#34;Account_ID&#34;: &#34;$.detail.accountId&#34;,
+    &#34;Finding_ID&#34;: &#34;$.detail.id&#34;,
+    &#34;Finding_Type&#34;: &#34;$.detail.type&#34;,
+    &#34;region&#34;: &#34;$.region&#34;,
+    &#34;Finding_description&#34;: &#34;$.detail.description&#34;
+}
+                            
+</code></pre><p><img alt="EventBridge" src="/images/4.Notification/EventBridge/4.2.9.jpg?width=60pc">
+9. Trong <strong>Template</strong>, cung cấp <strong>Input Template</strong> sau:</p>
+<pre tabindex="0"><code>&#34;AWS &lt;Account_ID&gt; has a severity &lt;severity&gt; GuardDuty finding type &lt;Finding_Type&gt; in the &lt;region&gt; region.&#34;
+&#34;Finding Description:&#34;
+&#34;&lt;Finding_description&gt;. &#34;
+&#34;For more details open the GuardDuty console at https://console.aws.amazon.com/guardduty/home?region=&lt;region&gt;#/findings?search=id%3D&lt;Finding_ID&gt;&#34;                         
+</code></pre><p><img alt="EventBridge" src="/images/4.Notification/EventBridge/4.2.10.jpg?width=60pc"></p>
+<ol>
+<li>Xem lại và nhấp Create Rule
+<img alt="EventBridge" src="/images/4.Notification/EventBridge/4.2.12.jpg?width=60pc"></li>
+<li>Hoàn tất việc tạo Event Rule
+<img alt="EventBridge" src="/images/4.Notification/EventBridge/4.2.13.jpg?width=60pc"></li>
 </ol>
 
 
@@ -1412,58 +1358,8 @@
 
                     
                     
-                        
-                    
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -1493,7 +1389,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/4-setupnotification/4.1-createsns/" title="Tạo máy chủ EC2"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/4-setupnotification/4.1-createsns/" title="Tạo SNS"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/vi/5-exportfindingtos3/" title="Tạo Internal Load Balancer và Auto Scaling Group" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -1506,19 +1402,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725938801"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725938801"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725938801"></script>
-    <script src="/js/jquery.sticky.js?1725938801"></script>
-    <script src="/js/featherlight.min.js?1725938801"></script>
-    <script src="/js/highlight.pack.js?1725938801"></script>
+    <script src="/js/clipboard.min.js?1725947752"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725947752"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725947752"></script>
+    <script src="/js/jquery.sticky.js?1725947752"></script>
+    <script src="/js/featherlight.min.js?1725947752"></script>
+    <script src="/js/highlight.pack.js?1725947752"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725938801"></script>
-    <script src="/js/learn.js?1725938801"></script>
-    <script src="/js/hugo-learn.js?1725938801"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725947752"></script>
+    <script src="/js/learn.js?1725947752"></script>
+    <script src="/js/hugo-learn.js?1725947752"></script>
 
-    <link href="/mermaid/mermaid.css?1725938801" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725938801"></script>
+    <link href="/mermaid/mermaid.css?1725947752" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725947752"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -1,31 +1,19 @@
 ---
-title : "Tạo Internal Load Balancer"
-date :  "`r Sys.Date()`" 
+title : "Gán Policy cho KMS"
+date : "`r Sys.Date()`"
 weight : 3
 chapter : false
 pre : " <b> 5.3 </b> "
 ---
 
-#### Tạo Internal Load Balancer
-1. Ở giao diện EC2, chọn **Load balancers** ở sidebar, sau đó click **Create load balancer**
-![ILB](/workshop01-AWS-FCJ-2024/images/5-3/01.png?width=50pc)
+#### Gán Policy cho KMS
 
-2. Tại giao diện chọn balancer type, click chọn **Create** của **Application Load Balancer**
-![ILB](/workshop01-AWS-FCJ-2024/images/5-3/02.png?width=50pc)
+1. Quay lại **Attach Policy** trên trang GuardDuty, nhấp vào **View policy for KMS key**.
+![S3](/images/5.%20Export%20Findings/5.11.jpg?width=60pc)
 
-3. Tại màn hình tạo ALB:
-    - **LB Name** điền **`app-tier-internal-lb`**
-    - **Scheme** chọn **Internal**
-![ILB](/workshop01-AWS-FCJ-2024/images/5-3/03.png?width=50pc)
-
-4. Ở phần **Network mapping**:
-    - **VPC: my-vpc**
-    - Tick chọn **ap-southeast-1a**, sau đó chọn **Private Subnet 1**
-    - Tick chọn **ap-southeast-1b**, sau đó chọn **Private Subnet 2**
-![ILB](/workshop01-AWS-FCJ-2024/images/5-3/04.png?width=50pc)
-
-5. Ở phần **Security groups** chọn **Internal-LB-SG**. Ở phần **Listeners and routing**, **default action** chọn **AppTierTargetGroup**. Lướt xuống dưới cùng và click **Create load balancer**.
-![ILB](/workshop01-AWS-FCJ-2024/images/5-3/05.png?width=50pc)
-
-6. Hoàn thành tạo load balancer cho app tier.
-![ILB](/workshop01-AWS-FCJ-2024/images/5-3/06.png?width=50pc)
+2. Sao chép **Policy sau đây**
+![S3](/images/5.%20Export%20Findings/5.11b.jpg?width=60pc)
+3. Mở một tab mới, đi đến **KMS key** mà bạn đã tạo trước đó. Nhấp vào Key policy, và **Switch to Policy View**
+![S3](/images/5.%20Export%20Findings/5.13.jpg?width=60pc)
+4. Dán **Policy trước đó** và **lưu**
+![S3](/images/5.%20Export%20Findings/5.14.jpg?width=60pc)

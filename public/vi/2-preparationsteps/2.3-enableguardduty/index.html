@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Các bước chuẩn bị :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
+    <title>Kích hoạt GuardDuty :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1725945981" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725945981" rel="stylesheet">
-    <link href="/css/hybrid.css?1725945981" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725945981" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725945981" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725945981" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725945981" rel="stylesheet">
-    <link href="/css/theme.css?1725945981" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725945981" rel="stylesheet">
+    <link href="/css/nucleus.css?1725946795" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725946795" rel="stylesheet">
+    <link href="/css/hybrid.css?1725946795" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725946795" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725946795" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725946795" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725946795" rel="stylesheet">
+    <link href="/css/theme.css?1725946795" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725946795" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725945981" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725946795" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725945981"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725946795"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -43,7 +43,7 @@
 
   <div id="header-wrapper">
     <div id="header">
-      <a id="logo" href="/Workshop-02/">
+      <a id="logo" href="/">
   <svg
     id="Layer_1"
     data-name="Layer 1"
@@ -86,14 +86,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725945981"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725945981"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725946795"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725946795"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725945981"></script>
+<script type="text/javascript" src="/js/search.js?1725946795"></script>
 
     
   </div>
@@ -111,13 +111,13 @@
  
   
     
-    <li data-nav-id="/vi/1-introduce/" title="Giới thiệu" class="dd-item 
+    <li data-nav-id="/vi/1-introduce/" title="Giới thiệu" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-introduce/">
-           <b> 1. </b> Giới thiệu
+           <b> 1. </b> Giới thiệu
           
             <i class="fas fa-check read-icon"></i>
           
@@ -142,13 +142,13 @@
  
   
     
-    <li data-nav-id="/vi/1-introduce/1.1-introduce-to-amazon-guardduty/" title="Giải thích luồng chạy" class="dd-item 
+    <li data-nav-id="/vi/1-introduce/1.1-introduce-to-amazon-guardduty/" title="Giới thiệu về Amazon GuardDuty" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-introduce/1.1-introduce-to-amazon-guardduty/">
-           <b> 1.1 </b> Giải thích luồng chạy
+           <b> 1.1 </b> Giới thiệu về Amazon GuardDuty
           
             <i class="fas fa-check read-icon"></i>
           
@@ -208,41 +208,13 @@
  
   
     
-    <li data-nav-id="/vi/2-preparationsteps/2.1-createkmskey/" title="Clone code từ GitHub" class="dd-item 
+    <li data-nav-id="/vi/2-preparationsteps/2.1-createkmskey/" title="Tạo khóa KMS" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-preparationsteps/2.1-createkmskey/">
-           <b> 2.1 </b> Clone code từ GitHub
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-preparationsteps/2.3-enableguardduty/" title="Các bước chuẩn bị" class="dd-item 
-        
-        active
-        
-        ">
-      <a href="/vi/2-preparationsteps/2.3-enableguardduty/">
-           <b> 2. </b> Các bước chuẩn bị
+           <b> 2.1 </b> Tạo khóa KMS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -271,6 +243,34 @@
         ">
       <a href="/vi/2-preparationsteps/2.2-creates3bucket/">
            <b> 2.2 </b> Tạo S3 Bucket
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-preparationsteps/2.3-enableguardduty/" title="Kích hoạt GuardDuty" class="dd-item 
+        
+        active
+        
+        ">
+      <a href="/vi/2-preparationsteps/2.3-enableguardduty/">
+           <b> 2.3 </b> Kích hoạt GuardDuty
           
             <i class="fas fa-check read-icon"></i>
           
@@ -878,7 +878,7 @@
             
           
           
-            <a href='/vi/'>Triển khai fullstack app với kiến trúc ba tầng</a> > <a href='/vi/2-preparationsteps/'>Các bước chuẩn bị</a> > Các bước chuẩn bị
+            <a href='/vi/'>Triển khai fullstack app với kiến trúc ba tầng</a> > <a href='/vi/2-preparationsteps/'>Các bước chuẩn bị</a> > Kích hoạt GuardDuty
           
         
           
@@ -915,7 +915,7 @@
           
             <h1>
               
-              Các bước chuẩn bị
+              Kích hoạt GuardDuty
             </h1>
           
 
@@ -923,19 +923,25 @@
 
 
 
-	<p>Trong section 2 này, chúng ta sẽ cùng nhau setup những thứ quan trọng và cần thiết để thực hiện workshop này.</p>
-<h4 id="nội-dung">Nội dung</h4>
-<ul>
-<li><a href="2.1-CloneCodeFromGitHub/">Clone clode từ GitHub</a></li>
-<li><a href="2.2-CreateS3Bucket/">Tạo S3 Bucket</a></li>
-<li><a href="2.3-CreateEC2Role/">Tạo EC2 role</a></li>
-<li><a href="2.4-CreateVPC/">Tạo VPC</a></li>
-<li><a href="2.5-CreateSubnets/">Tạo Subnet</a></li>
-<li><a href="2.6-CreateIGW/">Tạo Internet Gateway</a></li>
-<li><a href="2.7-CreateNATGateway/">Tạo NAT Gateway</a></li>
-<li><a href="2.8-CreateRouteTable/">Tạo Route Table</a></li>
-<li><a href="2.9-CreateSecurityGroup/">Tạo Security Group</a></li>
-</ul>
+	<h4 id="tổng-quan">Tổng quan</h4>
+<p>Trong phần này, chúng ta sẽ tìm hiểu cách kích hoạt Amazon GuardDuty trong môi trường AWS của bạn.</p>
+<ol>
+<li>Trên thanh điều hướng của AWS Console, gõ <strong>GuardDuty</strong> và chọn kết quả đầu tiên.
+<img alt="GD" src="/images/3.GuardDuty/3.1.jpg?width=60pc"></li>
+<li>Tiếp theo, chọn <strong>GuardDuty All feature</strong> để khám phá sức mạnh của GuardDuty.
+
+<div class="notices note" ><p>Bạn có thể chọn <strong>GuardDuty Malware Protection for S3 Only</strong> nếu bạn chỉ muốn bảo vệ S3 bucket mà không phải toàn bộ các dịch vụ AWS.</p>
+</div>
+
+<img alt="GD" src="/images/3.GuardDuty/3.2.jpg?width=60pc"></li>
+<li>Xem lại quyền hạn, sau đó nhấp vào <strong>Enable GuardDuty</strong> (Kích hoạt GuardDuty)
+<img alt="GD" src="/images/3.GuardDuty/3.3.jpg?width=60pc"></li>
+<li>Hoàn tất việc kích hoạt Amazon GuardDuty
+<img alt="GD" src="/images/3.GuardDuty/3.4.jpg?width=60pc"></li>
+</ol>
+<blockquote>
+<p>Bây giờ bạn đã hoàn thành tất cả các yêu cầu chuẩn bị cho buổi workshop này, hãy cùng tìm hiểu về các dịch vụ cụ thể và cách chúng tích hợp với nhau.</p>
+</blockquote>
 
 
 
@@ -1048,7 +1054,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1065,8 +1070,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1086,6 +1089,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1337,10 +1343,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/2-preparationsteps/2.1-createkmskey/" title="Clone code từ GitHub"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/2-preparationsteps/2.2-creates3bucket/" title="Tạo S3 Bucket"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/2-preparationsteps/2.2-creates3bucket/" title="Tạo S3 Bucket" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/3-guardduty/" title="Tạo Database với RDS" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1350,19 +1356,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725945982"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725945982"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725945982"></script>
-    <script src="/js/jquery.sticky.js?1725945982"></script>
-    <script src="/js/featherlight.min.js?1725945982"></script>
-    <script src="/js/highlight.pack.js?1725945982"></script>
+    <script src="/js/clipboard.min.js?1725946795"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725946795"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725946795"></script>
+    <script src="/js/jquery.sticky.js?1725946795"></script>
+    <script src="/js/featherlight.min.js?1725946795"></script>
+    <script src="/js/highlight.pack.js?1725946795"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725945982"></script>
-    <script src="/js/learn.js?1725945982"></script>
-    <script src="/js/hugo-learn.js?1725945982"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725946795"></script>
+    <script src="/js/learn.js?1725946795"></script>
+    <script src="/js/hugo-learn.js?1725946795"></script>
 
-    <link href="/mermaid/mermaid.css?1725945982" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725945982"></script>
+    <link href="/mermaid/mermaid.css?1725946795" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725946795"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

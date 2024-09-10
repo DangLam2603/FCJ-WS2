@@ -1,178 +1,157 @@
 [
 {
-	"uri": "//localhost:1313/vi/2-preparationsteps/2.1-createkmskey/",
-	"title": "Clone code từ GitHub",
+	"uri": "//localhost:1313/vi/5-exportfindingtos3/5.1-settingsfrequecy/",
+	"title": "Cài Đặt Tần Suất",
 	"tags": [],
 	"description": "",
-	"content": "Clone code từ GitHub Truy cập vào folder mà bạn muốn lưu trữ code.\nChuột phải chọn Open Git Bash Here. Gõ lệnh git clone https://github.com/NTDung93/library-app.git rồi enter.\nHoàn thành clone code từ GitHub Checkout qua nhánh deploy bằng lệnh git checkout deploy (nhánh đã được tinh chỉnh source code để thuận tiện cho việc deploy) Nếu bạn có mở source code phần Front-end, nó sẽ báo lỗi đỏ khắp màn hình, đừng lo lắng vì source đó đã xóa folder Node_modules để phục vụ cho việc deploy trong các section tới, bạn chỉ cần chạy lệnh npm install để cài đặt lại các package cần thiết. Nhưng nếu bạn không có nhu cầu mở source code phần Front-end, bạn có thể bỏ qua bước này.\n"
-},
-{
-	"uri": "//localhost:1313/vi/1-introduce/1.1-introduce-to-amazon-guardduty/",
-	"title": "Giải thích luồng chạy",
-	"tags": [],
-	"description": "",
-	"content": "Giải thích luồng chạy của kiến trúc ba tầng Trong hình dưới đây, chúng ta sẽ thấy mô hình kiến trúc của ứng dụng fullstack với kiến trúc ba tầng. Đầu tiên, thao tác của người dùng sẽ đi qua Internet gateway và sau đó đến External (Internet facing) Application Load Balancer. Load Balancer sẽ chuyển tiếp các traffic đến các máy chủ ở Web tier. Sau đó các máy chủ ở Web tier sẽ gọi các API đến Interal Load Balancer. Load Balancer sau đó sẽ chuyển tiếp các traffic đến các máy chủ ở App tier. Cuối cùng, các máy chủ ở App tier sẽ xử lý yêu cầu, truy xuất dữ liệu ở Data tier (nếu cần) và trả kết quả về cho người dùng ở Web tier. Đây là mô hình kiến trúc ba lớp cơ bản mà chúng ta sẽ triển khai trong workshop này.\n"
+	"content": "Cài Đặt GuardDuty Trong phần này, chúng ta sẽ cấu hình tần suất cho phép EventBridge xuất các phát hiện sau một khoảng thời gian.\nĐiều hướng đến thanh bên trái của GuardDuty, chọn Cài đặt Sau đó, nhấp vào Chỉnh sửa trong phần Tần suất của Tùy chọn Xuất Phát Hiện Trong cửa sổ pop-up, bạn có thể chọn tần suất mà bạn muốn EventBridge xuất. 6 Giờ (mặc định) 1 Giờ 15 Phút (Chúng tôi sẽ chọn 15 phút cho workshop này). "
 },
 {
 	"uri": "//localhost:1313/vi/1-introduce/",
-	"title": "Giới thiệu",
+	"title": "Giới thiệu",
 	"tags": [],
 	"description": "",
-	"content": "Giới thiệu kiến trúc 3 tầng Kiến trúc ba tầng là cách triển khai phổ biến nhất của kiến ​​trúc nhiều tầng, bao gồm một tầng giao diện, tầng logic và tầng dữ liệu. Hình minh họa sau đây cho thấy một ví dụ về một ứng dụng ba tầng chung đơn giản.\nKiến trúc 3 tầng bao gồm:\nPresentation tier / Web Tier: tầng giao diện để người dùng có thể tương tác trực tiếp (vd: trang web hay UI của ứng dụng mobile). Logic tier / App tier: tầng để xử lý logic và thực thi những câu lệnh của người dùng. Data tier: tầng lưu trữ dữ liệu của app. Lợi ích của việc sử dụng kiến trúc 3 tầng:\nTính mô-đun: kiến trúc này giúp ta module hóa app thành các phần độc lập nhau. Điều này giúp team dev có thể tập trung phát triển từng tầng của app, dẫn đến các thay đổi được áp dụng nhanh nhất có thể. Ngoài ra, nó còn giúp việc khôi phục app diễn ra nhanh chóng hơn sau khi server bị down do lỗi hay thảm họa nhờ vào việc có thể khoanh vùng và sửa chữa phần bị lỗi. Tính sẵn sàng cao: vì kiến trúc triển khai ứng dụng trên nhiều Availability Zones, các AZ được thiết kế để không xảy ra sự cố ảnh hưởng đồng thời 2 AZ một lúc (fault isolation). Tính dự phòng cao: AWS cho phép triển khai bản stand by hay replica của primary database trên AZ còn lại. Nếu database chính bị down, ứng dụng vẫn có thể truy xuất dữ liệu từ replica database. "
+	"content": "Giới thiệu về kiến trúc Trong buổi workshop này, chúng ta sẽ khám phá khả năng của AWS GuardDuty trong việc bảo vệ S3 bucket của bạn bằng cách tích hợp với SNS và kích hoạt các sự kiện trong EventBridge để cảnh báo cho Admin hành động kịp thời.\nKiến trúc này bao gồm:\nKích hoạt GuardDuty để bảo vệ S3 khỏi phần mềm độc hại. Thiết lập SNS, các quy tắc EventBridge để nhận thông báo qua email. Thiết lập IAM roles, KMS để bảo mật. Xuất kết quả tìm được vào S3 Bucket. Lợi ích của việc triển khai kiến trúc này:\nBảo mật: kiến trúc này giúp chúng ta cảnh báo ngay lập tức nếu có các tệp không được bảo vệ trong S3 Bucket cũng như môi trường AWS nói chung. Phát hiện mối đe dọa theo thời gian thực: AWS GuardDuty liên tục giám sát S3 bucket của bạn để phát hiện các truy cập độc hại hoặc không được phép, giúp phát hiện các mối đe dọa theo thời gian thực mà không cần can thiệp thủ công. Kích hoạt sự kiện tự động: Khi GuardDuty phát hiện một sự kiện đáng ngờ, nó sẽ kích hoạt sự kiện trong Amazon EventBridge, cho phép xử lý tự động các phát hiện này. Trong buổi workshop này, chúng ta sẽ gửi email tùy chỉnh qua SNS. "
 },
 {
-	"uri": "//localhost:1313/vi/6-demo/6.1-uploadmalwarefiletos3/",
-	"title": "Sửa lại file cấu hình Nginx",
+	"uri": "//localhost:1313/vi/1-introduce/1.1-introduce-to-amazon-guardduty/",
+	"title": "Giới thiệu về Amazon GuardDuty",
 	"tags": [],
 	"description": "",
-	"content": "Sửa lại file cấu hình Nginx Mở file nginx.conf từ project đã clone Sau đó sửa dòng số 58 trong file thành DNS Name của load balancer app-tier-internal-lb "
-},
-{
-	"uri": "//localhost:1313/vi/5-exportfindingtos3/5.1-settingsfrequecy/",
-	"title": "Tạo AMI cho App Tier",
-	"tags": [],
-	"description": "",
-	"content": "Vì sao chúng ta cần tạo Amazon Machine Image (AMI)? AMI bao gồm operating system, applications, configurations, và data volumes. Reproduce config hoặc launch instance mới dễ dàng - một khi đã tạo một instance với những config mong muốn, ta tạo AMI từ instance đó. Khi ta tạo ra những instance mới từ AMI đó, sẽ đảm bảo được tính consistency, các instance đều có những config tương đồng nhau. Backup và recovery - AMI như snapshot dùng để backup, recovery khi có thiên tai, để reproduce những instance bị fail → Nếu có instance nào fail hoặc cần thay thế, sẽ dễ dàng và nhanh chóng hơn nếu tạo từ AMI thay vì từ đầu. Auto scaling - Khi chúng ta sử dụng ASG (Auto Scaling Group) để scale up app, AMI sẽ đảm bảo những instance mới sẽ có những config cần thiết. Tạo AMI từ instance Truy cập vào dịch vụ EC2:\nChọn Instances ở sidebar Chọn instance My App Server 1 Click Actions, sau đó click Image and template và chọn Create image Ở giao diện tạo image:\nImage name điền AppTierImage Image description điền App tier Lướt xuống dưới cùng, click Create image "
+	"content": "Giới thiệu về Amazon GuardDuty Amazon GuardDuty là dịch vụ phát hiện mối đe dọa liên tục giám sát môi trường AWS của bạn để phát hiện các hoạt động đáng ngờ hoặc độc hại. Nó sử dụng học máy, giám sát phát hiện và trí tuệ mối đe dọa tích hợp để phát hiện và cảnh báo cho bạn về các mối đe dọa tiềm tàng trong môi trường AWS như Amazon S3, EC2 Instances.\nTrường hợp sử dụng:\nBảo vệ S3 Buckets: Phát hiện dữ liệu, tệp tin đáng ngờ hoặc lưu trữ phần mềm độc hại trong S3. Bảo vệ EC2 Instances: Xác định các instances được sử dụng để khai thác tiền điện tử hoặc kết nối với các địa chỉ IP đáng ngờ. Giám sát hoạt động IAM Role: Phát hiện các hành vi bất thường trong truy cập role, chẳng hạn như cố gắng leo thang quyền hoặc truy cập vào các tài nguyên nhạy cảm. "
 },
 {
 	"uri": "//localhost:1313/vi/3-guardduty/3.1-malwareprotections3/",
-	"title": "Tạo database subnet group",
+	"title": "Kích hoạt bảo vệ phần mềm độc hại cho S3",
 	"tags": [],
 	"description": "",
-	"content": "Database subnet group là gì và tại sao chúng ta cần nó? Database subnet group là một tập hợp các subnet mà bạn tạo ra trong VPC của bạn. Khi tạo một database instance, bạn cần phải chỉ định một database subnet group. Database subnet group phải chứa ít nhất một subnet trong mỗi AZ. Database subnet group đảm bảo rằng database instance có thể được triển khai trên nhiều AZ để có được tính sẵn sàng cao.\nTạo database subnet group Tìm và truy cập vào dịch vụ RDS Chọn Subnet groups ở sidebar và click Create DB subnet group Ở giao diện tạo DB subnet group:\nName điền db-subnet-group Description điền db-subnet-group VPC chọn my-vpc Ở phần Add subnets:\nAZ chọn ap-southeast-1a và ap-southeast-1b Subnets chọn Private DB Subnet 1 và Private DB Subnet 2 (có thể vào lại list các subnet, xem CIDR của mỗi subnet để chọn cho đúng) Sau đó click Create Hoàn thành tạo Subnet group. "
-},
-{
-	"uri": "//localhost:1313/vi/4-setupnotification/4.1-createsns/",
-	"title": "Tạo máy chủ EC2",
-	"tags": [],
-	"description": "",
-	"content": "Tạo EC2 instance cho App Tier Tìm và chọn dịch vụ EC2 Chọn Instances ở sidebar, sau đó click Launch instances Name and tags điền My App Server 1 Ở phần AMI: chọn Amazon Linux AMI chọn Amazon Linux 2 AMI (HVM) Ở phần Key pair, ta chọn Proceed without a key pair vì ta sẽ connect EC2 instance thông qua AWS Systems Manager Session Manager. Ở phần Network settings: VPC chọn my-vpc Subnet chọn Private Subnet 1 Auto-assign public IP chọn Enable SG chọn Select existing security group Common SG chọn AppTier-SG Ở phần Advanced details, IAM instance profile chọn ec2role ta tạo ở trên Click Launch instance Hoàn thành tạo EC2 instance cho một server ở AppTier ở private subnet 1 "
+	"content": "Kích hoạt tính năng mới Tìm và truy cập dịch vụ Amazon GuardDuty Chọn S3 bucket cần bảo vệ Bạn có thể chọn Object with a specific prefix để tùy chỉnh tiền tố của tệp trong bucket của bạn. Trong dự án này, chúng tôi sẽ quét tất cả các tệp trong bucket.\nChọn tùy chọn s3-raw-gd Trong phần Tag Scan Object:\nChọn Tag Objects: điều này cho phép GuardDuty ghi trạng thái quét vào phần thẻ trong các đối tượng S3. Trong phần Permission, xem xét Policy và Trust Relationship.\nPolicy {\r\u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;,\r\u0026#34;Statement\u0026#34;: [\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowManagedRuleToSendS3EventsToGuardDuty\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;events:PutRule\u0026#34;,\r\u0026#34;events:DeleteRule\u0026#34;,\r\u0026#34;events:PutTargets\u0026#34;,\r\u0026#34;events:RemoveTargets\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:events:ap-southeast-1:381492162967:rule/DO-NOT-DELETE-AmazonGuardDutyMalwareProtectionS3*\u0026#34;\r],\r\u0026#34;Condition\u0026#34;: {\r\u0026#34;StringLike\u0026#34;: {\r\u0026#34;events:ManagedBy\u0026#34;: \u0026#34;malware-protection-plan.guardduty.amazonaws.com\u0026#34;\r}\r}\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowGuardDutyToMonitorEventBridgeManagedRule\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;events:DescribeRule\u0026#34;,\r\u0026#34;events:ListTargetsByRule\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:events:ap-southeast-1:381492162967:rule/DO-NOT-DELETE-AmazonGuardDutyMalwareProtectionS3*\u0026#34;\r]\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowPostScanTag\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;s3:PutObjectTagging\u0026#34;,\r\u0026#34;s3:GetObjectTagging\u0026#34;,\r\u0026#34;s3:PutObjectVersionTagging\u0026#34;,\r\u0026#34;s3:GetObjectVersionTagging\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:s3:::\u0026lt;bucket_name\u0026gt;/*\u0026#34;\r]\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowEnableS3EventBridgeEvents\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;s3:PutBucketNotification\u0026#34;,\r\u0026#34;s3:GetBucketNotification\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:s3:::\u0026lt;bucket_name\u0026gt;\u0026#34;\r]\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowPutValidationObject\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;s3:PutObject\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:s3:::\u0026lt;bucket_name\u0026gt;/malware-protection-resource-validation-object\u0026#34;\r]\r},\r{\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;s3:ListBucket\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:s3:::\u0026lt;bucket_name\u0026gt;\u0026#34;\r]\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowMalwareScan\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;s3:GetObject\u0026#34;,\r\u0026#34;s3:GetObjectVersion\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:s3:::\u0026lt;bucket_name\u0026gt;/*\u0026#34;\r]\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowDecryptForMalwareScan\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;kms:GenerateDataKey\u0026#34;,\r\u0026#34;kms:Decrypt\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: \u0026#34;arn:aws:kms:ap-southeast-1:381492162967:key/\u0026lt;key_id\u0026gt;\u0026#34;,\r\u0026#34;Condition\u0026#34;: {\r\u0026#34;StringLike\u0026#34;: {\r\u0026#34;kms:ViaService\u0026#34;: \u0026#34;s3.*.amazonaws.com\u0026#34;\r}\r}\r}\r]\r} Trusted Relationship: {\r\u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;,\r\u0026#34;Statement\u0026#34;: [\r{\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Principal\u0026#34;: {\r\u0026#34;Service\u0026#34;: \u0026#34;malware-protection-plan.guardduty.amazonaws.com\u0026#34;\r},\r\u0026#34;Action\u0026#34;: \u0026#34;sts:AssumeRole\u0026#34;\r}\r]\r} Hãy chắc chắn lưu lại các chi tiết quyền hạn để sử dụng sau này, rồi tiếp tục đến các phần tiếp theo.\n"
 },
 {
 	"uri": "//localhost:1313/vi/",
-	"title": "Triển khai fullstack app với kiến trúc ba tầng",
+	"title": "Malware Protection cho S3 bằng GuardDuty",
 	"tags": [],
 	"description": "",
-	"content": "Triển khai fullstack app với kiến trúc ba tầng Tổng quan Trong bài workshop này, chúng ta sẽ cùng nhau triển khai fullstack app (Spring Boot, React, MySQL) với kiến trúc ba tầng. Tìm hiểu các khái niệm, các tính năng của từng dịch vụ được sử dụng trong kiến trúc.\nNội dung Giới thiệu Các bước chuẩn bị Tạo database với RDS Triển khai App tier Tạo Internal LB và ASG Triển khai Web tier Tạo External LB và ASG Demo web sau khi deploy thành công Dọn dẹp tài nguyên "
+	"content": "Bảo Vệ Malware cho S3 với GuardDuty Tổng Quan Trong workshop này, chúng tôi sẽ trình bày cách AWS GuardDuty có thể bảo vệ bucket S3 của bạn bằng cách nhận diện và khắc phục các tệp độc hại. Bạn sẽ học cách phát hiện các mối đe dọa tự động, xuất các phát hiện GuardDuty được mã hóa vào bucket S3 và thiết lập cảnh báo thời gian thực trong các khoảng thời gian chính sử dụng EventBridge và SNS để thông báo cho các quản trị viên.\nNội Dung Giới thiệu Các bước chuẩn bị Amazon GuardDuty Thiết lập thông báo Xuất kết quả đến S3 Demo Dọn dẹp tài nguyên "
 },
 {
-	"uri": "//localhost:1313/vi/2-preparationsteps/2.3-enableguardduty/",
-	"title": "Các bước chuẩn bị",
+	"uri": "//localhost:1313/vi/2-preparationsteps/2.1-createkmskey/",
+	"title": "Tạo khóa KMS",
 	"tags": [],
 	"description": "",
-	"content": "Trong section 2 này, chúng ta sẽ cùng nhau setup những thứ quan trọng và cần thiết để thực hiện workshop này.\nNội dung Clone clode từ GitHub Tạo S3 Bucket Tạo EC2 role Tạo VPC Tạo Subnet Tạo Internet Gateway Tạo NAT Gateway Tạo Route Table Tạo Security Group "
+	"content": "Tạo khóa mã hóa KMS Truy cập vào tài khoản AWS của bạn và tìm kiếm KMS (Key Management Service). Nhấp chuột phải vào Create Key (Tạo Khóa) Trong phần cấu hình, chọn Symmetric và Encrypt and Decrypt (Mã hóa và Giải mã) Trong phần Tùy chọn nâng cao (Advance options), chọn KMS key và Single-Region Key vì chúng ta muốn sử dụng khóa này trong cùng một khu vực trong buổi workshop. Đặt Alias custom name (Tên bí danh tùy chỉnh) cho khóa KMS: Chỉ định quyền truy cập quản trị viên (permission) cho khóa KMS: Xác định mục đích sử dụng của khóa KMS: Xem lại Chính sách Khóa (Key Policy) Khóa KMS đã được tạo thành công Trong bước Chính sách Khóa (Key Policy), bạn có thể giữ lại cấu hình mặc định được cung cấp khi tạo khóa KMS. Chúng ta sẽ thực hiện các sửa đổi cần thiết cho phần này sau khi tiếp tục dự án.\n"
+},
+{
+	"uri": "//localhost:1313/vi/4-setupnotification/4.1-createsns/",
+	"title": "Tạo SNS",
+	"tags": [],
+	"description": "",
+	"content": "Tạo SNS để gửi email Trong phần này, chúng ta sẽ cấu hình dịch vụ Email sử dụng chủ đề SNS.\nTạo Chủ Đề Điều hướng đến AWS console, Tìm kiếm dịch vụ SNS. Chọn Tạo một Chủ đề. Trong phần Chi tiết, chọn loại Standard và dán guardduty-topic vào phần tên. Sau đó, nhấp Tạo Chủ đề Tạo và Đăng Ký đăng ký Điều hướng đến thanh bên trái và chọn Chủ đề: Chọn chủ đề mà chúng ta vừa tạo sau đó chọn đăng ký và nhấp tạo đăng ký\nTrong phần Chi tiết, chọn Email ở phần Giao thức Tiếp theo, chỉ định email sẽ nhận thông báo từ SNS Nhấp Tạo Đăng ký Hoàn thành việc tạo đăng ký. Sau khi bạn tạo đăng ký, trạng thái tiếp theo sẽ chờ xác nhận. Bạn sẽ nhận được một email xác nhận dựa trên email mà bạn cung cấp ở trên.\nXác Nhận Email Email đã được xác nhận thành công. Cập nhật trạng thái "
 },
 {
 	"uri": "//localhost:1313/vi/2-preparationsteps/",
 	"title": "Các bước chuẩn bị",
 	"tags": [],
 	"description": "",
-	"content": "Trong section 2 này, chúng ta sẽ cùng nhau setup những thứ quan trọng và cần thiết để thực hiện workshop này.\nNội dung Clone clode từ GitHub Tạo S3 Bucket Tạo EC2 role Tạo VPC Tạo Subnet Tạo Internet Gateway Tạo NAT Gateway Tạo Route Table Tạo Security Group "
+	"content": "Trong phần này, chúng ta sẽ thiết lập các điều cần thiết và quan trọng để thực hiện buổi workshop này.\nNội dung Tạo khóa KMS Tạo S3 Bucket Kích hoạt GuardDuty "
 },
 {
-	"uri": "//localhost:1313/vi/4-setupnotification/4.2-createeventbridge/",
-	"title": "Kết nối tới EC2 instance",
+	"uri": "//localhost:1313/vi/5-exportfindingtos3/5.2-attachpolicytos3/",
+	"title": "Gán Policy cho S3",
 	"tags": [],
 	"description": "",
-	"content": "Kết nối tới EC2 instance Trên giao diện các EC2 instances, chọn instance vừa tạo và bấm Connect Chuyển qua tab Session Manager và click Connect Connect thành công vào instance Chạy lệnh sudo -su ec2-user để chuyển từ user sang ec2-user, và có những quyền quản trị root đối với instance Tiếp đó chạy lệnh ping 8.8.8.8 (IP address của Google’s DNS server) để test xem instance của ta có thể kết nối với internet bên ngoài thông qua igw không "
+	"content": "Chỉnh sửa quyền bucket S3 Quay lại Findings export options, và nhấp vào Configure now trong phần bucket S3.\nTrong giao diện Export Findings:\nS3 Bucket ARN điền ARN của bucket mà bạn muốn xuất: s3-malware-gd. KMS Key ARN điền ARN của khóa KMS mà chúng ta đã tạo trong Bước chuẩn bị 3. Tiếp theo, nhấp vào View Policy for S3 Bucket trong Attach Policy 4. Sao chép JSON policy và chuyển sang phần tiếp theo. 5. Mở một tab mới và điều hướng đến Permission của bucket s3-malware-gd 6. Trong Bucket Policy, nhấp vào Edit 7. Dán JSON policy. Nhấp vào Save Change 8. Hoàn tất việc Gán Policy cho S3 "
 },
 {
 	"uri": "//localhost:1313/vi/3-guardduty/3.2-createpolicyprotection/",
-	"title": "Tạo database instance",
+	"title": "Tạo Chính Sách Bảo Vệ IAM",
 	"tags": [],
 	"description": "",
-	"content": "Tạo database instance Trong giao diện Amazon RDS, chọn Databases ở sidebar sau đó click Create database Ở giao diện Create database:\nCreation method chọn Standard create Engine type chọn MySQL Templates chọn Dev/Test, Deployment options chọn Multi-AZ DB instance (để tạo ra instance chính ở AZ hiện tại, và một clone instance ở AZ còn lại đã define trong db subnet group phòng failover) → Cách triển khai này sẽ best practice vì đáp ứng tiêu chí High availability và Data redundancy Nhưng chúng ta có thể chọn option khác là Free tier để vừa phù hợp với scope của bài toán, vừa tiết kiệm chi phí Ở phần Settings:\nDB instance identifier điền database-1 Master username điền admin Master password điền 12345678 Ở phần Connectivity:\nComputer resource chọn Dont connect to EC2 VPC chọn my-vpc DB subnet group chọn db-subnet-group ta đã tạo Public access chọn No (chọn Yes nếu muốn test connection từ public network) VPC SG chọn Choose existing Existing VPC SG chọn DataTier-SG AZ chọn ap-southeast-1a Ở phần Additional configuration, điền db name là demodb (master name: admin, pass: 12345678) Kéo xuống dưới cùng và chọn Create database: Hoàn thành tạo database instance Config lại để test connection từ public network Để có thể test connection tới endpoint của db vừa tạo từ public network, ta phải config lại một số thứ như sau (sau khi test xong nhớ trả tất cả về trạng thái ban đầu)\nVào route table private-db-route-table, thêm một route mới với destination là 0.0.0.0/0 và target là internet gateway ta đã tạo Vào security group DataTier-SG, thêm một inbound rule mới cho phép All traffic truy cập Cập nhật lại trạng thái của Public access ở phần Connectivity trong db instance từ No thành Yes Test connection tới endpoint của db instance vừa tạo Vào phần mềm MySQL Workbench, tạo connect mới:\nConnection Name điền db-ws-01 Hostname copy và paste endpoint của db instance vừa tạo Port điền 3306 Username điền admin Password click Store in Vault rồi nhập 12345678 Sau cùng, nhấn Test Connection Test connection thành công Vào file application.properties và config lại datasource url, username và password như hình dưới Run app và check trong connection vừa tạo trong MySQL, ta thấy các table đã được auto generate nhờ vào cơ chế code first (chỉ để test vì trong workshop này chúng ta sẽ sử dụng database first) "
-},
-{
-	"uri": "//localhost:1313/vi/3-guardduty/3.3-createroleproctection/",
-	"title": "Tạo database instance",
-	"tags": [],
-	"description": "",
-	"content": "Tạo database instance Trong giao diện Amazon RDS, chọn Databases ở sidebar sau đó click Create database Ở giao diện Create database:\nCreation method chọn Standard create Engine type chọn MySQL Templates chọn Dev/Test, Deployment options chọn Multi-AZ DB instance (để tạo ra instance chính ở AZ hiện tại, và một clone instance ở AZ còn lại đã define trong db subnet group phòng failover) → Cách triển khai này sẽ best practice vì đáp ứng tiêu chí High availability và Data redundancy Nhưng chúng ta có thể chọn option khác là Free tier để vừa phù hợp với scope của bài toán, vừa tiết kiệm chi phí Ở phần Settings:\nDB instance identifier điền database-1 Master username điền admin Master password điền 12345678 Ở phần Connectivity:\nComputer resource chọn Dont connect to EC2 VPC chọn my-vpc DB subnet group chọn db-subnet-group ta đã tạo Public access chọn No (chọn Yes nếu muốn test connection từ public network) VPC SG chọn Choose existing Existing VPC SG chọn DataTier-SG AZ chọn ap-southeast-1a Ở phần Additional configuration, điền db name là demodb (master name: admin, pass: 12345678) Kéo xuống dưới cùng và chọn Create database: Hoàn thành tạo database instance Config lại để test connection từ public network Để có thể test connection tới endpoint của db vừa tạo từ public network, ta phải config lại một số thứ như sau (sau khi test xong nhớ trả tất cả về trạng thái ban đầu)\nVào route table private-db-route-table, thêm một route mới với destination là 0.0.0.0/0 và target là internet gateway ta đã tạo Vào security group DataTier-SG, thêm một inbound rule mới cho phép All traffic truy cập Cập nhật lại trạng thái của Public access ở phần Connectivity trong db instance từ No thành Yes Test connection tới endpoint của db instance vừa tạo Vào phần mềm MySQL Workbench, tạo connect mới:\nConnection Name điền db-ws-01 Hostname copy và paste endpoint của db instance vừa tạo Port điền 3306 Username điền admin Password click Store in Vault rồi nhập 12345678 Sau cùng, nhấn Test Connection Test connection thành công Vào file application.properties và config lại datasource url, username và password như hình dưới Run app và check trong connection vừa tạo trong MySQL, ta thấy các table đã được auto generate nhờ vào cơ chế code first (chỉ để test vì trong workshop này chúng ta sẽ sử dụng database first) "
-},
-{
-	"uri": "//localhost:1313/vi/3-guardduty/3.4-enableprotection/",
-	"title": "Tạo database instance",
-	"tags": [],
-	"description": "",
-	"content": "Tạo database instance Trong giao diện Amazon RDS, chọn Databases ở sidebar sau đó click Create database Ở giao diện Create database:\nCreation method chọn Standard create Engine type chọn MySQL Templates chọn Dev/Test, Deployment options chọn Multi-AZ DB instance (để tạo ra instance chính ở AZ hiện tại, và một clone instance ở AZ còn lại đã define trong db subnet group phòng failover) → Cách triển khai này sẽ best practice vì đáp ứng tiêu chí High availability và Data redundancy Nhưng chúng ta có thể chọn option khác là Free tier để vừa phù hợp với scope của bài toán, vừa tiết kiệm chi phí Ở phần Settings:\nDB instance identifier điền database-1 Master username điền admin Master password điền 12345678 Ở phần Connectivity:\nComputer resource chọn Dont connect to EC2 VPC chọn my-vpc DB subnet group chọn db-subnet-group ta đã tạo Public access chọn No (chọn Yes nếu muốn test connection từ public network) VPC SG chọn Choose existing Existing VPC SG chọn DataTier-SG AZ chọn ap-southeast-1a Ở phần Additional configuration, điền db name là demodb (master name: admin, pass: 12345678) Kéo xuống dưới cùng và chọn Create database: Hoàn thành tạo database instance Config lại để test connection từ public network Để có thể test connection tới endpoint của db vừa tạo từ public network, ta phải config lại một số thứ như sau (sau khi test xong nhớ trả tất cả về trạng thái ban đầu)\nVào route table private-db-route-table, thêm một route mới với destination là 0.0.0.0/0 và target là internet gateway ta đã tạo Vào security group DataTier-SG, thêm một inbound rule mới cho phép All traffic truy cập Cập nhật lại trạng thái của Public access ở phần Connectivity trong db instance từ No thành Yes Test connection tới endpoint của db instance vừa tạo Vào phần mềm MySQL Workbench, tạo connect mới:\nConnection Name điền db-ws-01 Hostname copy và paste endpoint của db instance vừa tạo Port điền 3306 Username điền admin Password click Store in Vault rồi nhập 12345678 Sau cùng, nhấn Test Connection Test connection thành công Vào file application.properties và config lại datasource url, username và password như hình dưới Run app và check trong connection vừa tạo trong MySQL, ta thấy các table đã được auto generate nhờ vào cơ chế code first (chỉ để test vì trong workshop này chúng ta sẽ sử dụng database first) "
+	"content": "Tổng Quan Trong bước trước, chúng ta đã tạo và chỉnh sửa bảo vệ phần mềm độc hại và nhận được một chính sách JSON. Bây giờ, hãy tùy chỉnh Chính sách IAM để làm cho điều này hoạt động!\nTrong giao diện AWS Console, tìm kiếm và chọn IAM Trong thanh điều hướng bên trái, chọn Policies và chọn Create Policy Trong phần Quyền cụ thể: Chọn JSON options Dán chính sách Policy trước đó vào phần 3.1 {\r\u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;,\r\u0026#34;Statement\u0026#34;: [\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowManagedRuleToSendS3EventsToGuardDuty\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;events:PutRule\u0026#34;,\r\u0026#34;events:DeleteRule\u0026#34;,\r\u0026#34;events:PutTargets\u0026#34;,\r\u0026#34;events:RemoveTargets\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:events:ap-southeast-1:381492162967:rule/DO-NOT-DELETE-AmazonGuardDutyMalwareProtectionS3*\u0026#34;\r],\r\u0026#34;Condition\u0026#34;: {\r\u0026#34;StringLike\u0026#34;: {\r\u0026#34;events:ManagedBy\u0026#34;: \u0026#34;malware-protection-plan.guardduty.amazonaws.com\u0026#34;\r}\r}\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowGuardDutyToMonitorEventBridgeManagedRule\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;events:DescribeRule\u0026#34;,\r\u0026#34;events:ListTargetsByRule\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:events:ap-southeast-1:381492162967:rule/DO-NOT-DELETE-AmazonGuardDutyMalwareProtectionS3*\u0026#34;\r]\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowPostScanTag\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;s3:PutObjectTagging\u0026#34;,\r\u0026#34;s3:GetObjectTagging\u0026#34;,\r\u0026#34;s3:PutObjectVersionTagging\u0026#34;,\r\u0026#34;s3:GetObjectVersionTagging\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:s3:::\u0026lt;bucket_name\u0026gt;/*\u0026#34;\r]\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowEnableS3EventBridgeEvents\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;s3:PutBucketNotification\u0026#34;,\r\u0026#34;s3:GetBucketNotification\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:s3:::\u0026lt;bucket_name\u0026gt;\u0026#34;\r]\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowPutValidationObject\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;s3:PutObject\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:s3:::\u0026lt;bucket_name\u0026gt;/malware-protection-resource-validation-object\u0026#34;\r]\r},\r{\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;s3:ListBucket\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:s3:::\u0026lt;bucket_name\u0026gt;\u0026#34;\r]\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowMalwareScan\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;s3:GetObject\u0026#34;,\r\u0026#34;s3:GetObjectVersion\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:s3:::\u0026lt;bucket_name\u0026gt;/*\u0026#34;\r]\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowDecryptForMalwareScan\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;kms:GenerateDataKey\u0026#34;,\r\u0026#34;kms:Decrypt\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: \u0026#34;arn:aws:kms:ap-southeast-1:381492162967:key/\u0026lt;key_id\u0026gt;\u0026#34;,\r\u0026#34;Condition\u0026#34;: {\r\u0026#34;StringLike\u0026#34;: {\r\u0026#34;kms:ViaService\u0026#34;: \u0026#34;s3.*.amazonaws.com\u0026#34;\r}\r}\r}\r]\r} 4. Tiếp theo đến bước Xem xét và Tạo, chọn tên chính sách trong Policy Details, chúng ta sẽ chọn pl-gd-s3-raw 5. Xem xét Chính sách:\nEventBridge: Quyền truy cập hạn chế với các quyền Danh sách, Đọc và Ghi. Nó có các điều kiện để quản lý các sự kiện từ Amazon GuardDuty liên quan đến bảo vệ phần mềm độc hại. KMS (Key Management Service): Quyền ghi được cấp với các hạn chế dựa trên ID khóa và khu vực, và phải được truy cập qua dịch vụ S3. S3 (Simple Storage Service): Quyền Danh sách, Đọc, Ghi và Đánh dấu, không có điều kiện cụ thể nào được áp dụng. Tạo Chính sách Hoàn thành việc tạo chính sách "
 },
 {
 	"uri": "//localhost:1313/vi/2-preparationsteps/2.2-creates3bucket/",
 	"title": "Tạo S3 Bucket",
 	"tags": [],
 	"description": "",
-	"content": "Tạo S3 Bucket Truy cập giao diện AWS, tìm dịch vụ S3 sau đó click chọn Trong giao diện S3, click Create bucket Trong giao diện Create bucket:\nAWS Region chọn Singapore ap-southeast-1 Bucket name nhập demowebapp-workshop-01 Kéo xuống dưới cùng và chọn Create bucket Hoàn thành tạo S3 bucket "
+	"content": "Tạo S3 Bucket Truy cập giao diện AWS, tìm Dịch vụ S3 và nhấp chọn Trong giao diện S3, nhấp vào Create bucket (Tạo Bucket) Trong giao diện Tạo Bucket: AWS Region chọn Singapore ap-southeast-1 Tên Bucket nhập s3-raw-gd Cuộn xuống dưới cùng và chọn Create bucket (Tạo Bucket) Bạn cần tạo thêm một bucket khác để lọc các tập tin độc hại cho việc sử dụng sau này. Thực hiện và làm theo các bước 1-4 ở trên, nhưng thay đổi tên bucket thành s3-malware-gd\nHoàn thành việc tạo S3 Bucket Để thực hành thêm, bạn có thể lấy ARN của Bucket bằng cách chọn tên bucket \u0026ndash;\u0026gt; thuộc tính \u0026ndash;\u0026gt; sao chép ARN\n"
 },
 {
-	"uri": "//localhost:1313/vi/5-exportfindingtos3/5.2-attachpolicytos3/",
-	"title": "Tạo Target group cho App Tier",
+	"uri": "//localhost:1313/vi/4-setupnotification/4.2-createeventbridge/",
+	"title": "Tạo Sự Kiện cho GuardDuty",
 	"tags": [],
 	"description": "",
-	"content": "Tại sao cần tạo Target group? Vì khi đăng ký các ec2 instances vào target group, load balancer có thể theo dõi health của từng instance và route traffic tới healthy instance → ensure high availability. Tạo Target group Tại giao diện EC2, chọn Target Groups ở nhóm Load balancing ở sidebar, sau đó chọn Create target group Tại giao diện tạo target group:\nTarget group name điền AppTierTargetGroup Protocol: HTTP, Port: 8080 VPC chọn my-vpc Kéo xuống dưới cùng click Next rồi click Create target group Hoàn thành tạo target group "
-},
-{
-	"uri": "//localhost:1313/vi/6-demo/6.2-checkemailnoification/",
-	"title": "Upaload code lên S3",
-	"tags": [],
-	"description": "",
-	"content": "Upaload code lên S3 Vào folder library-app-fe dưới local, xóa folder node_modules (nếu có) Truy cập vào bucket đã tạo của S3, kéo thả folder library-app-fe và file nginx.config dưới local vào bucket để tải folder và file lên bucket. "
+	"content": "Tổng Quan Trong phần này, chúng ta sẽ triển khai kiến trúc dựa trên sự kiện để theo dõi các phát hiện từ Amazon GuardDuty theo thời gian thực. Sử dụng Amazon EventBridge, chúng ta sẽ tạo các quy tắc kích hoạt các hành động cụ thể khi GuardDuty phát hiện các mối đe dọa hoặc lỗ hổng tiềm ẩn.\nTrong thanh tìm kiếm AWS, gõ EventBridge và chọn kết quả đầu tiên. Chuyển đến tab EventBridge Rule và nhấp Create Rule Gõ rule-event-gd vào phần Tên, và để các tùy chọn còn lại ở mặc định Trong Event Pattern, chọn các tùy chọn sau:\nEvent Source, Chọn AWS service Chọn GuardDuty cho AWS service GuardDuty Findings cho Event Type. Sau đó, chọn Edit Pattern để thay đổi mức độ nghiêm trọng của sự kiện sẽ được kích hoạt. Dán đoạn mã sau và chỉnh sửa mức độ nguy hiểm của các phát hiện { \u0026#34;source\u0026#34;: [ \u0026#34;aws.guardduty\u0026#34; ], \u0026#34;detail-type\u0026#34;: [ \u0026#34;GuardDuty Finding\u0026#34; ], \u0026#34;detail\u0026#34;: { \u0026#34;severity\u0026#34;: [ 4, 4.0, 4.1, 4.2, 4.3, 4.4, 4.5, 4.6, 4.7, 4.8, 4.9, 5, 5.0, 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 5.9, 6, 6.0, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 6.8, 6.9, 7, 7.0, 7.1, 7.2, 7.3, 7.4, 7.5, 7.6, 7.7, 7.8, 7.9, 8, 8.0, 8.1, 8.2, 8.3, 8.4, 8.5, 8.6, 8.7, 8.8, 8.9 ] } } 6. Trong Cài đặt Nâng cao, chọn các tùy chọn sau:\nChọn dịch vụ AWS Chọn SNS topic Và trong phần Topic, chọn guardduty-topic, mà bạn vừa tạo Tiếp theo, chúng ta sẽ tạo thông báo tùy chỉnh cho SNS: Trong Additional settings, chọn Input transformer Trong Target input transformer, gõ đoạn mã sau vào Input Path: {\r\u0026#34;severity\u0026#34;: \u0026#34;$.detail.severity\u0026#34;,\r\u0026#34;Account_ID\u0026#34;: \u0026#34;$.detail.accountId\u0026#34;,\r\u0026#34;Finding_ID\u0026#34;: \u0026#34;$.detail.id\u0026#34;,\r\u0026#34;Finding_Type\u0026#34;: \u0026#34;$.detail.type\u0026#34;,\r\u0026#34;region\u0026#34;: \u0026#34;$.region\u0026#34;,\r\u0026#34;Finding_description\u0026#34;: \u0026#34;$.detail.description\u0026#34;\r}\r9. Trong Template, cung cấp Input Template sau:\n\u0026#34;AWS \u0026lt;Account_ID\u0026gt; has a severity \u0026lt;severity\u0026gt; GuardDuty finding type \u0026lt;Finding_Type\u0026gt; in the \u0026lt;region\u0026gt; region.\u0026#34;\r\u0026#34;Finding Description:\u0026#34;\r\u0026#34;\u0026lt;Finding_description\u0026gt;. \u0026#34;\r\u0026#34;For more details open the GuardDuty console at https://console.aws.amazon.com/guardduty/home?region=\u0026lt;region\u0026gt;#/findings?search=id%3D\u0026lt;Finding_ID\u0026gt;\u0026#34; Xem lại và nhấp Create Rule Hoàn tất việc tạo Event Rule "
 },
 {
 	"uri": "//localhost:1313/vi/3-guardduty/",
-	"title": "Tạo Database với RDS",
+	"title": "Bảo Vệ S3 khỏi phần mềm độc hại",
 	"tags": [],
 	"description": "",
-	"content": "RDS là gì? Dịch vụ cơ sở dữ liệu quan hệ của Amazon (Amazon RDS) là một dịch vụ được quản lý, giúp bạn dễ dàng thiết lập, vận hành và điều chỉnh quy mô cơ sở dữ liệu quan hệ trên đám mây. Dịch vụ này cung cấp tính năng hiệu quả về chi phí và có thể thay đổi quy mô, trong khi vẫn quản lý được các tác vụ quản trị cơ sở dữ liệu tiêu tốn nhiều thời gian, giúp bạn thoải mái tập trung vào các ứng dụng và công việc của bạn.\nNội dung Tạo database subnet group Tạo database instance "
-},
-{
-	"uri": "//localhost:1313/vi/6-demo/6.3-checkexportfindings3/",
-	"title": "Tạo EC2 instance",
-	"tags": [],
-	"description": "",
-	"content": "Tạo EC2 instance Tương tự như tạo instance cho App server, ta tạo một instance cho web server với những thay đổi sau:\nInstance name điền My Web Server 1 Subnet chọn Public Subnet 1 Security group chọn WebTier-SG Advanced details, IAM instance profile chọn ec2role Cuối cùng chọn Launch instance Hoàn thành tạo EC2 instance cho web server "
+	"content": "Bảo Vệ S3 khỏi phần mềm độc hại là gì? Bảo Vệ S3 giúp phát hiện phần mềm độc hại tiềm ẩn bằng cách quét các đối tượng mới tải lên trong bucket Amazon S3 được chọn của bạn. Khi một đối tượng hoặc một phiên bản mới của đối tượng hiện có được tải lên, GuardDuty tự động khởi tạo quét phần mềm độc hại.\nĐây là tính năng mới của GuardDuty từ bản cập nhật gần nhất vào tháng 6 năm 2024\nNội Dung Kích Hoạt Malware Protection cho S3 Tạo Chính Sách Bảo Vệ Tạo Quy Tắc IAM Kích Hoạt Bảo Vệ "
 },
 {
 	"uri": "//localhost:1313/vi/5-exportfindingtos3/5.3-attachpolicytokms/",
-	"title": "Tạo Internal Load Balancer",
+	"title": "Gán Policy cho KMS",
 	"tags": [],
 	"description": "",
-	"content": "Tạo Internal Load Balancer Ở giao diện EC2, chọn Load balancers ở sidebar, sau đó click Create load balancer Tại giao diện chọn balancer type, click chọn Create của Application Load Balancer Tại màn hình tạo ALB:\nLB Name điền app-tier-internal-lb Scheme chọn Internal Ở phần Network mapping:\nVPC: my-vpc Tick chọn ap-southeast-1a, sau đó chọn Private Subnet 1 Tick chọn ap-southeast-1b, sau đó chọn Private Subnet 2 Ở phần Security groups chọn Internal-LB-SG. Ở phần Listeners and routing, default action chọn AppTierTargetGroup. Lướt xuống dưới cùng và click Create load balancer. Hoàn thành tạo load balancer cho app tier. "
+	"content": "Gán Policy cho KMS Quay lại Attach Policy trên trang GuardDuty, nhấp vào View policy for KMS key. Sao chép Policy sau đây Mở một tab mới, đi đến KMS key mà bạn đã tạo trước đó. Nhấp vào Key policy, và Switch to Policy View Dán Policy trước đó và lưu "
+},
+{
+	"uri": "//localhost:1313/vi/2-preparationsteps/2.3-enableguardduty/",
+	"title": "Kích hoạt GuardDuty",
+	"tags": [],
+	"description": "",
+	"content": "Tổng quan Trong phần này, chúng ta sẽ tìm hiểu cách kích hoạt Amazon GuardDuty trong môi trường AWS của bạn.\nTrên thanh điều hướng của AWS Console, gõ GuardDuty và chọn kết quả đầu tiên. Tiếp theo, chọn GuardDuty All feature để khám phá sức mạnh của GuardDuty. Bạn có thể chọn GuardDuty Malware Protection for S3 Only nếu bạn chỉ muốn bảo vệ S3 bucket mà không phải toàn bộ các dịch vụ AWS.\nXem lại quyền hạn, sau đó nhấp vào Enable GuardDuty (Kích hoạt GuardDuty) Hoàn tất việc kích hoạt Amazon GuardDuty Bây giờ bạn đã hoàn thành tất cả các yêu cầu chuẩn bị cho buổi workshop này, hãy cùng tìm hiểu về các dịch vụ cụ thể và cách chúng tích hợp với nhau.\n"
+},
+{
+	"uri": "//localhost:1313/vi/3-guardduty/3.3-createroleproctection/",
+	"title": "Tạo Vai Trò Bảo Vệ IAM",
+	"tags": [],
+	"description": "",
+	"content": "Tổng Quan Trong bước tiếp theo, chúng ta sẽ tạo một vai trò IAM dựa trên chính sách trước đó để sử dụng thêm nhằm chỉ định Quyền trong GuardDuty.\nTrong giao diện IAM, chọn Role từ thanh điều hướng bên trái và Create Role Trong Select trusted entity, chọn Custom Trust Policy Chọn chính sách sau pl-gd-s3-raw Tiếp theo, chọn Role name trong phần Role details. Trong Trust Policy, dán Trust Relationship trước đó vào phần 3.1 {\r\u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;,\r\u0026#34;Statement\u0026#34;: [\r{\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Principal\u0026#34;: {\r\u0026#34;Service\u0026#34;: \u0026#34;malware-protection-plan.guardduty.amazonaws.com\u0026#34;\r},\r\u0026#34;Action\u0026#34;: \u0026#34;sts:AssumeRole\u0026#34;\r}\r]\r} 5. Xem xét Vai trò và Tạo Vai trò mới: 6. Hoàn thành việc tạo vai trò "
 },
 {
 	"uri": "//localhost:1313/vi/5-exportfindingtos3/5.4-enableexport/",
-	"title": "Tạo Launch Template",
+	"title": "Bật Exporting Files",
 	"tags": [],
 	"description": "",
-	"content": "Sự khác nhau giữa Launch template và AMI? Launch template và AMI (Amazon Machine Images) đều là cơ sở quan trọng để khởi chạy các phiên bản EC2 trên AWS, nhưng chúng phục vụ cho các mục đích khác nhau:\nAMI (Amazon Machine Image): Một AMI là một template mô phỏng toàn bộ môi trường phần mềm của một phiên bản EC2 đang chạy. Nó bao gồm hệ điều hành, ứng dụng, cấu hình và khối lượng dữ liệu. AMI hoạt động như bản thiết kế cho việc tạo ra các phiên bản mới với cùng một setup. Bạn có thể coi chúng như các bản snapshots của một máy ảo. Launch template: Một Launch template xác định các chi tiết cấu hình cần thiết để khởi chạy một phiên bản EC2. Điều này bao gồm ID AMI (xác định môi trường phần mềm), security group, user data (scripts to run on instance startup), và các tham số khởi chạy khác. Nó về cơ bản xác định cách một phiên bản sẽ được cung cấp ngoài phần mềm cơ sở được cung cấp bởi AMI. Dưới đây là một ví dụ: Hãy tưởng tượng AMI như một công thức làm bánh, xác định các thành phần (hệ điều hành, ứng dụng). Một Launch template sẽ giống như hướng dẫn nướng bánh, bao gồm nhiệt độ lò (loại phiên bản), thời gian nướng, và bất kỳ bước nào bổ sung (các script dữ liệu người dùng). Bạn có thể sử dụng cùng một công thức làm bánh (AMI) với các hướng dẫn nướng khác nhau (Launch template) để tạo ra các loại bánh có biến thể (cấu hình phiên bản khác nhau).\nTạo Launch Template Tại giao diện EC2, chọn Launch templates ở sidebar, sau đó click Create launch template Tại giao diện tạo launch template, ở phần Launch template name and description, Launch template name điền AppTier-LaunchTemplate Ở phần chọn AMI, chọn Owned by me sau đó chọn AppTierImage Chọn Instance type là t2.micro Keypair để Don’t include in launch template Network settings:\nSubnet chọn Don’t include in launch template SG chọn existing sg, sau đó chọn AppTier-SG Advanced details, IAM instance profile chọn ec2role Kéo xuống dưới cùng, chọn Create launch template. Hoàn thành! "
+	"content": "Tổng Quan Bây giờ bạn đã thiết lập xong, hãy quay lại trang GuardDuty và lưu cấu hình. Sau khi cấu hình thành công, bạn sẽ nhận được thông báo tương tự. "
+},
+{
+	"uri": "//localhost:1313/vi/3-guardduty/3.4-enableprotection/",
+	"title": "Kích Hoạt Bảo Vệ Malware",
+	"tags": [],
+	"description": "",
+	"content": "Tổng Quan Bây giờ hãy tổng kết lại, quay lại Console GuardDuty, bạn sẽ kích hoạt Bảo Vệ Malware.\nTải lại và chọn role-guardduty-s3-raw mà chúng ta đã tạo trong phần 3.3 Hoàn tất việc kích hoạt Bảo Vệ Malware cho s3-raw-gd "
 },
 {
 	"uri": "//localhost:1313/vi/4-setupnotification/",
-	"title": "Triển khai App Tier",
+	"title": "Thiết lập Thông Báo",
 	"tags": [],
 	"description": "",
-	"content": "Triển khai App Tier Trong section này, chúng ta sẽ tạo máy chủ EC2 nằm trong private subnet, sau đó kết nối tới instance, cài đặt MySQL lên instance và chạy app của chúng ta trên instance.\nNội dung Tạo máy chủ EC2 Kết nối tới EC2 instance Tải MySQL lên instance Chạy app trên instance "
+	"content": "Thiết lập Sự Kiện cho Amazon GuardDuty Trong phần này, chúng ta sẽ kích hoạt SNS để gửi thông báo qua email mỗi khi GuardDuty phát hiện một vấn đề thông qua EventBridge.\nNội Dung Tạo SNS Tạo EventBridge "
 },
 {
 	"uri": "//localhost:1313/vi/5-exportfindingtos3/",
-	"title": "Tạo Internal Load Balancer và Auto Scaling Group",
+	"title": "Xuất Kết Quả Tìm Kiếm Đến Bucket S3",
 	"tags": [],
 	"description": "",
-	"content": "Giới thiệu Ở section này, chúng ta sẽ tạo Internal Load Balancer để cân bằng tải các traffic từ Web Tier tới App Tier và Auto Scaling Group cho App Tier.\nNội dung: Tạo AMI cho App Tier Tạo Tartget Group cho App Tier Tạo Internal Load Balancer Tạo Launch Template cho App Tier Tạo Auto Scaling Group "
+	"content": "Tổng Quan Trong phần này, chúng ta sẽ cấu hình kết quả tìm kiếm của GuardDuty trên bucket S3, mã hóa nó và xuất đến một bucket khác để phân tích trong tương lai.\nNội Dung: Cài Đặt Tần Suất Gán Policy vào S3 Gán Policy vào KMS Xuất Kết Quả Tìm Kiếm Đến Bucket S3 "
 },
 {
 	"uri": "//localhost:1313/vi/6-demo/",
-	"title": "Triển khai Web Tier",
+	"title": "Dòng Công Việc Demo",
 	"tags": [],
 	"description": "",
-	"content": "Giới thiệu Trong phần này, chúng ta sẽ tiến hành triển khai Web Tier bằng cách upload mã nguồn của ứng dụng lên Amazon S3 và triển khai ứng dụng trên Amazon EC2. Ngoài ra chúng ta sẽ sử dụng Nginx trong workshop này. Nginx sẽ đóng vai trò là 1 web server mà chúng ta sẽ config để chạy úng dụng trên port 80, cũng như giúp chuyển hướng API request từ Web Tier đến App Tier thông qua Internal Load Balancer.\nNội dung: Sửa lại file cấu hình Nginx Upload mã nguồn ứng dụng lên Amazon S3 Tạo EC2 Instance Kết nối tới EC2 Instance "
+	"content": "Tổng Quan Bây giờ bạn đã cấu hình xong mọi thứ, hãy cùng đi qua các bản demo và xem cách nó hoạt động thực tế.\nTải các tệp nghi ngờ lên S3 Chỉ dành cho mục đích demo! Bạn nên tránh tải lên các tệp nghi ngờ vào bucket S3 của bạn, vì điều này có thể dẫn đến việc dịch vụ bị ngừng hoạt động hoặc tồi tệ hơn. Trong hướng dẫn này, tôi sẽ sử dụng một tệp thử nghiệm Malware. Bạn có thể theo dõi và tải xuống từ liên kết này.\nĐiều hướng đến s3-raw-gd và nhấp vào Tải lên Tải tệp malware virusFile.txt lên bucket S3 được cấu hình bảo vệ s3-raw-gd Ngay lập tức, GuardDuty sẽ quét tất cả các tệp trong bucket và gán nhãn Trạng Thái Quét Các giá trị trạng thái kết quả quét tiềm năng của đối tượng S3 NO_THREATS_FOUND – GuardDuty không phát hiện mối đe dọa tiềm năng liên quan đến đối tượng đã quét. THREATS_FOUND – GuardDuty phát hiện mối đe dọa tiềm năng liên quan đến đối tượng đã quét. UNSUPPORTED – Có một số lý do mà Malware Protection for S3 sẽ bỏ qua quét. Các lý do tiềm năng bao gồm tệp được bảo vệ bằng mật khẩu, hạn ngạch của Malware Protection for S3 và hỗ trợ cho một số tính năng Amazon S3 có thể không khả dụng. Để biết thêm thông tin, hãy xem Các khả năng của Malware Protection for S3. ACCESS_DENIED – GuardDuty không thể truy cập đối tượng này để quét. Kiểm tra quyền IAM liên quan đến bucket này. Để biết thêm thông tin, hãy xem Điều kiện tiên quyết - Tạo hoặc cập nhật chính sách IAM. FAILED – GuardDuty không thể thực hiện quét malware trên đối tượng này do lỗi nội bộ. Trong Console GuardDuty, bạn có thể tìm thấy tất cả các kết quả mà GuardDuty phát hiện ở đây. Thông Báo Sau khi phát hiện kết quả, bạn sẽ nhận được email mà bạn đã cấu hình trước đó. Xuất S3 Bucket Điều hướng đến bucket s3-malware-gd Bạn có thể tìm thấy các kết quả trong bucket đã được mã hóa ở đây "
 },
 {
 	"uri": "//localhost:1313/vi/7-cleanupresources/",
-	"title": "Dọn dẹp tài nguyên",
+	"title": "Dọn Dẹp Tài Nguyên",
 	"tags": [],
 	"description": "",
-	"content": "Dọn dẹp tài nguyên Chúng ta sẽ tiến hành xóa các tài nguyên theo thứ tự sau:\nXóa NAT Gateway Xóa Elastic IPs Xóa Auto Scaling Group Xóa Load Balancer Xóa Target group Xóa Launch template Xóa AMIs Xóa EC2 instances Xóa Database RDS Xóa Route tables\nTa phải xóa các subnet associations của từng route table trước (vào subnet -\u0026gt; table associations -\u0026gt; edit subnet associations -\u0026gt; unchecked các subnet đã gán -\u0026gt; save) Xóa route table Xóa Internet Gateway\ndetach IGW ra khỏi VPC Xóa IGW Xóa VPC Xóa S3 bucket\nXóa các file trong bucket Xóa bucket "
+	"content": "Dọn Dẹp Tài Nguyên Chúng ta sẽ tiến hành xóa các tài nguyên:\nXóa EventBridge Vô hiệu hóa GuardDuty Xóa IAM Role Xóa KMS Key Xóa S3 Bucket Xóa SNS Topic "
 },
 {
 	"uri": "//localhost:1313/vi/categories/",

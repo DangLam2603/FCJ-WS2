@@ -1,35 +1,47 @@
 ---
-title : "Tạo máy chủ EC2"
-date :  "`r Sys.Date()`" 
-weight : 1 
+title : "Tạo SNS"
+date : "`r Sys.Date()`"
+weight : 1
 chapter : false
 pre : " <b> 4.1 </b> "
 ---
 
-#### Tạo EC2 instance cho App Tier
+## Tạo SNS để gửi email
+Trong phần này, chúng ta sẽ cấu hình dịch vụ Email sử dụng chủ đề SNS.
 
-1. Tìm và chọn dịch vụ **EC2**
-![Git Bash](/workshop01-AWS-FCJ-2024/images/4-1/01.png?width=50pc)
-2. Chọn **Instances** ở sidebar, sau đó click **Launch instances**
-![Git Bash](/workshop01-AWS-FCJ-2024/images/4-1/02.png?width=50pc)
-3. **Name and tags** điền **My App Server 1**
-![Git Bash](/workshop01-AWS-FCJ-2024/images/4-1/03.png?width=50pc)
-4. Ở phần **AMI**:
-   - chọn **Amazon Linux** 
-   - **AMI** chọn **Amazon Linux 2 AMI (HVM)**
-![Git Bash](/workshop01-AWS-FCJ-2024/images/4-1/04.png?width=50pc)
-5. Ở phần **Key pair**, ta chọn **Proceed without a key pair** vì ta sẽ connect EC2 instance thông qua **AWS Systems Manager Session Manager**.
-![Git Bash](/workshop01-AWS-FCJ-2024/images/4-1/05.png?width=50pc)
-6. Ở phần **Network settings**:
-   - **VPC** chọn **my-vpc**
-   - **Subnet** chọn **Private Subnet 1**
-   - **Auto-assign public IP** chọn **Enable**
-   - **SG** chọn **Select existing security group**
-   - **Common SG** chọn **AppTier-SG**
-![Git Bash](/workshop01-AWS-FCJ-2024/images/4-1/06.png?width=50pc)
-7. Ở phần **Advanced details**, **IAM instance profile** chọn **ec2role** ta tạo ở trên
-![Git Bash](/workshop01-AWS-FCJ-2024/images/4-1/07.png?width=50pc)
-8. Click **Launch instance**
-![Git Bash](/workshop01-AWS-FCJ-2024/images/4-1/08.png?width=40pc)
-9. Hoàn thành tạo EC2 instance cho một server ở **AppTier** ở **private subnet 1**
-![Git Bash](/workshop01-AWS-FCJ-2024/images/4-1/09.png?width=50pc)
+#### Tạo Chủ Đề
+1. Điều hướng đến **AWS console**, Tìm kiếm dịch vụ **SNS**.
+![SNS](/images/4.Notification/SNS/4.1.1-sns.jpg?width=60pc)
+
+2. Chọn **Tạo một Chủ đề**.
+![SNS](/images/4.Notification/SNS/4.1.2-topic.jpg?width=60pc)
+
+3. Trong phần Chi tiết, chọn loại **Standard** và dán ```guardduty-topic``` vào phần **tên**.
+![SNS](/images/4.Notification/SNS/4.1.3.jpg?width=60pc)
+
+4. Sau đó, nhấp **Tạo Chủ đề**
+![SNS](/images/4.Notification/SNS/4.1.4.jpg?width=60pc)
+
+#### Tạo và Đăng Ký đăng ký
+
+1. Điều hướng đến thanh bên trái và chọn **Chủ đề**:
+   - Chọn chủ đề mà chúng ta vừa tạo
+   - sau đó chọn **đăng ký** và nhấp **tạo đăng ký**  
+![SNS](/images/4.Notification/SNS/4.1.5-subscription.jpg?width=60pc)
+2. Trong phần Chi tiết, chọn **Email** ở phần **Giao thức**
+![SNS](/images/4.Notification/SNS/4.1.6.jpg?width=60pc)
+3. Tiếp theo, chỉ định **email** sẽ nhận thông báo từ SNS 
+![SNS](/images/4.Notification/SNS/4.1.7.jpg?width=60pc)
+4. Nhấp **Tạo Đăng ký**
+![SNS](/images/4.Notification/SNS/4.1.8.jpg?width=60pc)
+5. Hoàn thành việc tạo đăng ký.
+![SNS](/images/4.Notification/SNS/4.1.9.jpg?width=60pc)
+{{% notice info %}}
+Sau khi bạn tạo đăng ký, trạng thái tiếp theo sẽ chờ xác nhận. Bạn sẽ nhận được một email xác nhận dựa trên email mà bạn cung cấp ở trên.
+{{% /notice %}} 
+![SNS](/images/4.Notification/SNS/4.1.10.jpg?width=60pc)
+#### Xác Nhận Email
+1. Email đã được xác nhận thành công.
+![SNS](/images/4.Notification/SNS/4.1.11.jpg?width=60pc)
+2. Cập nhật trạng thái
+![SNS](/images/4.Notification/SNS/4.1.12.jpg?width=60pc)

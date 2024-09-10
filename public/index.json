@@ -4,7 +4,7 @@
 	"title": "Create KMS key",
 	"tags": [],
 	"description": "",
-	"content": "Create KMS encrypted keys Access your AWS account and Search for KMS (Key Management Service). Right-click to \u0026ldquo;Create Key\u0026rdquo; For the configurtion, select \u0026ldquo;Symmetric\u0026rdquo; and \u0026ldquo;Encrypt and Decrypt\u0026rdquo; In the Advance options, select \u0026ldquo;KMS key\u0026rdquo; and Single-Region Key while we want to use this key in the same region in the workshop. Give the KMS key an Alias custom name: Specify the admin permission for KMS access: Define the usage of the KMS Key for: Review the Key Policy KMS key created successfull In the Key Policy step, you can retain the default configuration provided when the KMS key is created. We will make the necessary modifications to this part later as we continue the project.\n"
+	"content": "Create KMS encrypted keys Access your AWS account and Search for KMS (Key Management Service). Right-click to Create Key For the configurtion, select Symmetric and Encrypt and Decrypt In the Advance options, select KMS key and Single-Region Key while we want to use this key in the same region in the workshop. Give the KMS key an Alias custom name: Specify the admin permission for KMS access: Define the usage of the KMS Key for: Review the Key Policy KMS key created successfull In the Key Policy step, you can retain the default configuration provided when the KMS key is created. We will make the necessary modifications to this part later as we continue the project.\n"
 },
 {
 	"uri": "//localhost:1313/4-setupnotification/4.1-createsns/",
@@ -25,7 +25,7 @@
 	"title": "Introduce to Amazon GuardDuty",
 	"tags": [],
 	"description": "",
-	"content": "Explaination of Amazon GuardDuty Amazon GuardDuty is a threat detection service that continuously monitors your AWS environment for suspicious or malicious activity. It uses machine learning, monitoring detection, and integrated threat intelligence to detect and alert you about potential threats in AWS enviroment like Amazon S3, EC2 Instances.\nUse Cases:\nProtecting S3 Buckets: Detecting suspicious data, files or the storage of malware in S3. Protecting EC2 Instances: Identifying instances used for crypto mining or connecting to suspicious IP addresses. Monitoring IAM Role Activity: Spotting anomalies in role access, like attempts to escalate privileges or access sensitive resources. "
+	"content": "Introducing Amazon GuardDuty Amazon GuardDuty is a threat detection service that continuously monitors your AWS environment for suspicious or malicious activity. It uses machine learning, monitoring detection, and integrated threat intelligence to detect and alert you about potential threats in AWS enviroment like Amazon S3, EC2 Instances.\nUse Cases:\nProtecting S3 Buckets: Detecting suspicious data, files or the storage of malware in S3. Protecting EC2 Instances: Identifying instances used for crypto mining or connecting to suspicious IP addresses. Monitoring IAM Role Activity: Spotting anomalies in role access, like attempts to escalate privileges or access sensitive resources. "
 },
 {
 	"uri": "//localhost:1313/1-introduce/",

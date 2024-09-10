@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tạo database instance :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
+    <title>Tạo Chính Sách Bảo Vệ IAM :: Bắt đầu với Amazon VPC và AWS VPN Site to Site</title>
 
     
-    <link href="/css/nucleus.css?1725946048" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1725946048" rel="stylesheet">
-    <link href="/css/hybrid.css?1725946048" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1725946048" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1725946048" rel="stylesheet">
-    <link href="/css/auto-complete.css?1725946048" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1725946048" rel="stylesheet">
-    <link href="/css/theme.css?1725946048" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1725946048" rel="stylesheet">
+    <link href="/css/nucleus.css?1725947067" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1725947067" rel="stylesheet">
+    <link href="/css/hybrid.css?1725947067" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1725947067" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1725947067" rel="stylesheet">
+    <link href="/css/auto-complete.css?1725947067" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1725947067" rel="stylesheet">
+    <link href="/css/theme.css?1725947067" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1725947067" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1725946048" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1725947067" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1725946048"></script>
+    <script src="/js/jquery-3.3.1.min.js?1725947067"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -43,7 +43,7 @@
 
   <div id="header-wrapper">
     <div id="header">
-      <a id="logo" href="/Workshop-02/">
+      <a id="logo" href="/">
   <svg
     id="Layer_1"
     data-name="Layer 1"
@@ -86,14 +86,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1725946048"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1725946048"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1725947067"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1725947067"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1725946048"></script>
+<script type="text/javascript" src="/js/search.js?1725947067"></script>
 
     
   </div>
@@ -111,13 +111,13 @@
  
   
     
-    <li data-nav-id="/vi/1-introduce/" title="Giới thiệu" class="dd-item 
+    <li data-nav-id="/vi/1-introduce/" title="Giới thiệu" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-introduce/">
-           <b> 1. </b> Giới thiệu
+           <b> 1. </b> Giới thiệu
           
             <i class="fas fa-check read-icon"></i>
           
@@ -142,13 +142,13 @@
  
   
     
-    <li data-nav-id="/vi/1-introduce/1.1-introduce-to-amazon-guardduty/" title="Giải thích luồng chạy" class="dd-item 
+    <li data-nav-id="/vi/1-introduce/1.1-introduce-to-amazon-guardduty/" title="Giới thiệu về Amazon GuardDuty" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-introduce/1.1-introduce-to-amazon-guardduty/">
-           <b> 1.1 </b> Giải thích luồng chạy
+           <b> 1.1 </b> Giới thiệu về Amazon GuardDuty
           
             <i class="fas fa-check read-icon"></i>
           
@@ -208,41 +208,13 @@
  
   
     
-    <li data-nav-id="/vi/2-preparationsteps/2.1-createkmskey/" title="Clone code từ GitHub" class="dd-item 
+    <li data-nav-id="/vi/2-preparationsteps/2.1-createkmskey/" title="Tạo khóa KMS" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-preparationsteps/2.1-createkmskey/">
-           <b> 2.1 </b> Clone code từ GitHub
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-preparationsteps/2.3-enableguardduty/" title="Các bước chuẩn bị" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-preparationsteps/2.3-enableguardduty/">
-           <b> 2. </b> Các bước chuẩn bị
+           <b> 2.1 </b> Tạo khóa KMS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -271,6 +243,34 @@
         ">
       <a href="/vi/2-preparationsteps/2.2-creates3bucket/">
            <b> 2.2 </b> Tạo S3 Bucket
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-preparationsteps/2.3-enableguardduty/" title="Kích hoạt GuardDuty" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-preparationsteps/2.3-enableguardduty/">
+           <b> 2.3 </b> Kích hoạt GuardDuty
           
             <i class="fas fa-check read-icon"></i>
           
@@ -330,13 +330,13 @@
  
   
     
-    <li data-nav-id="/vi/3-guardduty/3.1-malwareprotections3/" title="Tạo database subnet group" class="dd-item 
+    <li data-nav-id="/vi/3-guardduty/3.1-malwareprotections3/" title="Kích hoạt bảo vệ phần mềm độc hại cho S3" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-guardduty/3.1-malwareprotections3/">
-           <b> 3.1 </b> Tạo database subnet group
+           <b> 3.1 </b> Kích hoạt bảo vệ phần mềm độc hại cho S3
           
             <i class="fas fa-check read-icon"></i>
           
@@ -358,13 +358,13 @@
  
   
     
-    <li data-nav-id="/vi/3-guardduty/3.2-createpolicyprotection/" title="Tạo database instance" class="dd-item 
+    <li data-nav-id="/vi/3-guardduty/3.2-createpolicyprotection/" title="Tạo Chính Sách Bảo Vệ IAM" class="dd-item 
         
         active
         
         ">
       <a href="/vi/3-guardduty/3.2-createpolicyprotection/">
-           <b> 3.2 </b> Tạo database instance
+           <b> 3.2 </b> Tạo Chính Sách Bảo Vệ IAM
           
             <i class="fas fa-check read-icon"></i>
           
@@ -878,7 +878,7 @@
             
           
           
-            <a href='/vi/'>Triển khai fullstack app với kiến trúc ba tầng</a> > <a href='/vi/3-guardduty/'>Tạo Database với RDS</a> > Tạo database instance
+            <a href='/vi/'>Triển khai fullstack app với kiến trúc ba tầng</a> > <a href='/vi/3-guardduty/'>Tạo Database với RDS</a> > Tạo Chính Sách Bảo Vệ IAM
           
         
           
@@ -893,11 +893,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#tổng-quan">Tổng Quan</a></li>
   </ul>
 </nav>
     </div>
@@ -915,7 +911,7 @@
           
             <h1>
               
-              Tạo database instance
+              Tạo Chính Sách Bảo Vệ IAM
             </h1>
           
 
@@ -923,103 +919,137 @@
 
 
 
-	<h4 id="tạo-database-instance">Tạo database instance</h4>
+	<h2 id="tổng-quan">Tổng Quan</h2>
+<p>Trong bước trước, chúng ta đã tạo và chỉnh sửa bảo vệ phần mềm độc hại và nhận được một chính sách JSON. Bây giờ, hãy tùy chỉnh Chính sách IAM để làm cho điều này hoạt động!</p>
 <ol>
-<li>
-<p>Trong giao diện Amazon RDS, chọn <strong>Databases</strong> ở sidebar sau đó click <strong>Create database</strong>
-<img alt="create db instance" src="/workshop01-AWS-FCJ-2024/images/3-2/01.png?width=50pc"></p>
-</li>
-<li>
-<p>Ở giao diện Create database:</p>
+<li>Trong giao diện AWS Console, tìm kiếm và chọn <strong>IAM</strong>
+<img alt="IAM Role" src="/images/3.GuardDuty/3.10-IAM.jpg?width=60pc"></li>
+<li>Trong thanh điều hướng bên trái, chọn <strong>Policies</strong> và chọn <strong>Create Policy</strong>
+<img alt="IAM Role" src="/images/3.GuardDuty/3.11.jpg?width=60pc"></li>
+<li>Trong phần Quyền cụ thể:
 <ul>
-<li><strong>Creation method</strong> chọn <strong>Standard create</strong></li>
-<li><strong>Engine type</strong> chọn <strong>MySQL</strong>
-<img alt="create db instance" src="/workshop01-AWS-FCJ-2024/images/3-2/02.png?width=50pc"></li>
+<li>Chọn <strong>JSON options</strong></li>
+<li>Dán chính sách <strong>Policy</strong> trước đó vào <strong>phần 3.1</strong></li>
 </ul>
-</li>
-<li>
-<p><strong>Templates</strong> chọn <strong>Dev/Test</strong>, <strong>Deployment options</strong> chọn <strong>Multi-AZ DB instance</strong> (để tạo ra instance chính ở AZ hiện tại, và một clone instance ở AZ còn lại đã define trong db subnet group phòng failover)
-→ Cách triển khai này sẽ best practice vì đáp ứng tiêu chí High availability và Data redundancy
-<img alt="create db instance" src="/workshop01-AWS-FCJ-2024/images/3-2/03.png?width=50pc"></p>
 </li>
 </ol>
+<pre tabindex="0"><code>{
+  &#34;Version&#34;: &#34;2012-10-17&#34;,
+  &#34;Statement&#34;: [
+    {
+      &#34;Sid&#34;: &#34;AllowManagedRuleToSendS3EventsToGuardDuty&#34;,
+      &#34;Effect&#34;: &#34;Allow&#34;,
+      &#34;Action&#34;: [
+        &#34;events:PutRule&#34;,
+        &#34;events:DeleteRule&#34;,
+        &#34;events:PutTargets&#34;,
+        &#34;events:RemoveTargets&#34;
+      ],
+      &#34;Resource&#34;: [
+        &#34;arn:aws:events:ap-southeast-1:381492162967:rule/DO-NOT-DELETE-AmazonGuardDutyMalwareProtectionS3*&#34;
+      ],
+      &#34;Condition&#34;: {
+        &#34;StringLike&#34;: {
+          &#34;events:ManagedBy&#34;: &#34;malware-protection-plan.guardduty.amazonaws.com&#34;
+        }
+      }
+    },
+    {
+      &#34;Sid&#34;: &#34;AllowGuardDutyToMonitorEventBridgeManagedRule&#34;,
+      &#34;Effect&#34;: &#34;Allow&#34;,
+      &#34;Action&#34;: [
+        &#34;events:DescribeRule&#34;,
+        &#34;events:ListTargetsByRule&#34;
+      ],
+      &#34;Resource&#34;: [
+        &#34;arn:aws:events:ap-southeast-1:381492162967:rule/DO-NOT-DELETE-AmazonGuardDutyMalwareProtectionS3*&#34;
+      ]
+    },
+    {
+      &#34;Sid&#34;: &#34;AllowPostScanTag&#34;,
+      &#34;Effect&#34;: &#34;Allow&#34;,
+      &#34;Action&#34;: [
+        &#34;s3:PutObjectTagging&#34;,
+        &#34;s3:GetObjectTagging&#34;,
+        &#34;s3:PutObjectVersionTagging&#34;,
+        &#34;s3:GetObjectVersionTagging&#34;
+      ],
+      &#34;Resource&#34;: [
+        &#34;arn:aws:s3:::&lt;bucket_name&gt;/*&#34;
+      ]
+    },
+    {
+      &#34;Sid&#34;: &#34;AllowEnableS3EventBridgeEvents&#34;,
+      &#34;Effect&#34;: &#34;Allow&#34;,
+      &#34;Action&#34;: [
+        &#34;s3:PutBucketNotification&#34;,
+        &#34;s3:GetBucketNotification&#34;
+      ],
+      &#34;Resource&#34;: [
+        &#34;arn:aws:s3:::&lt;bucket_name&gt;&#34;
+      ]
+    },
+    {
+      &#34;Sid&#34;: &#34;AllowPutValidationObject&#34;,
+      &#34;Effect&#34;: &#34;Allow&#34;,
+      &#34;Action&#34;: [
+        &#34;s3:PutObject&#34;
+      ],
+      &#34;Resource&#34;: [
+        &#34;arn:aws:s3:::&lt;bucket_name&gt;/malware-protection-resource-validation-object&#34;
+      ]
+    },
+    {
+      &#34;Effect&#34;: &#34;Allow&#34;,
+      &#34;Action&#34;: [
+        &#34;s3:ListBucket&#34;
+      ],
+      &#34;Resource&#34;: [
+        &#34;arn:aws:s3:::&lt;bucket_name&gt;&#34;
+      ]
+    },
+    {
+      &#34;Sid&#34;: &#34;AllowMalwareScan&#34;,
+      &#34;Effect&#34;: &#34;Allow&#34;,
+      &#34;Action&#34;: [
+        &#34;s3:GetObject&#34;,
+        &#34;s3:GetObjectVersion&#34;
+      ],
+      &#34;Resource&#34;: [
+        &#34;arn:aws:s3:::&lt;bucket_name&gt;/*&#34;
+      ]
+    },
+    {
+      &#34;Sid&#34;: &#34;AllowDecryptForMalwareScan&#34;,
+      &#34;Effect&#34;: &#34;Allow&#34;,
+      &#34;Action&#34;: [
+        &#34;kms:GenerateDataKey&#34;,
+        &#34;kms:Decrypt&#34;
+      ],
+      &#34;Resource&#34;: &#34;arn:aws:kms:ap-southeast-1:381492162967:key/&lt;key_id&gt;&#34;,
+      &#34;Condition&#34;: {
+        &#34;StringLike&#34;: {
+          &#34;kms:ViaService&#34;: &#34;s3.*.amazonaws.com&#34;
+        }
+      }
+    }
+  ]
+}
+</code></pre><p><img alt="IAM Role" src="/images/3.GuardDuty/3.12.jpg?width=60pc">
+4. Tiếp theo đến bước Xem xét và Tạo, chọn tên chính sách trong <strong>Policy Details</strong>, chúng ta sẽ chọn <code>pl-gd-s3-raw</code>
+<img alt="IAM Role" src="/images/3.GuardDuty/3.13.jpg?width=60pc">
+5. Xem xét Chính sách:</p>
 <ul>
-<li>Nhưng chúng ta có thể chọn option khác là <strong>Free tier</strong> để vừa phù hợp với scope của bài toán, vừa tiết kiệm chi phí
-<img alt="create db instance" src="/workshop01-AWS-FCJ-2024/images/3-2/04.png?width=50pc"></li>
+<li><strong>EventBridge</strong>: Quyền truy cập hạn chế với các quyền Danh sách, Đọc và Ghi. Nó có các điều kiện để quản lý các sự kiện từ Amazon GuardDuty liên quan đến bảo vệ phần mềm độc hại.</li>
+<li><strong>KMS (Key Management Service)</strong>: Quyền ghi được cấp với các hạn chế dựa trên ID khóa và khu vực, và phải được truy cập qua dịch vụ S3.</li>
+<li><strong>S3 (Simple Storage Service)</strong>: Quyền Danh sách, Đọc, Ghi và Đánh dấu, không có điều kiện cụ thể nào được áp dụng.
+<img alt="IAM Role" src="/images/3.GuardDuty/3.14.jpg?width=60pc"></li>
 </ul>
-<ol start="4">
-<li>
-<p>Ở phần Settings:</p>
-<ul>
-<li><strong>DB instance identifier</strong> điền <strong><code>database-1</code></strong></li>
-<li><strong>Master username</strong> điền <strong><code>admin</code></strong></li>
-<li><strong>Master password</strong> điền <strong><code>12345678</code></strong>
-<img alt="create db instance" src="/workshop01-AWS-FCJ-2024/images/3-2/05.png?width=50pc"></li>
-</ul>
-</li>
-<li>
-<p>Ở phần Connectivity:</p>
-<ul>
-<li><strong>Computer resource</strong> chọn <strong>Dont connect to EC2</strong></li>
-<li><strong>VPC</strong> chọn <strong>my-vpc</strong></li>
-<li><strong>DB subnet group</strong> chọn <strong>db-subnet-group</strong> ta đã tạo</li>
-<li><strong>Public access</strong> chọn <strong>No</strong> (chọn <strong>Yes</strong> nếu muốn test connection từ public network)
-<img alt="create db instance" src="/workshop01-AWS-FCJ-2024/images/3-2/06.png?width=50pc"></li>
-<li><strong>VPC SG</strong> chọn <strong>Choose existing</strong></li>
-<li><strong>Existing VPC SG</strong> chọn <strong>DataTier-SG</strong></li>
-<li><strong>AZ</strong> chọn <strong>ap-southeast-1a</strong>
-<img alt="create db instance" src="/workshop01-AWS-FCJ-2024/images/3-2/07.png?width=50pc"></li>
-</ul>
-</li>
-<li>
-<p>Ở phần <strong>Additional configuration</strong>, điền db name là <strong><code>demodb</code></strong> (<strong>master name: admin, pass: 12345678</strong>)
-<img alt="create db instance" src="/workshop01-AWS-FCJ-2024/images/3-2/08.png?width=50pc"></p>
-</li>
-<li>
-<p>Kéo xuống dưới cùng và chọn <strong>Create database</strong>:
-<img alt="create db instance" src="/workshop01-AWS-FCJ-2024/images/3-2/09.png?width=50pc"></p>
-</li>
-<li>
-<p>Hoàn thành tạo database instance
-<img alt="create db instance" src="/workshop01-AWS-FCJ-2024/images/3-2/10.png?width=50pc"></p>
-</li>
-</ol>
-<h4 id="config-lại-để-test-connection-từ-public-network">Config lại để test connection từ public network</h4>
-
-<div class="notices note" ><p>Để có thể test connection tới endpoint của db vừa tạo từ public network, ta phải config lại một số thứ như sau (sau khi test xong nhớ trả tất cả về trạng thái ban đầu)</p>
-<ul>
-<li>Vào route table <strong>private-db-route-table</strong>, thêm một route mới với destination là <strong>0.0.0.0/0</strong> và target là <strong>internet gateway</strong> ta đã tạo</li>
-<li>Vào security group <strong>DataTier-SG</strong>, thêm một inbound rule mới cho phép All traffic truy cập</li>
-<li>Cập nhật lại trạng thái của <strong>Public access</strong> ở phần <strong>Connectivity</strong> trong db instance từ <strong>No</strong> thành <strong>Yes</strong></li>
-</ul>
-</div>
-
-<h4 id="test-connection-tới-endpoint-của-db-instance-vừa-tạo">Test connection tới endpoint của db instance vừa tạo</h4>
-<ol>
-<li>
-<p>Vào phần mềm <strong>MySQL Workbench</strong>, tạo connect mới:</p>
-<ul>
-<li><strong>Connection Name</strong> điền <strong><code>db-ws-01</code></strong></li>
-<li><strong>Hostname</strong> copy và paste <strong>endpoint</strong> của db instance vừa tạo</li>
-<li><strong>Port</strong> điền <strong><code>3306</code></strong></li>
-<li><strong>Username</strong> điền <strong><code>admin</code></strong></li>
-<li><strong>Password</strong> click <strong>Store in Vault</strong> rồi nhập <strong><code>12345678</code></strong></li>
-<li>Sau cùng, nhấn <strong>Test Connection</strong>
-<img alt="create db instance" src="/workshop01-AWS-FCJ-2024/images/3-2/11.png?width=50pc"></li>
-</ul>
-</li>
-<li>
-<p>Test connection thành công
-<img alt="create db instance" src="/workshop01-AWS-FCJ-2024/images/3-2/12.png?width=50pc"></p>
-</li>
-<li>
-<p>Vào file <strong>application.properties</strong> và config lại <strong>datasource url</strong>, <strong>username</strong> và <strong>password</strong> như hình dưới
-<img alt="create db instance" src="/workshop01-AWS-FCJ-2024/images/3-2/13.png?width=50pc"></p>
-</li>
-<li>
-<p>Run app và check trong connection vừa tạo trong MySQL, ta thấy các table đã được auto generate nhờ vào cơ chế <strong>code first</strong> (chỉ để test vì trong workshop này chúng ta sẽ sử dụng <strong>database first</strong>)
-<img alt="create db instance" src="/workshop01-AWS-FCJ-2024/images/3-2/14.png?width=40pc"></p>
-</li>
+<ol start="6">
+<li>Tạo Chính sách
+<img alt="IAM Role" src="/images/3.GuardDuty/3.15.jpg?width=60pc"></li>
+<li>Hoàn thành việc tạo chính sách
+<img alt="IAM Role" src="/images/3.GuardDuty/3.16.jpg?width=60pc"></li>
 </ol>
 
 
@@ -1422,7 +1452,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/3-guardduty/3.1-malwareprotections3/" title="Tạo database subnet group"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/3-guardduty/3.1-malwareprotections3/" title="Kích hoạt bảo vệ phần mềm độc hại cho S3"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/vi/3-guardduty/3.3-createroleproctection/" title="Tạo database instance" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -1435,19 +1465,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1725946048"></script>
-    <script src="/js/perfect-scrollbar.min.js?1725946048"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1725946048"></script>
-    <script src="/js/jquery.sticky.js?1725946048"></script>
-    <script src="/js/featherlight.min.js?1725946048"></script>
-    <script src="/js/highlight.pack.js?1725946048"></script>
+    <script src="/js/clipboard.min.js?1725947068"></script>
+    <script src="/js/perfect-scrollbar.min.js?1725947068"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1725947068"></script>
+    <script src="/js/jquery.sticky.js?1725947068"></script>
+    <script src="/js/featherlight.min.js?1725947068"></script>
+    <script src="/js/highlight.pack.js?1725947068"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1725946048"></script>
-    <script src="/js/learn.js?1725946048"></script>
-    <script src="/js/hugo-learn.js?1725946048"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1725947068"></script>
+    <script src="/js/learn.js?1725947068"></script>
+    <script src="/js/hugo-learn.js?1725947068"></script>
 
-    <link href="/mermaid/mermaid.css?1725946048" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1725946048"></script>
+    <link href="/mermaid/mermaid.css?1725947068" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1725947068"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -1,74 +1,134 @@
 ---
-title : "Tạo database instance"
-date :  "`r Sys.Date()`" 
-weight : 2 
+title : "Tạo Chính Sách Bảo Vệ IAM"
+date : "`r Sys.Date()`"
+weight : 2
 chapter : false
 pre : " <b> 3.2 </b> "
 ---
 
-#### Tạo database instance
+## Tổng Quan
+Trong bước trước, chúng ta đã tạo và chỉnh sửa bảo vệ phần mềm độc hại và nhận được một chính sách JSON. Bây giờ, hãy tùy chỉnh Chính sách IAM để làm cho điều này hoạt động!
 
-1. Trong giao diện Amazon RDS, chọn **Databases** ở sidebar sau đó click **Create database**
-![create db instance](/workshop01-AWS-FCJ-2024/images/3-2/01.png?width=50pc)
-
-2. Ở giao diện Create database:
-   - **Creation method** chọn **Standard create**
-   - **Engine type** chọn **MySQL**
-![create db instance](/workshop01-AWS-FCJ-2024/images/3-2/02.png?width=50pc)
-
-3. **Templates** chọn **Dev/Test**, **Deployment options** chọn **Multi-AZ DB instance** (để tạo ra instance chính ở AZ hiện tại, và một clone instance ở AZ còn lại đã define trong db subnet group phòng failover)
-→ Cách triển khai này sẽ best practice vì đáp ứng tiêu chí High availability và Data redundancy
-![create db instance](/workshop01-AWS-FCJ-2024/images/3-2/03.png?width=50pc)
-- Nhưng chúng ta có thể chọn option khác là **Free tier** để vừa phù hợp với scope của bài toán, vừa tiết kiệm chi phí
-![create db instance](/workshop01-AWS-FCJ-2024/images/3-2/04.png?width=50pc)
-
-4. Ở phần Settings:
-   - **DB instance identifier** điền **`database-1`**
-   - **Master username** điền **`admin`**
-   - **Master password** điền **`12345678`**
-![create db instance](/workshop01-AWS-FCJ-2024/images/3-2/05.png?width=50pc)
-
-5. Ở phần Connectivity:
-   - **Computer resource** chọn **Dont connect to EC2**
-   - **VPC** chọn **my-vpc**
-   - **DB subnet group** chọn **db-subnet-group** ta đã tạo
-   - **Public access** chọn **No** (chọn **Yes** nếu muốn test connection từ public network)
-![create db instance](/workshop01-AWS-FCJ-2024/images/3-2/06.png?width=50pc)
-   - **VPC SG** chọn **Choose existing**
-   - **Existing VPC SG** chọn **DataTier-SG**
-   - **AZ** chọn **ap-southeast-1a**
-![create db instance](/workshop01-AWS-FCJ-2024/images/3-2/07.png?width=50pc)
-6. Ở phần **Additional configuration**, điền db name là **`demodb`** (**master name: admin, pass: 12345678**)
-![create db instance](/workshop01-AWS-FCJ-2024/images/3-2/08.png?width=50pc)
-
-7. Kéo xuống dưới cùng và chọn **Create database**:
-![create db instance](/workshop01-AWS-FCJ-2024/images/3-2/09.png?width=50pc)
-
-8. Hoàn thành tạo database instance
-![create db instance](/workshop01-AWS-FCJ-2024/images/3-2/10.png?width=50pc)
-#### Config lại để test connection từ public network
-{{% notice note %}}
-Để có thể test connection tới endpoint của db vừa tạo từ public network, ta phải config lại một số thứ như sau (sau khi test xong nhớ trả tất cả về trạng thái ban đầu)
-   - Vào route table **private-db-route-table**, thêm một route mới với destination là **0.0.0.0/0** và target là **internet gateway** ta đã tạo
-   - Vào security group **DataTier-SG**, thêm một inbound rule mới cho phép All traffic truy cập
-   - Cập nhật lại trạng thái của **Public access** ở phần **Connectivity** trong db instance từ **No** thành **Yes**
-{{% /notice %}}
-
-#### Test connection tới endpoint của db instance vừa tạo
-1. Vào phần mềm **MySQL Workbench**, tạo connect mới:
-   - **Connection Name** điền **`db-ws-01`** 
-   - **Hostname** copy và paste **endpoint** của db instance vừa tạo
-   - **Port** điền **`3306`**
-   - **Username** điền **`admin`**
-   - **Password** click **Store in Vault** rồi nhập **`12345678`**
-   - Sau cùng, nhấn **Test Connection**
-![create db instance](/workshop01-AWS-FCJ-2024/images/3-2/11.png?width=50pc)
-
-2. Test connection thành công
-![create db instance](/workshop01-AWS-FCJ-2024/images/3-2/12.png?width=50pc)
-
-3. Vào file **application.properties** và config lại **datasource url**, **username** và **password** như hình dưới
-![create db instance](/workshop01-AWS-FCJ-2024/images/3-2/13.png?width=50pc)
-
-4. Run app và check trong connection vừa tạo trong MySQL, ta thấy các table đã được auto generate nhờ vào cơ chế **code first** (chỉ để test vì trong workshop này chúng ta sẽ sử dụng **database first**)
-![create db instance](/workshop01-AWS-FCJ-2024/images/3-2/14.png?width=40pc)
+1. Trong giao diện AWS Console, tìm kiếm và chọn **IAM** 
+![IAM Role](/images/3.GuardDuty/3.10-IAM.jpg?width=60pc)
+2. Trong thanh điều hướng bên trái, chọn **Policies** và chọn **Create Policy**
+![IAM Role](/images/3.GuardDuty/3.11.jpg?width=60pc)
+3. Trong phần Quyền cụ thể:
+   - Chọn **JSON options** 
+   - Dán chính sách **Policy** trước đó vào **phần 3.1**
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowManagedRuleToSendS3EventsToGuardDuty",
+      "Effect": "Allow",
+      "Action": [
+        "events:PutRule",
+        "events:DeleteRule",
+        "events:PutTargets",
+        "events:RemoveTargets"
+      ],
+      "Resource": [
+        "arn:aws:events:ap-southeast-1:381492162967:rule/DO-NOT-DELETE-AmazonGuardDutyMalwareProtectionS3*"
+      ],
+      "Condition": {
+        "StringLike": {
+          "events:ManagedBy": "malware-protection-plan.guardduty.amazonaws.com"
+        }
+      }
+    },
+    {
+      "Sid": "AllowGuardDutyToMonitorEventBridgeManagedRule",
+      "Effect": "Allow",
+      "Action": [
+        "events:DescribeRule",
+        "events:ListTargetsByRule"
+      ],
+      "Resource": [
+        "arn:aws:events:ap-southeast-1:381492162967:rule/DO-NOT-DELETE-AmazonGuardDutyMalwareProtectionS3*"
+      ]
+    },
+    {
+      "Sid": "AllowPostScanTag",
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObjectTagging",
+        "s3:GetObjectTagging",
+        "s3:PutObjectVersionTagging",
+        "s3:GetObjectVersionTagging"
+      ],
+      "Resource": [
+        "arn:aws:s3:::<bucket_name>/*"
+      ]
+    },
+    {
+      "Sid": "AllowEnableS3EventBridgeEvents",
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutBucketNotification",
+        "s3:GetBucketNotification"
+      ],
+      "Resource": [
+        "arn:aws:s3:::<bucket_name>"
+      ]
+    },
+    {
+      "Sid": "AllowPutValidationObject",
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::<bucket_name>/malware-protection-resource-validation-object"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket"
+      ],
+      "Resource": [
+        "arn:aws:s3:::<bucket_name>"
+      ]
+    },
+    {
+      "Sid": "AllowMalwareScan",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:GetObjectVersion"
+      ],
+      "Resource": [
+        "arn:aws:s3:::<bucket_name>/*"
+      ]
+    },
+    {
+      "Sid": "AllowDecryptForMalwareScan",
+      "Effect": "Allow",
+      "Action": [
+        "kms:GenerateDataKey",
+        "kms:Decrypt"
+      ],
+      "Resource": "arn:aws:kms:ap-southeast-1:381492162967:key/<key_id>",
+      "Condition": {
+        "StringLike": {
+          "kms:ViaService": "s3.*.amazonaws.com"
+        }
+      }
+    }
+  ]
+}
+```
+![IAM Role](/images/3.GuardDuty/3.12.jpg?width=60pc)
+4. Tiếp theo đến bước Xem xét và Tạo, chọn tên chính sách trong **Policy Details**, chúng ta sẽ chọn ```pl-gd-s3-raw``` 
+![IAM Role](/images/3.GuardDuty/3.13.jpg?width=60pc)
+5. Xem xét Chính sách:
+   - **EventBridge**: Quyền truy cập hạn chế với các quyền Danh sách, Đọc và Ghi. Nó có các điều kiện để quản lý các sự kiện từ Amazon GuardDuty liên quan đến bảo vệ phần mềm độc hại.
+   - **KMS (Key Management Service)**: Quyền ghi được cấp với các hạn chế dựa trên ID khóa và khu vực, và phải được truy cập qua dịch vụ S3.
+   - **S3 (Simple Storage Service)**: Quyền Danh sách, Đọc, Ghi và Đánh dấu, không có điều kiện cụ thể nào được áp dụng.
+![IAM Role](/images/3.GuardDuty/3.14.jpg?width=60pc)
+6. Tạo Chính sách
+ ![IAM Role](/images/3.GuardDuty/3.15.jpg?width=60pc)
+7. Hoàn thành việc tạo chính sách
+ ![IAM Role](/images/3.GuardDuty/3.16.jpg?width=60pc)
