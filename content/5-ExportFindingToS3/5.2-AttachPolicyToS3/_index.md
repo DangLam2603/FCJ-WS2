@@ -1,21 +1,28 @@
 ---
-title : "Create Target group for App Tier"
+title : "Attach Policy to S3"
 date : "`r Sys.Date()`"
 weight : 2
 chapter : false
 pre : " <b> 5.2 </b> "
 ---
 
-#### Create Target group for App Tier
-1. In the EC2 Dashboard, click on **Target Groups** under **Load Balancing** at sidebar, and then click on **Create target group**.
-![Target group](/workshop01-AWS-FCJ-2024/images/5-2/01.png?width=50pc)
+#### Modify S3 bucket permission
+1. Navigate back to **Findings export options**, and click on **Configure now** in the S3 bucket section
 
-2. In the interface of creating Target group:
-    - **Target group name** fill in **`AppTierTargetGroup`**.
-    - **Protocol: HTTP, Port: 8080**
-    - **VPC** choose **my-vpc**
-    - Scroll down and click **Next** then click **Create target group**.
-![Target group](/workshop01-AWS-FCJ-2024/images/5-2/02.png?width=50pc)
+2. In the **Export Findings** interface:
+    - **S3 Bucket ARN** fill in the **ARN** of the bucket that you want to export: **`s3-malware-gd`**.
+    - **KMS Key ARN** fill in the **ARN** path of that KMS key we created in **Preparaton Step**
 
-3. Finish creating target group
-![Target group](/workshop01-AWS-FCJ-2024/images/5-2/03.png?width=50pc)
+![S3](/images/5.%20Export%20Findings/5.4.jpg?width=60pc)
+1. Next, Click on **View Policy for S3 Bucket** in the **Attach Policy**
+![S3](/images/5.%20Export%20Findings/5.5.jpg?width=60pc)
+1. Copy a **JSON policy** and move to next part.
+![S3](/images/5.%20Export%20Findings/5.6.jpg?width=60pc)
+1. **Open a new tab** and navigate to the **`s3-malware-gd`** bucket **Permission**
+![S3](/images/5.%20Export%20Findings/5.7.jpg?width=60pc)
+1. In the **Bucket Policy**, click **Edit**
+![S3](/images/5.%20Export%20Findings/5.8.jpg?width=60pc)
+1. Paste the **JSON policy**. Click **Save Change**
+![S3](/images/5.%20Export%20Findings/5.8.jpg?width=60pc)
+1. Completely Attach Policy to S3
+![S3](/images/5.%20Export%20Findings/5.9.jpg?width=60pc)

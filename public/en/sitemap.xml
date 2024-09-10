@@ -2,18 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/5-exportfindingtos3/5.1-settingsfrequecy/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-exportfindingtos3/5.1-settingsfrequecy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-exportfindingtos3/5.1-settingsfrequecy/"
-                />
-  </url><url>
     <loc>//localhost:1313/2-preparationsteps/2.1-createkmskey/</loc>
     <xhtml:link
                 rel="alternate"
@@ -84,6 +72,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="//localhost:1313/"
+                />
+  </url><url>
+    <loc>//localhost:1313/5-exportfindingtos3/5.1-settingsfrequecy/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/5-exportfindingtos3/5.1-settingsfrequecy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/5-exportfindingtos3/5.1-settingsfrequecy/"
                 />
   </url><url>
     <loc>//localhost:1313/6-demo/6.1-uploadmalwarefiletos3/</loc>

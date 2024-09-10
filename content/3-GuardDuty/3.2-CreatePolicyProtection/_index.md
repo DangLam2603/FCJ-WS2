@@ -124,9 +124,9 @@ In the previous step, we have create and modify the malware protection and recie
 4. Next to Review and Create step,choose a policy name in the **Policy Details**, we will go for ```pl-gd-s3-raw``` 
 ![IAM Role](/images/3.GuardDuty/3.13.jpg?width=60pc)
 5. Review the Policy:
-   - EventBridge: Limited access with List, Read, and Write permissions. It has conditions to manage events from Amazon GuardDuty related to malware protection.
-   - KMS (Key Management Service): Write permissions are provided with restrictions based on key IDs and regions, and must be accessed through the S3 service.
-   - S3 (Simple Storage Service): List, Read, Write, and Tagging permissions, with no specific conditions applied.
+   - **EventBridge**: Limited access with List, Read, and Write permissions. It has conditions to manage events from Amazon GuardDuty related to malware protection.
+   - **KMS (Key Management Service)**: Write permissions are provided with restrictions based on key IDs and regions, and must be accessed through the S3 service.
+   - **S3 (Simple Storage Service)**: List, Read, Write, and Tagging permissions, with no specific conditions applied.
 ![IAM Role](/images/3.GuardDuty/3.14.jpg?width=60pc)
 6. Create Policy
  ![IAM Role](/images/3.GuardDuty/3.15.jpg?width=60pc)

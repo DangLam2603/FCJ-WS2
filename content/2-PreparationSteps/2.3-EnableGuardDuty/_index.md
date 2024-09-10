@@ -8,16 +8,16 @@ pre : " <b> 2.3 </b> "
 #### Overview
 In this section, we will dive in enable Amazon GuardDuty in your AWS environment.
 
-1. In the AWS Console navigation bar, type "GuardDuty" and select the first result.
+1. In the AWS Console navigation bar, type **GuardDuty** and select the first result.
 ![GD](/images/3.GuardDuty/3.1.jpg?width=60pc)
-1. Next, Select GuardDuty All feature to explore the power of GuardDuty.
+1. Next, Select **GuardDuty All feature** to explore the power of GuardDuty.
 2. {{% notice note %}}
-You can select "GuardDuty Malware Protection for S3 Only" if you want to protect S3 bucket only not the entire AWS services. 
+You can select **GuardDuty Malware Protection for S3 Only** if you want to protect S3 bucket only not the entire AWS services. 
 {{% /notice %}}
 ![GD](/images/3.GuardDuty/3.2.jpg?width=60pc)
-1. Review Permission, and click on "Enable GuardDuty"
+1. Review Permission, and click on **Enable GuardDuty**
 ![GD](/images/3.GuardDuty/3.3.jpg?width=60pc)
-1. Complete enable Amazone GuardDuty
+1. Complete enable Amazon GuardDuty
 ![GD](/images/3.GuardDuty/3.4.jpg?width=60pc)
 
 

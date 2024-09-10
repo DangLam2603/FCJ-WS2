@@ -8,7 +8,7 @@ pre : " <b> 1. </b> "
 
 ## Introduction to architecture
 
-In this workshop, we will explore the capabilities of AWS GuardDuty in securing your S3 bucket by integrating it with SNS and triggering events in EventBridge to alert the Admin for immediate action.
+In this workshop, we will explore the capabilities of **AWS GuardDuty** in securing your S3 bucket by integrating it with SNS and triggering events in EventBridge to alert the Admin for immediate action.
 
 ![GuardDuty example](/images/GD.png?featherlight=false&width=50pc)
 
@@ -19,6 +19,6 @@ In this workshop, we will explore the capabilities of AWS GuardDuty in securing 
 - Export Findings to S3 Bucket.
 
 **Advantages of implementing this architecture:**
-- Security: this architecture helps us alarm action imediately if there are un-protected files in the S3 Bucket also AWS environment in general.
-- Real-time Threat Detection: AWS GuardDuty continuously monitors your S3 bucket for malicious or unauthorized access, helping detect threats in real-time without manual intervention.
-- Automated Event Triggering: When GuardDuty detects a suspicious event, it triggers an event in Amazon EventBridge, which allows for the automatic handling of these findings. In this workshop, we will send custom email via SNS.
+- **Security**: this architecture helps us alarm action imediately if there are un-protected files in the S3 Bucket also AWS environment in general.
+- **Real-time Threat Detection**: AWS GuardDuty continuously monitors your S3 bucket for malicious or unauthorized access, helping detect threats in real-time without manual intervention.
+- **Automated Event Triggering**: When GuardDuty detects a suspicious event, it triggers an event in Amazon EventBridge, which allows for the automatic handling of these findings. In this workshop, we will send custom email via SNS.

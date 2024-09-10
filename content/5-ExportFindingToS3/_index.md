@@ -10,9 +10,9 @@ In this section, we will config GuardDuty findings found on S3 bucket, encrypt i
 
 #### Content:
 
-1. [Create AMI for App Tier](5.1-CreateAppTierAMI)
-2. [Create Target Group](5.2-CreateTargetGroup)
-3. [Create Internal Load Balancer](5.3-CreateInternalLoadBalancer)
-4. [Create Launch Template for App Tier](5.4-CreateLaunchTemplate)
-5. [Create Auto Scaling Group](5.5-CreateAutoScalingGroup)
+1. [Setting Frequency](5.1-SettingsFrequecy/)
+2. [Attach Policy to S3](5.2-AttachPolicyToS3/)
+3. [Attach Policy to S3](5.3-AttachPolicyToKMS/)
+4. [Export Findings To S3 bucket](5.4-EnableExport/)
+
 

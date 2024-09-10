@@ -1,12 +1,5 @@
 [
 {
-	"uri": "//localhost:1313/5-exportfindingtos3/5.1-settingsfrequecy/",
-	"title": "Create AMI for App Tier",
-	"tags": [],
-	"description": "",
-	"content": "Why do we need AMIs? Reproduce configurations easily - Once you have an instance configured the way you want, with all necessary software, settings etc., you can create an AMI from it. Then launching new instances from that AMI ensures all instances have the same baseline configuration automatically. Standardize environments - AMIs help maintain consistency across your environments. For example, you may have an AMI configured for a web server role that contains the necessary web server software and configurations. All new web server instances would use this standardized AMI. Backup and recovery - AMIs act as machine snapshots that can be used for backup, disaster recovery or to reproduce instances that may have failed. If an existing instance fails or needs to be replaced, launching a new one from the AMI is quicker than reconfiguring from scratch. Auto scaling - When using auto scaling groups to dynamically scale your fleet size based on demand, AMIs ensure all new instances added by auto scaling have the required configuration already in place. Create AMI from EC2 Instance Access EC2 service:\nChoose Instances from the sidebar Select instance My App Server 1 Click Actions, then click Image and template and choose Create image In the create image interface:\nFill in Image name with AppTierImage Fill in Image description with App tier Scroll down to the bottom and click Create image "
-},
-{
 	"uri": "//localhost:1313/2-preparationsteps/2.1-createkmskey/",
 	"title": "Create KMS key",
 	"tags": [],
@@ -25,7 +18,7 @@
 	"title": "Enable Malware Protection For S3",
 	"tags": [],
 	"description": "",
-	"content": "Enable New Feature Find and access the Amazon GuardDuty service Select the S3 bucket that need protection You can choose \u0026ldquo;Object with a specific prefix\u0026rdquo; in order to custom prefix file in your bucket. In this project, we will scan all the files that in the bucket.\nChoose the s3-raw-gd options In the Tag Scan Object section:\nchoose Tag Objects: this allow GuardDuty write scan status into tag section in S3 Objetcs In the Permission section, review the Policy and Trust Relationship.\nPolicy {\r\u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;,\r\u0026#34;Statement\u0026#34;: [\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowManagedRuleToSendS3EventsToGuardDuty\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;events:PutRule\u0026#34;,\r\u0026#34;events:DeleteRule\u0026#34;,\r\u0026#34;events:PutTargets\u0026#34;,\r\u0026#34;events:RemoveTargets\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:events:ap-southeast-1:381492162967:rule/DO-NOT-DELETE-AmazonGuardDutyMalwareProtectionS3*\u0026#34;\r],\r\u0026#34;Condition\u0026#34;: {\r\u0026#34;StringLike\u0026#34;: {\r\u0026#34;events:ManagedBy\u0026#34;: \u0026#34;malware-protection-plan.guardduty.amazonaws.com\u0026#34;\r}\r}\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowGuardDutyToMonitorEventBridgeManagedRule\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;events:DescribeRule\u0026#34;,\r\u0026#34;events:ListTargetsByRule\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:events:ap-southeast-1:381492162967:rule/DO-NOT-DELETE-AmazonGuardDutyMalwareProtectionS3*\u0026#34;\r]\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowPostScanTag\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;s3:PutObjectTagging\u0026#34;,\r\u0026#34;s3:GetObjectTagging\u0026#34;,\r\u0026#34;s3:PutObjectVersionTagging\u0026#34;,\r\u0026#34;s3:GetObjectVersionTagging\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:s3:::\u0026lt;bucket_name\u0026gt;/*\u0026#34;\r]\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowEnableS3EventBridgeEvents\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;s3:PutBucketNotification\u0026#34;,\r\u0026#34;s3:GetBucketNotification\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:s3:::\u0026lt;bucket_name\u0026gt;\u0026#34;\r]\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowPutValidationObject\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;s3:PutObject\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:s3:::\u0026lt;bucket_name\u0026gt;/malware-protection-resource-validation-object\u0026#34;\r]\r},\r{\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;s3:ListBucket\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:s3:::\u0026lt;bucket_name\u0026gt;\u0026#34;\r]\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowMalwareScan\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;s3:GetObject\u0026#34;,\r\u0026#34;s3:GetObjectVersion\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:s3:::\u0026lt;bucket_name\u0026gt;/*\u0026#34;\r]\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowDecryptForMalwareScan\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;kms:GenerateDataKey\u0026#34;,\r\u0026#34;kms:Decrypt\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: \u0026#34;arn:aws:kms:ap-southeast-1:381492162967:key/\u0026lt;key_id\u0026gt;\u0026#34;,\r\u0026#34;Condition\u0026#34;: {\r\u0026#34;StringLike\u0026#34;: {\r\u0026#34;kms:ViaService\u0026#34;: \u0026#34;s3.*.amazonaws.com\u0026#34;\r}\r}\r}\r]\r} Trusted Relationship: {\r\u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;,\r\u0026#34;Statement\u0026#34;: [\r{\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Principal\u0026#34;: {\r\u0026#34;Service\u0026#34;: \u0026#34;malware-protection-plan.guardduty.amazonaws.com\u0026#34;\r},\r\u0026#34;Action\u0026#34;: \u0026#34;sts:AssumeRole\u0026#34;\r}\r]\r} Make sure to save both the permissions details for later, and then continue to the next parts.\n"
+	"content": "Enable New Feature Find and access the Amazon GuardDuty service Select the S3 bucket that need protection You can choose Object with a specific prefix in order to custom prefix file in your bucket. In this project, we will scan all the files that in the bucket.\nChoose the s3-raw-gd options In the Tag Scan Object section:\nchoose Tag Objects: this allow GuardDuty write scan status into tag section in S3 Objetcs In the Permission section, review the Policy and Trust Relationship.\nPolicy {\r\u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;,\r\u0026#34;Statement\u0026#34;: [\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowManagedRuleToSendS3EventsToGuardDuty\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;events:PutRule\u0026#34;,\r\u0026#34;events:DeleteRule\u0026#34;,\r\u0026#34;events:PutTargets\u0026#34;,\r\u0026#34;events:RemoveTargets\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:events:ap-southeast-1:381492162967:rule/DO-NOT-DELETE-AmazonGuardDutyMalwareProtectionS3*\u0026#34;\r],\r\u0026#34;Condition\u0026#34;: {\r\u0026#34;StringLike\u0026#34;: {\r\u0026#34;events:ManagedBy\u0026#34;: \u0026#34;malware-protection-plan.guardduty.amazonaws.com\u0026#34;\r}\r}\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowGuardDutyToMonitorEventBridgeManagedRule\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;events:DescribeRule\u0026#34;,\r\u0026#34;events:ListTargetsByRule\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:events:ap-southeast-1:381492162967:rule/DO-NOT-DELETE-AmazonGuardDutyMalwareProtectionS3*\u0026#34;\r]\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowPostScanTag\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;s3:PutObjectTagging\u0026#34;,\r\u0026#34;s3:GetObjectTagging\u0026#34;,\r\u0026#34;s3:PutObjectVersionTagging\u0026#34;,\r\u0026#34;s3:GetObjectVersionTagging\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:s3:::\u0026lt;bucket_name\u0026gt;/*\u0026#34;\r]\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowEnableS3EventBridgeEvents\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;s3:PutBucketNotification\u0026#34;,\r\u0026#34;s3:GetBucketNotification\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:s3:::\u0026lt;bucket_name\u0026gt;\u0026#34;\r]\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowPutValidationObject\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;s3:PutObject\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:s3:::\u0026lt;bucket_name\u0026gt;/malware-protection-resource-validation-object\u0026#34;\r]\r},\r{\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;s3:ListBucket\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:s3:::\u0026lt;bucket_name\u0026gt;\u0026#34;\r]\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowMalwareScan\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;s3:GetObject\u0026#34;,\r\u0026#34;s3:GetObjectVersion\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: [\r\u0026#34;arn:aws:s3:::\u0026lt;bucket_name\u0026gt;/*\u0026#34;\r]\r},\r{\r\u0026#34;Sid\u0026#34;: \u0026#34;AllowDecryptForMalwareScan\u0026#34;,\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Action\u0026#34;: [\r\u0026#34;kms:GenerateDataKey\u0026#34;,\r\u0026#34;kms:Decrypt\u0026#34;\r],\r\u0026#34;Resource\u0026#34;: \u0026#34;arn:aws:kms:ap-southeast-1:381492162967:key/\u0026lt;key_id\u0026gt;\u0026#34;,\r\u0026#34;Condition\u0026#34;: {\r\u0026#34;StringLike\u0026#34;: {\r\u0026#34;kms:ViaService\u0026#34;: \u0026#34;s3.*.amazonaws.com\u0026#34;\r}\r}\r}\r]\r} Trusted Relationship: {\r\u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;,\r\u0026#34;Statement\u0026#34;: [\r{\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Principal\u0026#34;: {\r\u0026#34;Service\u0026#34;: \u0026#34;malware-protection-plan.guardduty.amazonaws.com\u0026#34;\r},\r\u0026#34;Action\u0026#34;: \u0026#34;sts:AssumeRole\u0026#34;\r}\r]\r} Make sure to save both the permissions details for later, and then continue to the next parts.\n"
 },
 {
 	"uri": "//localhost:1313/1-introduce/1.1-introduce-to-amazon-guardduty/",
@@ -49,11 +42,18 @@
 	"content": "Malware Protection for S3 with GuardDuty Overview In this workshop, we will demonstrate how AWS GuardDuty can secure your S3 bucket by identifying and remediating malicious files. You will learn how to automatically detect threats, export encrypted GuardDuty findings to S3 bucket and set up real-time alerts in prime periods using EventBridge and SNS to inform administrators.\nContent Introduction Preparation steps Amazon GuardDuty Set-up Notification Export Findings to S3 Demo Clean up resources "
 },
 {
-	"uri": "//localhost:1313/6-demo/6.1-uploadmalwarefiletos3/",
-	"title": "Update Nginx Configuration File",
+	"uri": "//localhost:1313/5-exportfindingtos3/5.1-settingsfrequecy/",
+	"title": "Setting Frequency",
 	"tags": [],
 	"description": "",
-	"content": "Update Nginx Configuration File Open the nginx.conf file from the cloned project Then change line 58 in the file to the DNS Name of the app-tier-internal-lb load balancer "
+	"content": "Setting GuardDuty In this part, we will config frequency allow EventBrigde to export findings after amount of time.\nNavigate to the GuardDuty left sidebar, choose Settings Then, click Edit in section Frequency of Finding Export Options In the pop-up window, You can select the frequency that you want EventBrigde to export. 6 Hours(default) 1 Hours 15 Minutes (We will go with 15 minutes for this workshop). "
+},
+{
+	"uri": "//localhost:1313/5-exportfindingtos3/5.2-attachpolicytos3/",
+	"title": "Attach Policy to S3",
+	"tags": [],
+	"description": "",
+	"content": "Modify S3 bucket permission Navigate back to Findings export options, and click on Configure now in the S3 bucket section\nIn the Export Findings interface:\nS3 Bucket ARN fill in the ARN of the bucket that you want to export: s3-malware-gd. KMS Key ARN fill in the ARN path of that KMS key we created in Preparaton Step Next, Click on View Policy for S3 Bucket in the Attach Policy Copy a JSON policy and move to next part. Open a new tab and navigate to the s3-malware-gd bucket Permission In the Bucket Policy, click Edit Paste the JSON policy. Click Save Change Completely Attach Policy to S3 "
 },
 {
 	"uri": "//localhost:1313/4-setupnotification/4.2-createeventbridge/",
@@ -77,13 +77,6 @@
 	"content": "Create S3 Bucket Access the AWS interface, find the S3 service and then click to select In the S3 interface, click Create bucket In the Create bucket interface: AWS Region select Singapore ap-southeast-1 Bucket name enter s3-raw-gd Scroll down to the bottom and select Create bucket You need to create another bucket to filter malicious files for later use. Follow and practice steps 1-4 from above, but change the bucket name to s3-malware-gd\nComplete creating S3 bucket For further practices, you can get the Bucket ARN by select the bucket name \u0026ndash;\u0026gt; propertise \u0026ndash;\u0026gt; copy the ARN\n"
 },
 {
-	"uri": "//localhost:1313/5-exportfindingtos3/5.2-attachpolicytos3/",
-	"title": "Create Target group for App Tier",
-	"tags": [],
-	"description": "",
-	"content": "Create Target group for App Tier In the EC2 Dashboard, click on Target Groups under Load Balancing at sidebar, and then click on Create target group. In the interface of creating Target group:\nTarget group name fill in AppTierTargetGroup. Protocol: HTTP, Port: 8080 VPC choose my-vpc Scroll down and click Next then click Create target group. Finish creating target group "
-},
-{
 	"uri": "//localhost:1313/2-preparationsteps/",
 	"title": "Preparation Steps",
 	"tags": [],
@@ -91,18 +84,11 @@
 	"content": "In this section, we will setup the necessary and important things to perform this workshop.\nContents Create KMS keys Create S3 Bucket Enable GuardDuty "
 },
 {
-	"uri": "//localhost:1313/6-demo/6.2-checkemailnoification/",
-	"title": "Upload Application Source Code to Amazon S3",
+	"uri": "//localhost:1313/5-exportfindingtos3/5.3-attachpolicytokms/",
+	"title": "Attach Policy to KMS",
 	"tags": [],
 	"description": "",
-	"content": "Upload Application Source Code to Amazon S3 Go to the library-app-fe folder under local, delete the node_modules folder (if any) Access the created S3 bucket, drag and drop the library-app-fe folder and nginx.config file under local to the bucket to upload the folder and file to the bucket. "
-},
-{
-	"uri": "//localhost:1313/6-demo/6.3-checkexportfindings3/",
-	"title": "Create EC2 instance",
-	"tags": [],
-	"description": "",
-	"content": "Create EC2 instance Similar to creating an instance for the App server, create an instance for the web server with the following changes:\nInstance name fill in My Web Server 1 Subnet select Public Subnet 1 Security group select WebTier-SG Advanced details, IAM instance profile select ec2role Finally, select Launch instance Complete creating an EC2 instance for the web server "
+	"content": "Attach Policy to KMS Navigate back to Attach Policy on GuardDuty page, click on View policy for KMS key. Copy the following Policy Open a new Tab, go to KMS key that you created before. Click Key policy, the Switch to Policy View\nPaste the previous Policy and save "
 },
 {
 	"uri": "//localhost:1313/3-guardduty/3.3-createroleproctection/",
@@ -112,18 +98,11 @@
 	"content": "Overview In this following step, we have create an IAM role base on the prervious policy for further use to specify Permission in GuardDuty\nIn the IAM interface, select Role from the left navigation bar and Create Role In the Select trusted entity, select Custom Trust Policy Select the following policy pl-gd-s3-raw Next, select Role name in the Role details section. In the Trust Policy, paste the previous Trust Relationship in 3.1 section {\r\u0026#34;Version\u0026#34;: \u0026#34;2012-10-17\u0026#34;,\r\u0026#34;Statement\u0026#34;: [\r{\r\u0026#34;Effect\u0026#34;: \u0026#34;Allow\u0026#34;,\r\u0026#34;Principal\u0026#34;: {\r\u0026#34;Service\u0026#34;: \u0026#34;malware-protection-plan.guardduty.amazonaws.com\u0026#34;\r},\r\u0026#34;Action\u0026#34;: \u0026#34;sts:AssumeRole\u0026#34;\r}\r]\r} 5. Review the Role and Create new Role: 6. Complete create role "
 },
 {
-	"uri": "//localhost:1313/5-exportfindingtos3/5.3-attachpolicytokms/",
-	"title": "Create Internal Load Balancer",
-	"tags": [],
-	"description": "",
-	"content": "Create Internal Load Balancer At EC2 Dashboard, click on Load Balancers from the left-hand menu and then click on Create Load Balancer. In the interface of choosing a load balancer type, select Application Load Balancer and click on Create. In the ALB creation screen:\nLB Name enter app-tier-internal-lb Scheme select Internal In the Network mapping section:\nVPC: my-vpc Tick ap-southeast-1a, then select Private Subnet 1 Tick ap-southeast-1b, then select Private Subnet 2 In the Security groups section, select Internal-LB-SG. In the Listeners and routing section, select AppTierTargetGroup for the default action. Scroll down to the bottom and click on Create load balancer. Complete the load balancer creation for the app tier. "
-},
-{
 	"uri": "//localhost:1313/2-preparationsteps/2.3-enableguardduty/",
 	"title": "Enable GuardDuty",
 	"tags": [],
 	"description": "",
-	"content": "Overview In this section, we will dive in enable Amazon GuardDuty in your AWS environment.\nIn the AWS Console navigation bar, type \u0026ldquo;GuardDuty\u0026rdquo; and select the first result. Next, Select GuardDuty All feature to explore the power of GuardDuty. You can select \u0026ldquo;GuardDuty Malware Protection for S3 Only\u0026rdquo; if you want to protect S3 bucket only not the entire AWS services.\nReview Permission, and click on \u0026ldquo;Enable GuardDuty\u0026rdquo; Complete enable Amazone GuardDuty Now that you\u0026rsquo;ve completed all the prerequisites for this workshop, let\u0026rsquo;s dive into the specific services and learn how they integrate with each other.\n"
+	"content": "Overview In this section, we will dive in enable Amazon GuardDuty in your AWS environment.\nIn the AWS Console navigation bar, type GuardDuty and select the first result. Next, Select GuardDuty All feature to explore the power of GuardDuty. You can select GuardDuty Malware Protection for S3 Only if you want to protect S3 bucket only not the entire AWS services.\nReview Permission, and click on Enable GuardDuty Complete enable Amazon GuardDuty Now that you\u0026rsquo;ve completed all the prerequisites for this workshop, let\u0026rsquo;s dive into the specific services and learn how they integrate with each other.\n"
 },
 {
 	"uri": "//localhost:1313/3-guardduty/",
@@ -134,10 +113,10 @@
 },
 {
 	"uri": "//localhost:1313/5-exportfindingtos3/5.4-enableexport/",
-	"title": "Create Launch Template",
+	"title": "Enable Exporting",
 	"tags": [],
 	"description": "",
-	"content": "Create Launch Template Launch templates and AMIs (Amazon Machine Images) are both fundamental for launching EC2 instances on AWS, but they serve different purposes:\nAMI (Amazon Machine Image): An AMI is a template that captures the entire software environment of a running EC2 instance. It includes the operating system, applications, configurations, and data volumes. AMIs act as blueprints for creating new instances with the same software setup. You can think of them as pre-configured snapshots of a virtual machine. Launch Template: A launch template defines the configuration details needed to launch an EC2 instance. This includes the AMI ID (which specifies the software environment), instance type (hardware capabilities), security groups (network access rules), user data (scripts to run on instance startup), and other launch parameters. It essentially defines how an instance will be provisioned beyond the base software provided by the AMI. Here\u0026rsquo;s an analogy: Imagine an AMI as a recipe for a cake, specifying the ingredients (operating system, applications). A launch template would be like the baking instructions, including the oven temperature (instance type), baking time, and any additional steps (user data scripts). You can use the same cake recipe (AMI) with different baking instructions (launch templates) to create cakes with variations (different instance configurations).\nCreate Launch Template In the EC2 dashboard, select Launch templates in the sidebar, then click Create launch template In the launch template creation interface, under Launch template name and description, fill in Launch template name as AppTier-LaunchTemplate Under the AMI selection, choose Owned by me then select AppTierImage Choose Instance type as t2.micro Keypair to Don’t include in launch template Network settings:\nSubnet to Don’t include in launch template SG to existing sg, then select AppTier-SG Advanced details, IAM instance profile to ec2role Scroll down to the bottom, select Create launch template. Done! "
+	"content": "Overview Now you are set-up, let go back to GuardDuty page and save the configuration. After the configuration successfully, you will recieve a message likewise. "
 },
 {
 	"uri": "//localhost:1313/3-guardduty/3.4-enableprotection/",
@@ -158,21 +137,21 @@
 	"title": "Export Findings To S3 bucket",
 	"tags": [],
 	"description": "",
-	"content": "Overview In this section, we will config GuardDuty findings found on S3 bucket, encrypt it and export to another bucket for future analysis.\nContent: Create AMI for App Tier Create Target Group Create Internal Load Balancer Create Launch Template for App Tier Create Auto Scaling Group "
+	"content": "Overview In this section, we will config GuardDuty findings found on S3 bucket, encrypt it and export to another bucket for future analysis.\nContent: Setting Frequency Attach Policy to S3 Attach Policy to S3 Export Findings To S3 bucket "
 },
 {
 	"uri": "//localhost:1313/6-demo/",
-	"title": "Deploy Web Tier",
+	"title": "Demo workflow",
 	"tags": [],
 	"description": "",
-	"content": "Introduction In this section, we will deploy the Web Tier by uploading the source code of the application to Amazon S3 and deploying the application on Amazon EC2. In addition, we will use Nginx in this workshop. Nginx will act as a web server that we will configure to run the application on port 80, as well as help redirect API requests from the Web Tier to the App Tier through the Internal Load Balancer.\nContents: Update Nginx Configuration File Upload Application Source Code to Amazon S3 Create EC2 Instance Connect to EC2 Instance "
+	"content": "Overview Now you have been configurated everything, let\u0026rsquo;s walk through demos and see how it actual work.\nUpload Malware File to S3 For demonstration purposes only! You should avoid uploading suspicious files to your S3 bucket, as it could lead to service termination or worse. In this tutorial, I\u0026rsquo;ll be using a Malware Testfile. You can follow along and download it from this link\nNavigate to s3-raw-gd and click Upload Upload the malware file virusFile.txt to S3 bucket that enable for protection s3-raw-gd Immediately, GuardDuty will scan all the files within the bucket and tagging Scan Status S3 object potential malware scan result status values NO_THREATS_FOUND – GuardDuty detected no potential threat associated with the scanned object. THREATS_FOUND – GuardDuty detected a potential threat associated with the scanned object. UNSUPPORTED – There are a few reasons why Malware Protection for S3 will skip a scan. Potential reasons include password-protected file, Malware Protection for S3 quotas, and support for certain Amazon S3 features may be unavailable. For more information, see Capabilities of Malware Protection for S3. ACCESS_DENIED – GuardDuty can\u0026rsquo;t access this object for scanning. Check the IAM role permissions associated with this bucket. For more information, see Prerequisite - Create or update IAM role policy. FAILED – GuardDuty can\u0026rsquo;t perform malware scan on this object because of an internal error. In the GuardDuty Console, You can find all the findings that GuardDuty detected here. Notification After detected a findings, you will recieve an email that you configured before. S3 Export Logs Navigate to s3-malware-gd bucket You can found the bucket findings that have been encryted here "
 },
 {
 	"uri": "//localhost:1313/7-cleanupresources/",
 	"title": "Clean Up Resources",
 	"tags": [],
 	"description": "",
-	"content": "Clean Up Resources We will proceed to delete the resources in the following order:\nDelete NAT Gateway Delete Elastic IPs Delete Auto Scaling Group Delete Load Balancer Delete Target group Delete Launch template Delete AMIs Delete EC2 instances Delete Database RDS Delete Route tables\nWe have to delete the subnet associations of each route table first (go to subnet -\u0026gt; table associations -\u0026gt; edit subnet associations -\u0026gt; unchecked the assigned subnets -\u0026gt; save) Delete route table Delete Internet Gateway\ndetach IGW from VPC Delete IGW Delete VPC Delete S3 bucket\nEmpty bucket Delete bucket "
+	"content": "Clean Up Resources We will proceed to delete the resources:\nDelete EventBridge Disable GuardDuty Delete IAM Role Delete KMS Key Delete S3 Bucket Delete SNS Topic "
 },
 {
 	"uri": "//localhost:1313/categories/",
