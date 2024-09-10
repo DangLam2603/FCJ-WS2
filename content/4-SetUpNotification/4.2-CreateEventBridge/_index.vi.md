@@ -1,5 +1,5 @@
 ---
-title : "Tạo Sự Kiện cho GuardDuty"
+title : "Tạo Sự Kiện Cho GuardDuty"
 date : "`r Sys.Date()`"
 weight : 2
 chapter : false

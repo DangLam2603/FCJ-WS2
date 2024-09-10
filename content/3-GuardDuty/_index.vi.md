@@ -7,7 +7,7 @@ pre : " <b> 3. </b> "
 ---
 
 ### Bảo Vệ S3 khỏi phần mềm độc hại là gì?
-Bảo Vệ S3 giúp phát hiện phần mềm độc hại tiềm ẩn bằng cách quét các đối tượng mới tải lên trong bucket Amazon S3 được chọn của bạn. Khi một đối tượng hoặc một phiên bản mới của đối tượng hiện có được tải lên, GuardDuty tự động khởi tạo quét phần mềm độc hại.
+Malware Protection S3 giúp phát hiện các phần mềm độc hại tiềm ẩn bằng cách quét các đối tượng mới tải lên trong bucket Amazon S3 được chọn của bạn. Khi một đối tượng hoặc một phiên bản mới của đối tượng hiện có được tải lên, GuardDuty tự động khởi tạo quét phần mềm độc hại.
 
 {{% notice info %}}
 Đây là tính năng mới của GuardDuty từ bản cập nhật gần nhất vào tháng 6 năm 2024
